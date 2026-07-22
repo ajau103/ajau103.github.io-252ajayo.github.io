@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fitness & Wellness</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", Arial, sans-serif;
+    }
+
+    body {
+      background: #f6fff8;
+      color: #132018;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 0 22px;
+    }
+
+    header {
+      background: #fff;
+      box-shadow: 0 5px 25px rgba(0,0,0,0.06);
+      position: sticky;
+      top: 0;
+      z-index: 99;
+    }
+
+    .navbar {
+      height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: 900;
+      text-decoration: none;
+      color: #132018;
+    }
+
+    .logo span {
+      color: #22c55e;
+    }
+
+    .menu {
+      display: flex;
+      gap: 28px;
+      list-style: none;
+    }
+
+    .menu a {
+      text-decoration: none;
+      color: #334155;
+      font-weight: 600;
+      font-size: 15px;
+    }
+
+    .header-btn {
+      background: #22c55e;
+      color: #fff;
+      padding: 13px 22px;
+      border-radius: 40px;
+      text-decoration: none;
+      font-weight: 800;
+    }
+
+    .hero {
+      margin: 45px 0;
+      padding: 75px;
+      border-radius: 36px;
+      background:
+        linear-gradient(rgba(19,32,24,0.70), rgba(19,32,24,0.70)),
+        url("https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=1400&q=80");
+      background-size: cover;
+      background-position: center;
+      color: #fff;
+    }
+
+    .hero span {
+      color: #bbf7d0;
+      font-weight: 900;
+      letter-spacing: 2px;
+      font-size: 13px;
+    }
+
+    .hero h1 {
+      font-size: 66px;
+      max-width: 780px;
+      line-height: 1.05;
+      margin: 20px 0;
+    }
+
+    .hero p {
+      max-width: 650px;
+      color: #ecfdf5;
+      font-size: 19px;
+      line-height: 1.7;
+      margin-bottom: 32px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 15px 28px;
+      border-radius: 40px;
+      text-decoration: none;
+      font-weight: 800;
+    }
+
+    .btn-green {
+      background: #22c55e;
+      color: #fff;
+    }
+
+    .btn-white {
+      background: #fff;
+      color: #132018;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 22px;
+      margin-bottom: 75px;
+    }
+
+    .stat-card {
+      background: #fff;
+      padding: 26px;
+      border-radius: 22px;
+      text-align: center;
+      box-shadow: 0 12px 35px rgba(0,0,0,0.06);
+    }
+
+    .stat-card h3 {
+      font-size: 34px;
+      color: #22c55e;
+      margin-bottom: 6px;
+    }
+
+    .stat-card p {
+      color: #64748b;
+      font-weight: 700;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 42px;
+    }
+
+    .section-title span {
+      color: #22c55e;
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 2px;
+    }
+
+    .section-title h2 {
+      font-size: 44px;
+      margin-top: 10px;
+    }
+
+    .program-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+      margin-bottom: 80px;
+    }
+
+    .program-card {
+      background: #fff;
+      border-radius: 28px;
+      overflow: hidden;
+      box-shadow: 0 12px 35px rgba(0,0,0,0.07);
+      transition: 0.3s;
+    }
+
+    .program-card:hover {
+      transform: translateY(-8px);
+    }
+
+    .program-card img {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+    }
+
+    .program-info {
+      padding: 26px;
+    }
+
+    .program-info h3 {
+      font-size: 25px;
+      margin-bottom: 12px;
+    }
+
+    .program-info p {
+      color: #64748b;
+      line-height: 1.7;
+      margin-bottom: 18px;
+    }
+
+    .program-meta {
+      display: flex;
+      justify-content: space-between;
+      color: #22c55e;
+      font-weight: 800;
+      margin-bottom: 20px;
+    }
+
+    .small-btn {
+      border: none;
+      background: #132018;
+      color: #fff;
+      padding: 12px 18px;
+      border-radius: 30px;
+      cursor: pointer;
+      font-weight: 800;
+    }
+
+    .about {
+      background: #132018;
+      color: #fff;
+      border-radius: 34px;
+      padding: 60px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 42px;
+      align-items: center;
+      margin-bottom: 80px;
+    }
+
+    .about img {
+      width: 100%;
+      height: 420px;
+      object-fit: cover;
+      border-radius: 28px;
+    }
+
+    .about h2 {
+      font-size: 46px;
+      margin-bottom: 18px;
+    }
+
+    .about p {
+      color: #d9fbe4;
+      line-height: 1.8;
+      font-size: 17px;
+      margin-bottom: 25px;
+    }
+
+    .check-list {
+      list-style: none;
+      margin-bottom: 28px;
+    }
+
+    .check-list li {
+      margin-bottom: 12px;
+      color: #f0fdf4;
+      font-weight: 700;
+    }
+
+    .check-list li::before {
+      content: "✓";
+      color: #86efac;
+      margin-right: 10px;
+      font-weight: 900;
+    }
+
+    .plans-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+      margin-bottom: 80px;
+    }
+
+    .plan-card {
+      background: #fff;
+      border-radius: 28px;
+      padding: 32px;
+      box-shadow: 0 12px 35px rgba(0,0,0,0.07);
+    }
+
+    .plan-card h3 {
+      font-size: 26px;
+      margin-bottom: 12px;
+    }
+
+    .plan-card p {
+      color: #64748b;
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+
+    .price {
+      font-size: 34px;
+      font-weight: 900;
+      color: #22c55e;
+      margin-bottom: 22px;
+    }
+
+    .plan-card ul {
+      list-style: none;
+      margin-bottom: 26px;
+    }
+
+    .plan-card li {
+      margin-bottom: 12px;
+      color: #334155;
+      font-weight: 600;
+    }
+
+    .plan-card li::before {
+      content: "✓";
+      color: #22c55e;
+      margin-right: 9px;
+      font-weight: 900;
+    }
+
+    .cta {
+      background: #22c55e;
+      color: #fff;
+      border-radius: 30px;
+      padding: 55px;
+      margin-bottom: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 28px;
+    }
+
+    .cta h2 {
+      font-size: 42px;
+      margin-bottom: 10px;
+    }
+
+    .cta p {
+      color: #f0fdf4;
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    footer {
+      background: #0b1a10;
+      color: #fff;
+      padding: 55px 0 20px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1.5fr;
+      gap: 35px;
+    }
+
+    footer h3,
+    footer h4 {
+      margin-bottom: 18px;
+    }
+
+    footer p,
+    footer a {
+      color: #cbdccf;
+      text-decoration: none;
+      line-height: 1.7;
+      font-size: 15px;
+    }
+
+    footer ul {
+      list-style: none;
+    }
+
+    footer li {
+      margin-bottom: 10px;
+    }
+
+    .newsletter {
+      display: flex;
+      margin-top: 14px;
+    }
+
+    .newsletter input {
+      flex: 1;
+      border: none;
+      padding: 13px;
+      border-radius: 8px 0 0 8px;
+      outline: none;
+    }
+
+    .newsletter button {
+      border: none;
+      background: #22c55e;
+      color: #fff;
+      padding: 13px 16px;
+      font-weight: 800;
+      border-radius: 0 8px 8px 0;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid #243b2a;
+      margin-top: 35px;
+      padding-top: 20px;
+      text-align: center;
+      color: #a7b8ac;
+      font-size: 14px;
+    }
+
+    @media (max-width: 900px) {
+      .menu {
+        display: none;
+      }
+
+      .hero {
+        padding: 42px;
+      }
+
+      .hero h1 {
+        font-size: 42px;
+      }
+
+      .stats,
+      .program-grid,
+      .about,
+      .plans-grid,
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .cta {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="container navbar">
+    <a href="#" class="logo">Fit<span>Well</span></a>
+
+    <ul class="menu">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Programs</a></li>
+      <li><a href="#">Coaching</a></li>
+      <li><a href="#">Plans</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+
+    <a href="#" class="header-btn">Join Now</a>
+  </div>
+</header>
+
+<main class="container">
+
+  <section class="hero">
+    <span>FITNESS & WELLNESS STUDIO</span>
+    <h1>Build strength, balance, and a healthier lifestyle.</h1>
+    <p>
+      Personalized fitness training, yoga, nutrition guidance, and wellness programs
+      designed to help you feel stronger, lighter, and more confident.
+    </p>
+
+    <div class="hero-buttons">
+      <a href="#" class="btn btn-green">Start Today</a>
+      <a href="#" class="btn btn-white">View Programs</a>
+    </div>
+  </section>
+
+  <section class="stats">
+    <div class="stat-card">
+      <h3>10+</h3>
+      <p>Expert Trainers</p>
+    </div>
+
+    <div class="stat-card">
+      <h3>5K+</h3>
+      <p>Happy Members</p>
+    </div>
+
+    <div class="stat-card">
+      <h3>30+</h3>
+      <p>Weekly Classes</p>
+    </div>
+
+    <div class="stat-card">
+      <h3>24/7</h3>
+      <p>Wellness Support</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-title">
+      <span>OUR PROGRAMS</span>
+      <h2>Train Your Body & Mind</h2>
+    </div>
+
+    <div class="program-grid">
+
+      <div class="program-card">
+        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=900&q=80" alt="Personal Training">
+        <div class="program-info">
+          <h3>Personal Training</h3>
+          <p>One-on-one strength, fat loss, and muscle-building sessions with expert trainers.</p>
+          <div class="program-meta">
+            <span>45 min</span>
+            <span>$49/session</span>
+          </div>
+          <button class="small-btn">Book Session</button>
+        </div>
+      </div>
+
+      <div class="program-card">
+        <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=900&q=80" alt="Yoga">
+        <div class="program-info">
+          <h3>Yoga & Mindfulness</h3>
+          <p>Improve flexibility, posture, breathing, and inner calm with guided yoga classes.</p>
+          <div class="program-meta">
+            <span>60 min</span>
+            <span>$29/class</span>
+          </div>
+          <button class="small-btn">Join Class</button>
+        </div>
+      </div>
+
+      <div class="program-card">
+        <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=900&q=80" alt="Nutrition Coaching">
+        <div class="program-info">
+          <h3>Nutrition Coaching</h3>
+          <p>Personalized diet plans, habit coaching, and meal guidance for healthy results.</p>
+          <div class="program-meta">
+            <span>Weekly</span>
+            <span>$79/month</span>
+          </div>
+          <button class="small-btn">Get Plan</button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="about">
+    <img src="https://images.unsplash.com/photo-1599058917212-d750089bc07e?auto=format&fit=crop&w=900&q=80" alt="Fitness Trainer">
+
+    <div>
+      <h2>Wellness that fits your lifestyle.</h2>
+      <p>
+        Our approach combines smart workouts, mindful recovery, balanced nutrition,
+        and personal guidance to help you create long-term healthy habits.
+      </p>
+
+      <ul class="check-list">
+        <li>Certified fitness and wellness coaches</li>
+        <li>Custom workout and nutrition programs</li>
+        <li>Beginner-friendly and advanced classes</li>
+        <li>Progress tracking and lifestyle support</li>
+      </ul>
+
+      <a href="#" class="btn btn-green">Meet Our Coaches</a>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-title">
+      <span>MEMBERSHIP PLANS</span>
+      <h2>Choose Your Wellness Plan</h2>
+    </div>
+
+    <div class="plans-grid">
+
+      <div class="plan-card">
+        <h3>Starter</h3>
+        <p>Great for beginners starting their fitness journey.</p>
+        <div class="price">$39/mo</div>
+        <ul>
+          <li>Gym access</li>
+          <li>2 group classes</li>
+          <li>Basic fitness assessment</li>
+          <li>Progress checklist</li>
+        </ul>
+        <a href="#" class="btn btn-green">Choose Plan</a>
+      </div>
+
+      <div class="plan-card">
+        <h3>Transformation</h3>
+        <p>Best for fat loss, strength building, and consistent results.</p>
+        <div class="price">$89/mo</div>
+        <ul>
+          <li>Unlimited gym access</li>
+          <li>Weekly trainer check-in</li>
+          <li>Nutrition guidance</li>
+          <li>Yoga and group classes</li>
+        </ul>
+        <a href="#" class="btn btn-green">Choose Plan</a>
+      </div>
+
+      <div class="plan-card">
+        <h3>Premium Wellness</h3>
+        <p>Complete fitness, nutrition, recovery, and lifestyle support.</p>
+        <div class="price">$149/mo</div>
+        <ul>
+          <li>Personal training sessions</li>
+          <li>Custom meal plan</li>
+          <li>Recovery and mobility coaching</li>
+          <li>Priority wellness support</li>
+        </ul>
+        <a href="#" class="btn btn-green">Choose Plan</a>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="cta">
+    <div>
+      <h2>Ready to feel stronger and healthier?</h2>
+      <p>Start your fitness and wellness journey with expert coaching and personalized support.</p>
+    </div>
+
+    <a href="#" class="btn btn-white">Book Free Trial</a>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container footer-grid">
+
+    <div>
+      <h3>FitWell</h3>
+      <p>
+        Fitness and wellness studio offering personal training,
+        yoga, nutrition coaching, and lifestyle transformation programs.
+      </p>
+    </div>
+
+    <div>
+      <h4>Programs</h4>
+      <ul>
+        <li><a href="#">Personal Training</a></li>
+        <li><a href="#">Yoga Classes</a></li>
+        <li><a href="#">Nutrition Coaching</a></li>
+        <li><a href="#">Weight Loss</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h4>Company</h4>
+      <ul>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Trainers</a></li>
+        <li><a href="#">Membership</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h4>Newsletter</h4>
+      <p>Get workout tips, nutrition advice, and wellness updates.</p>
+
+      <form class="newsletter">
+        <input type="email" placeholder="Enter email">
+        <button>Join</button>
+      </form>
+    </div>
+
+  </div>
+
+  <div class="container footer-bottom">
+    © 2026 FitWell. All rights reserved.
+  </div>
+</footer>
+
+</body>
+</html>
