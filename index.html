@@ -1,0 +1,1242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>GreenRoots Organic Farming | Fresh & Naturally Grown Produce</title>
+
+<meta
+    name="description"
+    content="Organic farming and naturally grown produce including vegetables, fruits, grains and farm-fresh products. Request availability, pricing or bulk supply details."
+>
+
+<style>
+:root{
+    --green:#2f7d32;
+    --green-dark:#1e5721;
+    --green-light:#edf7ec;
+    --olive:#738c3f;
+    --cream:#fbf8ef;
+    --brown:#72523b;
+    --white:#ffffff;
+    --text:#29352b;
+    --muted:#6d796e;
+    --border:#dfe7dc;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#fff;
+    color:var(--text);
+    line-height:1.6;
+}
+
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+button,
+input,
+select,
+textarea{
+    font:inherit;
+}
+
+.container{
+    width:min(1120px, calc(100% - 32px));
+    margin:auto;
+}
+
+.btn{
+    min-height:46px;
+    padding:0 22px;
+    border:0;
+    border-radius:8px;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:700;
+    cursor:pointer;
+    transition:.25s;
+}
+
+.btn-primary{
+    background:var(--green);
+    color:#fff;
+}
+
+.btn-primary:hover{
+    background:var(--green-dark);
+    transform:translateY(-2px);
+}
+
+.btn-dark{
+    background:var(--green-dark);
+    color:#fff;
+}
+
+.btn-light{
+    background:#fff;
+    color:var(--green-dark);
+    border:1px solid var(--border);
+}
+
+/* TOP BAR */
+
+.topbar{
+    background:var(--green-dark);
+    color:#d9ead8;
+    padding:8px 0;
+    font-size:12px;
+}
+
+.topbar-inner{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:20px;
+}
+
+.topbar strong{
+    color:#fff;
+}
+
+/* HEADER */
+
+header{
+    background:#fff;
+    border-bottom:1px solid var(--border);
+    position:sticky;
+    top:0;
+    z-index:100;
+}
+
+.navbar{
+    min-height:72px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:24px;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    color:var(--green-dark);
+    font-size:23px;
+    font-weight:800;
+}
+
+.logo-icon{
+    width:42px;
+    height:42px;
+    border-radius:11px;
+    background:var(--green-light);
+    display:grid;
+    place-items:center;
+    font-size:23px;
+}
+
+.logo span{
+    color:var(--olive);
+}
+
+.menu{
+    display:flex;
+    list-style:none;
+    gap:23px;
+}
+
+.menu a{
+    color:#546154;
+    font-size:14px;
+    font-weight:600;
+}
+
+.menu a:hover{
+    color:var(--green);
+}
+
+/* HERO */
+
+.hero{
+    padding:72px 0 82px;
+    background:
+        radial-gradient(circle at 82% 22%,rgba(115,140,63,.18),transparent 28%),
+        linear-gradient(135deg,#eef8ed,#fffaf0);
+}
+
+.hero-grid{
+    display:grid;
+    grid-template-columns:1.05fr .95fr;
+    align-items:center;
+    gap:55px;
+}
+
+.badge{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    padding:8px 13px;
+    border-radius:30px;
+    background:#dff0dc;
+    color:var(--green-dark);
+    font-size:12px;
+    font-weight:700;
+    margin-bottom:18px;
+}
+
+.badge-dot{
+    width:8px;
+    height:8px;
+    border-radius:50%;
+    background:var(--olive);
+}
+
+.hero h1{
+    color:var(--green-dark);
+    font-size:56px;
+    line-height:1.08;
+    letter-spacing:-2px;
+    margin-bottom:18px;
+}
+
+.hero h1 span{
+    color:var(--green);
+}
+
+.hero p{
+    max-width:600px;
+    color:var(--muted);
+    font-size:17px;
+    margin-bottom:27px;
+}
+
+.hero-buttons{
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+}
+
+.hero-points{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+    margin-top:29px;
+    font-size:13px;
+    color:#5d695e;
+}
+
+.hero-points strong{
+    color:var(--green);
+}
+
+.farm-visual{
+    background:#fff;
+    border:1px solid var(--border);
+    border-radius:22px;
+    padding:25px;
+    box-shadow:0 22px 50px rgba(50,85,45,.13);
+}
+
+.farm-card{
+    min-height:325px;
+    border-radius:17px;
+    position:relative;
+    overflow:hidden;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:linear-gradient(145deg,#e8f5e5,#fff3d9);
+}
+
+.farm-icon{
+    font-size:120px;
+}
+
+.float-item{
+    position:absolute;
+    width:64px;
+    height:64px;
+    border-radius:17px;
+    background:#fff;
+    display:grid;
+    place-items:center;
+    font-size:31px;
+    box-shadow:0 10px 26px rgba(50,75,45,.13);
+}
+
+.item-one{ top:24px; left:25px; }
+.item-two{ top:32px; right:30px; }
+.item-three{ bottom:27px; left:48px; }
+.item-four{ bottom:25px; right:38px; }
+
+/* FEATURES */
+
+.features{
+    padding:24px 0;
+    border-bottom:1px solid var(--border);
+}
+
+.features-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+}
+
+.feature{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:12px;
+    padding:19px;
+    border-right:1px solid var(--border);
+}
+
+.feature:last-child{
+    border-right:0;
+}
+
+.feature-icon{
+    font-size:27px;
+}
+
+.feature h3{
+    color:var(--green-dark);
+    font-size:13px;
+    margin-bottom:2px;
+}
+
+.feature p{
+    color:var(--muted);
+    font-size:11px;
+}
+
+/* COMMON */
+
+.section{
+    padding:72px 0;
+}
+
+.section-light{
+    background:var(--cream);
+}
+
+.section-heading{
+    max-width:660px;
+    margin:0 auto 38px;
+    text-align:center;
+}
+
+.section-heading span{
+    color:var(--green);
+    text-transform:uppercase;
+    letter-spacing:1.8px;
+    font-size:11px;
+    font-weight:800;
+}
+
+.section-heading h2{
+    color:var(--green-dark);
+    font-size:38px;
+    line-height:1.2;
+    margin:8px 0 10px;
+}
+
+.section-heading p{
+    color:var(--muted);
+}
+
+/* PRODUCE */
+
+.produce-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+}
+
+.produce-card{
+    background:#fff;
+    border:1px solid var(--border);
+    border-radius:15px;
+    padding:25px 20px;
+    text-align:center;
+    transition:.25s;
+}
+
+.produce-card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 14px 34px rgba(50,75,45,.08);
+}
+
+.produce-icon{
+    width:72px;
+    height:72px;
+    margin:0 auto 14px;
+    border-radius:50%;
+    background:var(--green-light);
+    display:grid;
+    place-items:center;
+    font-size:35px;
+}
+
+.produce-card h3{
+    color:var(--green-dark);
+    font-size:17px;
+    margin-bottom:5px;
+}
+
+.produce-card p{
+    color:var(--muted);
+    font-size:12px;
+}
+
+/* WHY US */
+
+.why-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+}
+
+.why-card{
+    background:#fff;
+    border:1px solid var(--border);
+    border-radius:15px;
+    padding:25px;
+}
+
+.why-icon{
+    width:58px;
+    height:58px;
+    border-radius:14px;
+    background:#eef7ea;
+    display:grid;
+    place-items:center;
+    font-size:27px;
+    margin-bottom:15px;
+}
+
+.why-card h3{
+    color:var(--green-dark);
+    font-size:17px;
+    margin-bottom:6px;
+}
+
+.why-card p{
+    color:var(--muted);
+    font-size:12px;
+}
+
+/* CTA */
+
+.cta{
+    padding:34px 0 72px;
+}
+
+.cta-box{
+    background:linear-gradient(135deg,var(--green),var(--green-dark));
+    color:#fff;
+    border-radius:18px;
+    padding:40px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:35px;
+}
+
+.cta-box h2{
+    font-size:32px;
+    line-height:1.2;
+    margin-bottom:6px;
+}
+
+.cta-box p{
+    color:#d9ead8;
+}
+
+/* CONTACT */
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:.8fr 1.2fr;
+    gap:42px;
+}
+
+.contact-info{
+    background:var(--green-dark);
+    color:#fff;
+    border-radius:16px;
+    padding:34px;
+}
+
+.contact-info h2{
+    font-size:29px;
+    line-height:1.25;
+    margin-bottom:12px;
+}
+
+.contact-info > p{
+    color:#d7e5d5;
+    font-size:13px;
+    margin-bottom:22px;
+}
+
+.info-row{
+    padding:13px 0;
+    border-top:1px solid rgba(255,255,255,.14);
+}
+
+.info-row strong{
+    display:block;
+    font-size:11px;
+    margin-bottom:4px;
+}
+
+.info-row span{
+    color:#d3e2d1;
+    font-size:13px;
+}
+
+.inquiry-form{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:13px;
+}
+
+.inquiry-form input,
+.inquiry-form select,
+.inquiry-form textarea{
+    width:100%;
+    padding:14px;
+    border:1px solid var(--border);
+    border-radius:8px;
+    outline:none;
+    background:#fff;
+}
+
+.inquiry-form input:focus,
+.inquiry-form select:focus,
+.inquiry-form textarea:focus{
+    border-color:var(--green);
+    box-shadow:0 0 0 3px rgba(47,125,50,.1);
+}
+
+.inquiry-form textarea{
+    min-height:110px;
+    resize:vertical;
+    grid-column:span 2;
+}
+
+.inquiry-form button{
+    grid-column:span 2;
+}
+
+/* FOOTER */
+
+footer{
+    background:#183d1b;
+    color:#fff;
+    padding:48px 0 20px;
+}
+
+.footer-grid{
+    display:grid;
+    grid-template-columns:1.6fr 1fr 1fr;
+    gap:40px;
+}
+
+.footer-logo{
+    font-size:23px;
+    font-weight:800;
+    margin-bottom:11px;
+}
+
+.footer-logo span{
+    color:#9ab567;
+}
+
+footer p,
+footer a{
+    color:#b7c8b5;
+    font-size:12px;
+    line-height:1.8;
+}
+
+footer h4{
+    margin-bottom:12px;
+}
+
+footer ul{
+    list-style:none;
+}
+
+footer li{
+    margin-bottom:7px;
+}
+
+footer a:hover{
+    color:#fff;
+}
+
+.footer-bottom{
+    border-top:1px solid #315b35;
+    margin-top:30px;
+    padding-top:18px;
+    display:flex;
+    justify-content:space-between;
+    gap:20px;
+    color:#8ca18b;
+    font-size:11px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+    .menu{
+        display:none;
+    }
+
+    .hero-grid,
+    .contact-grid{
+        grid-template-columns:1fr;
+    }
+
+    .features-grid,
+    .produce-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .why-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media(max-width:600px){
+
+    .container{
+        width:min(100% - 22px,1120px);
+    }
+
+    .topbar-inner{
+        justify-content:center;
+        text-align:center;
+    }
+
+    .topbar-inner span:last-child{
+        display:none;
+    }
+
+    .logo{
+        font-size:19px;
+    }
+
+    .navbar .btn{
+        padding:0 13px;
+        font-size:11px;
+    }
+
+    .hero{
+        padding:55px 0;
+    }
+
+    .hero h1{
+        font-size:41px;
+        letter-spacing:-1.2px;
+    }
+
+    .farm-card{
+        min-height:270px;
+    }
+
+    .farm-icon{
+        font-size:90px;
+    }
+
+    .features-grid,
+    .produce-grid,
+    .why-grid,
+    .footer-grid{
+        grid-template-columns:1fr;
+    }
+
+    .feature{
+        justify-content:flex-start;
+        border-right:0;
+        border-bottom:1px solid var(--border);
+    }
+
+    .section{
+        padding:60px 0;
+    }
+
+    .section-heading h2{
+        font-size:31px;
+    }
+
+    .cta-box{
+        padding:29px 22px;
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+    .cta-box h2{
+        font-size:27px;
+    }
+
+    .inquiry-form{
+        grid-template-columns:1fr;
+    }
+
+    .inquiry-form textarea,
+    .inquiry-form button{
+        grid-column:auto;
+    }
+
+    .footer-bottom{
+        flex-direction:column;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- TOP BAR -->
+
+<div class="topbar">
+    <div class="container topbar-inner">
+
+        <span>
+            Farm fresh vegetables · Fruits · Grains · Bulk supply
+        </span>
+
+        <span>
+            Call / WhatsApp:
+            <strong>+91 98765 43210</strong>
+        </span>
+
+    </div>
+</div>
+
+<!-- HEADER -->
+
+<header>
+
+    <div class="container navbar">
+
+        <a href="#home" class="logo">
+            <div class="logo-icon">🌿</div>
+            Green<span>Roots</span>
+        </a>
+
+        <ul class="menu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#produce">Our Produce</a></li>
+            <li><a href="#farming">Our Farming</a></li>
+            <li><a href="#inquiry">Enquiry</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <a href="#inquiry" class="btn btn-primary">
+            Request Availability
+        </a>
+
+    </div>
+
+</header>
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+    <div class="container hero-grid">
+
+        <div>
+
+            <div class="badge">
+                <span class="badge-dot"></span>
+                Naturally grown produce from responsible farms
+            </div>
+
+            <h1>
+                Fresh food begins with <span>healthy soil.</span>
+            </h1>
+
+            <p>
+                We grow and supply fresh vegetables, fruits, grains
+                and seasonal farm produce using responsible farming practices
+                focused on soil health, quality and freshness.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#produce" class="btn btn-primary">
+                    Explore Produce
+                </a>
+
+                <a href="#inquiry" class="btn btn-light">
+                    Request Farm Supply
+                </a>
+
+            </div>
+
+            <div class="hero-points">
+                <div><strong>✓</strong> Fresh seasonal harvest</div>
+                <div><strong>✓</strong> Responsible farming</div>
+                <div><strong>✓</strong> Retail & bulk supply</div>
+            </div>
+
+        </div>
+
+        <div class="farm-visual">
+
+            <div class="farm-card">
+
+                <div class="farm-icon">🚜</div>
+
+                <div class="float-item item-one">🥕</div>
+                <div class="float-item item-two">🥬</div>
+                <div class="float-item item-three">🍅</div>
+                <div class="float-item item-four">🌾</div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- FEATURES -->
+
+<section class="features">
+
+    <div class="container features-grid">
+
+        <div class="feature">
+
+            <div class="feature-icon">🌱</div>
+
+            <div>
+                <h3>Soil-Focused Farming</h3>
+                <p>Healthy farming starts from the ground</p>
+            </div>
+
+        </div>
+
+        <div class="feature">
+
+            <div class="feature-icon">🥦</div>
+
+            <div>
+                <h3>Fresh Harvest</h3>
+                <p>Seasonal produce based on availability</p>
+            </div>
+
+        </div>
+
+        <div class="feature">
+
+            <div class="feature-icon">📦</div>
+
+            <div>
+                <h3>Bulk Supply</h3>
+                <p>Options for stores and businesses</p>
+            </div>
+
+        </div>
+
+        <div class="feature">
+
+            <div class="feature-icon">🚚</div>
+
+            <div>
+                <h3>Delivery Support</h3>
+                <p>Based on order size and location</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- PRODUCE -->
+
+<section class="section section-light" id="produce">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span>Farm fresh produce</span>
+
+            <h2>
+                Naturally grown food for everyday living.
+            </h2>
+
+            <p>
+                Product availability changes with season,
+                harvest quantity and growing conditions.
+            </p>
+
+        </div>
+
+        <div class="produce-grid">
+
+            <article class="produce-card">
+
+                <div class="produce-icon">🥬</div>
+
+                <h3>Fresh Vegetables</h3>
+
+                <p>
+                    Leafy greens, tomatoes, carrots,
+                    seasonal vegetables and farm-fresh produce.
+                </p>
+
+            </article>
+
+            <article class="produce-card">
+
+                <div class="produce-icon">🍎</div>
+
+                <h3>Fresh Fruits</h3>
+
+                <p>
+                    Seasonal fruit varieties sourced or grown
+                    according to farm availability.
+                </p>
+
+            </article>
+
+            <article class="produce-card">
+
+                <div class="produce-icon">🌾</div>
+
+                <h3>Grains & Pulses</h3>
+
+                <p>
+                    Selected grains, cereals and pulses
+                    for household and bulk requirements.
+                </p>
+
+            </article>
+
+            <article class="produce-card">
+
+                <div class="produce-icon">🌿</div>
+
+                <h3>Herbs & Greens</h3>
+
+                <p>
+                    Fresh herbs and greens for kitchens,
+                    restaurants and retail buyers.
+                </p>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- FARMING -->
+
+<section class="section" id="farming">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span>Our approach</span>
+
+            <h2>
+                Farming with care for the soil and the harvest.
+            </h2>
+
+            <p>
+                We focus on practical farming methods that support
+                soil quality, responsible water use and consistent produce.
+            </p>
+
+        </div>
+
+        <div class="why-grid">
+
+            <article class="why-card">
+
+                <div class="why-icon">🌱</div>
+
+                <h3>Soil Health</h3>
+
+                <p>
+                    Crop planning and farming practices focused
+                    on maintaining productive and healthy soil.
+                </p>
+
+            </article>
+
+            <article class="why-card">
+
+                <div class="why-icon">💧</div>
+
+                <h3>Responsible Water Use</h3>
+
+                <p>
+                    Irrigation is planned according to crops,
+                    weather conditions and farm requirements.
+                </p>
+
+            </article>
+
+            <article class="why-card">
+
+                <div class="why-icon">🧺</div>
+
+                <h3>Fresh Harvest</h3>
+
+                <p>
+                    Produce is harvested according to maturity,
+                    demand and seasonal availability.
+                </p>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- CTA -->
+
+<section class="cta">
+
+    <div class="container">
+
+        <div class="cta-box">
+
+            <div>
+
+                <h2>
+                    Looking for fresh farm produce in bulk?
+                </h2>
+
+                <p>
+                    Share your product, quantity and delivery location
+                    to check current harvest availability and pricing.
+                </p>
+
+            </div>
+
+            <a href="#inquiry" class="btn btn-light">
+                Request Bulk Supply
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ENQUIRY -->
+
+<section class="section section-light" id="inquiry">
+
+    <div class="container contact-grid">
+
+        <div class="contact-info" id="contact">
+
+            <h2>
+                Request produce availability and pricing.
+            </h2>
+
+            <p>
+                Send your requirement and our farm team will contact you
+                regarding availability, quantity, pricing and delivery options.
+            </p>
+
+            <div class="info-row">
+                <strong>Call / WhatsApp</strong>
+                <span>+91 98765 43210</span>
+            </div>
+
+            <div class="info-row">
+                <strong>Email</strong>
+                <span>farm@greenroots.in</span>
+            </div>
+
+            <div class="info-row">
+                <strong>Farm Location</strong>
+                <span>Village Greenfield, Your District, India</span>
+            </div>
+
+            <div class="info-row">
+                <strong>Farm Enquiry Hours</strong>
+                <span>Monday – Saturday: 8:00 AM – 6:00 PM</span>
+            </div>
+
+            <div class="info-row">
+                <strong>Availability</strong>
+                <span>
+                    Produce availability and prices depend on season,
+                    harvest quantity and delivery location.
+                </span>
+            </div>
+
+        </div>
+
+        <form class="inquiry-form" action="#inquiry" method="post">
+
+            <input
+                type="text"
+                name="name"
+                placeholder="Full Name"
+                required>
+
+            <input
+                type="tel"
+                name="phone"
+                placeholder="Phone / WhatsApp"
+                required>
+
+            <input
+                type="email"
+                name="email"
+                placeholder="Email Address">
+
+            <select name="buyer_type" required>
+                <option value="">Buyer Type</option>
+                <option value="household">Household</option>
+                <option value="retailer">Retail Store</option>
+                <option value="restaurant">Restaurant / Hotel</option>
+                <option value="wholesaler">Wholesaler</option>
+                <option value="other">Other Business</option>
+            </select>
+
+            <select name="product" required>
+                <option value="">Product Requirement</option>
+                <option value="vegetables">Fresh Vegetables</option>
+                <option value="fruits">Fresh Fruits</option>
+                <option value="grains">Grains & Pulses</option>
+                <option value="herbs">Herbs & Greens</option>
+                <option value="mixed">Mixed Farm Produce</option>
+            </select>
+
+            <input
+                type="text"
+                name="quantity"
+                placeholder="Approximate Quantity"
+                required>
+
+            <input
+                type="text"
+                name="location"
+                placeholder="Delivery City / Location"
+                required>
+
+            <select name="frequency">
+                <option value="">Supply Frequency</option>
+                <option value="one-time">One-Time Requirement</option>
+                <option value="weekly">Weekly Supply</option>
+                <option value="monthly">Monthly Supply</option>
+                <option value="regular">Regular Business Supply</option>
+            </select>
+
+            <textarea
+                name="message"
+                placeholder="Describe the produce, preferred quantity, packaging or delivery requirement"></textarea>
+
+            <button type="submit" class="btn btn-primary">
+                Submit Farm Enquiry
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+    <div class="container">
+
+        <div class="footer-grid">
+
+            <div>
+
+                <div class="footer-logo">
+                    Green<span>Roots</span>
+                </div>
+
+                <p>
+                    Fresh vegetables, fruits, grains, herbs
+                    and seasonal farm produce for homes and businesses.
+                </p>
+
+            </div>
+
+            <div>
+
+                <h4>Our Produce</h4>
+
+                <ul>
+                    <li><a href="#produce">Vegetables</a></li>
+                    <li><a href="#produce">Fruits</a></li>
+                    <li><a href="#produce">Grains & Pulses</a></li>
+                    <li><a href="#produce">Herbs & Greens</a></li>
+                </ul>
+
+            </div>
+
+            <div>
+
+                <h4>Quick Links</h4>
+
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#farming">Our Farming</a></li>
+                    <li><a href="#inquiry">Supply Enquiry</a></li>
+                    <li><a href="#contact">Contact Details</a></li>
+                </ul>
+
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+
+            <span>
+                © 2026 GreenRoots Organic Farming. All rights reserved.
+            </span>
+
+            <span>
+                Seasonal availability, quantities and prices may vary.
+            </span>
+
+        </div>
+
+    </div>
+
+</footer>
+
+</body>
+</html>
