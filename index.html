@@ -1,0 +1,1392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ChampionEdge Sports Academy | Professional Sports Training</title>
+
+<meta
+    name="description"
+    content="Professional sports coaching for cricket, football, basketball, athletics and fitness. Join structured training programs for kids, beginners and competitive players."
+>
+
+<style>
+:root{
+    --blue:#1457d9;
+    --blue-dark:#0d347f;
+    --orange:#ff9f1c;
+    --orange-dark:#e28608;
+    --navy:#111827;
+    --white:#ffffff;
+    --light:#f5f7fb;
+    --text:#273142;
+    --muted:#6f7a88;
+    --border:#dfe5ec;
+    --green:#159b68;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#fff;
+    color:var(--text);
+    line-height:1.6;
+}
+
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+button,
+input,
+select,
+textarea{
+    font:inherit;
+}
+
+.container{
+    width:min(1120px,calc(100% - 32px));
+    margin:auto;
+}
+
+.btn{
+    min-height:46px;
+    padding:0 22px;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    border:0;
+    border-radius:8px;
+    font-weight:700;
+    cursor:pointer;
+    transition:.25s;
+}
+
+.btn-primary{
+    background:var(--blue);
+    color:#fff;
+}
+
+.btn-primary:hover{
+    background:var(--blue-dark);
+    transform:translateY(-2px);
+}
+
+.btn-orange{
+    background:var(--orange);
+    color:#1d2734;
+}
+
+.btn-dark{
+    background:var(--navy);
+    color:#fff;
+}
+
+.btn-light{
+    background:#fff;
+    color:var(--navy);
+    border:1px solid var(--border);
+}
+
+/* TOP BAR */
+
+.topbar{
+    background:#0b1220;
+    color:#cbd4df;
+    padding:8px 0;
+    font-size:12px;
+}
+
+.topbar-inner{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+}
+
+.topbar strong{
+    color:#fff;
+}
+
+/* HEADER */
+
+header{
+    background:#fff;
+    border-bottom:1px solid var(--border);
+    position:sticky;
+    top:0;
+    z-index:100;
+}
+
+.navbar{
+    min-height:72px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:24px;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    color:var(--navy);
+    font-size:23px;
+    font-weight:800;
+}
+
+.logo-icon{
+    width:42px;
+    height:42px;
+    border-radius:11px;
+    background:#eaf1ff;
+    display:grid;
+    place-items:center;
+    font-size:23px;
+}
+
+.logo span{
+    color:var(--orange);
+}
+
+.menu{
+    display:flex;
+    align-items:center;
+    gap:23px;
+    list-style:none;
+}
+
+.menu a{
+    color:#536071;
+    font-size:14px;
+    font-weight:600;
+}
+
+.menu a:hover{
+    color:var(--blue);
+}
+
+/* HERO */
+
+.hero{
+    padding:72px 0 86px;
+    color:#fff;
+    background:
+        radial-gradient(circle at 82% 20%,rgba(255,159,28,.22),transparent 28%),
+        linear-gradient(135deg,#10244a,#173b79);
+}
+
+.hero-grid{
+    display:grid;
+    grid-template-columns:1.05fr .95fr;
+    align-items:center;
+    gap:55px;
+}
+
+.badge{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    padding:8px 13px;
+    border-radius:30px;
+    background:rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.14);
+    color:#e1e9f2;
+    font-size:12px;
+    font-weight:700;
+    margin-bottom:18px;
+}
+
+.badge-dot{
+    width:8px;
+    height:8px;
+    border-radius:50%;
+    background:var(--orange);
+}
+
+.hero h1{
+    font-size:56px;
+    line-height:1.08;
+    letter-spacing:-2px;
+    margin-bottom:18px;
+}
+
+.hero h1 span{
+    color:#ffbd55;
+}
+
+.hero p{
+    max-width:600px;
+    color:#ced9e5;
+    font-size:17px;
+    margin-bottom:27px;
+}
+
+.hero-buttons{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+}
+
+.hero-points{
+    display:flex;
+    flex-wrap:wrap;
+    gap:20px;
+    margin-top:29px;
+    color:#d8e1ea;
+    font-size:13px;
+}
+
+.hero-points strong{
+    color:var(--orange);
+}
+
+.sports-visual{
+    background:#fff;
+    border-radius:22px;
+    padding:25px;
+    box-shadow:0 24px 55px rgba(0,0,0,.25);
+}
+
+.sports-card{
+    min-height:325px;
+    border-radius:17px;
+    background:linear-gradient(145deg,#edf3ff,#fff1d9);
+    position:relative;
+    overflow:hidden;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.main-icon{
+    font-size:120px;
+}
+
+.float-item{
+    position:absolute;
+    width:64px;
+    height:64px;
+    border-radius:17px;
+    display:grid;
+    place-items:center;
+    background:#fff;
+    font-size:31px;
+    box-shadow:0 10px 26px rgba(30,45,70,.14);
+}
+
+.item-one{top:24px;left:25px;}
+.item-two{top:32px;right:30px;}
+.item-three{bottom:27px;left:48px;}
+.item-four{bottom:25px;right:38px;}
+
+/* QUICK FORM */
+
+.quick-wrap{
+    margin-top:-52px;
+    position:relative;
+    z-index:20;
+}
+
+.quick-form{
+    background:#fff;
+    padding:20px;
+    border-radius:14px;
+    box-shadow:0 18px 45px rgba(25,40,70,.14);
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr auto;
+    gap:12px;
+}
+
+.quick-field{
+    padding:0 10px;
+    border-right:1px solid var(--border);
+}
+
+.quick-field label{
+    display:block;
+    color:#929aa5;
+    font-size:9px;
+    font-weight:800;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    margin-bottom:6px;
+}
+
+.quick-field select,
+.quick-field input{
+    width:100%;
+    border:0;
+    outline:0;
+    background:transparent;
+    color:var(--text);
+    font-weight:600;
+}
+
+/* FEATURES */
+
+.features{
+    padding:72px 0 52px;
+}
+
+.features-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    border:1px solid var(--border);
+    border-radius:14px;
+    overflow:hidden;
+}
+
+.feature{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:12px;
+    padding:23px 18px;
+    border-right:1px solid var(--border);
+}
+
+.feature:last-child{
+    border-right:0;
+}
+
+.feature-icon{
+    font-size:27px;
+}
+
+.feature h3{
+    color:var(--navy);
+    font-size:13px;
+    margin-bottom:2px;
+}
+
+.feature p{
+    color:var(--muted);
+    font-size:11px;
+}
+
+/* COMMON */
+
+.section{
+    padding:72px 0;
+}
+
+.section-light{
+    background:var(--light);
+}
+
+.section-heading{
+    max-width:660px;
+    margin:0 auto 38px;
+    text-align:center;
+}
+
+.section-heading span{
+    color:var(--blue);
+    text-transform:uppercase;
+    letter-spacing:1.8px;
+    font-size:11px;
+    font-weight:800;
+}
+
+.section-heading h2{
+    color:var(--navy);
+    font-size:38px;
+    line-height:1.2;
+    margin:8px 0 10px;
+}
+
+.section-heading p{
+    color:var(--muted);
+}
+
+/* PROGRAMS */
+
+.program-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+}
+
+.program-card{
+    background:#fff;
+    border:1px solid var(--border);
+    border-radius:15px;
+    padding:25px 20px;
+    text-align:center;
+    transition:.25s;
+}
+
+.program-card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 14px 34px rgba(25,40,70,.08);
+}
+
+.program-icon{
+    width:70px;
+    height:70px;
+    margin:0 auto 14px;
+    border-radius:50%;
+    background:#eaf1ff;
+    display:grid;
+    place-items:center;
+    font-size:34px;
+}
+
+.program-card h3{
+    color:var(--navy);
+    font-size:17px;
+    margin-bottom:6px;
+}
+
+.program-card p{
+    color:var(--muted);
+    font-size:12px;
+}
+
+/* WHY US */
+
+.why-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+}
+
+.why-card{
+    background:#fff;
+    border:1px solid var(--border);
+    border-radius:15px;
+    padding:25px;
+}
+
+.why-icon{
+    width:58px;
+    height:58px;
+    border-radius:14px;
+    background:#fff1d8;
+    display:grid;
+    place-items:center;
+    font-size:28px;
+    margin-bottom:15px;
+}
+
+.why-card h3{
+    color:var(--navy);
+    font-size:17px;
+    margin-bottom:6px;
+}
+
+.why-card p{
+    color:var(--muted);
+    font-size:12px;
+}
+
+/* CTA */
+
+.cta{
+    padding:34px 0 72px;
+}
+
+.cta-box{
+    background:linear-gradient(135deg,var(--blue),var(--blue-dark));
+    color:#fff;
+    border-radius:18px;
+    padding:40px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:35px;
+}
+
+.cta-box h2{
+    font-size:32px;
+    line-height:1.2;
+    margin-bottom:6px;
+}
+
+.cta-box p{
+    color:#dce7f6;
+}
+
+/* CONTACT */
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:.8fr 1.2fr;
+    gap:42px;
+}
+
+.contact-info{
+    background:var(--navy);
+    color:#fff;
+    border-radius:16px;
+    padding:34px;
+}
+
+.contact-info h2{
+    font-size:29px;
+    line-height:1.25;
+    margin-bottom:12px;
+}
+
+.contact-info > p{
+    color:#c8d0da;
+    font-size:13px;
+    margin-bottom:22px;
+}
+
+.info-row{
+    padding:13px 0;
+    border-top:1px solid rgba(255,255,255,.13);
+}
+
+.info-row strong{
+    display:block;
+    font-size:11px;
+    margin-bottom:4px;
+}
+
+.info-row span{
+    color:#c8d0da;
+    font-size:13px;
+}
+
+.trial-form{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:13px;
+}
+
+.trial-form input,
+.trial-form select,
+.trial-form textarea{
+    width:100%;
+    padding:14px;
+    border:1px solid var(--border);
+    border-radius:8px;
+    outline:none;
+    background:#fff;
+}
+
+.trial-form input:focus,
+.trial-form select:focus,
+.trial-form textarea:focus{
+    border-color:var(--blue);
+    box-shadow:0 0 0 3px rgba(20,87,217,.1);
+}
+
+.trial-form textarea{
+    min-height:105px;
+    resize:vertical;
+    grid-column:span 2;
+}
+
+.trial-form button,
+.form-note{
+    grid-column:span 2;
+}
+
+.form-note{
+    color:#7d8792;
+    font-size:10px;
+    line-height:1.6;
+}
+
+/* FOOTER */
+
+footer{
+    background:#0b1220;
+    color:#fff;
+    padding:48px 0 20px;
+}
+
+.footer-grid{
+    display:grid;
+    grid-template-columns:1.6fr 1fr 1fr;
+    gap:40px;
+}
+
+.footer-logo{
+    font-size:23px;
+    font-weight:800;
+    margin-bottom:11px;
+}
+
+.footer-logo span{
+    color:var(--orange);
+}
+
+footer p,
+footer a{
+    color:#9ca9b8;
+    font-size:12px;
+    line-height:1.8;
+}
+
+footer h4{
+    margin-bottom:12px;
+}
+
+footer ul{
+    list-style:none;
+}
+
+footer li{
+    margin-bottom:7px;
+}
+
+footer a:hover{
+    color:#fff;
+}
+
+.footer-bottom{
+    border-top:1px solid #29364a;
+    margin-top:30px;
+    padding-top:18px;
+    display:flex;
+    justify-content:space-between;
+    gap:20px;
+    color:#748397;
+    font-size:11px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+    .menu{
+        display:none;
+    }
+
+    .hero-grid,
+    .contact-grid{
+        grid-template-columns:1fr;
+    }
+
+    .quick-form{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .quick-form button{
+        grid-column:span 2;
+    }
+
+    .features-grid,
+    .program-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .why-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media(max-width:600px){
+
+    .container{
+        width:min(100% - 22px,1120px);
+    }
+
+    .topbar-inner{
+        justify-content:center;
+        text-align:center;
+    }
+
+    .topbar-inner span:last-child{
+        display:none;
+    }
+
+    .logo{
+        font-size:19px;
+    }
+
+    .navbar .btn{
+        padding:0 13px;
+        font-size:11px;
+    }
+
+    .hero{
+        padding:55px 0 74px;
+    }
+
+    .hero h1{
+        font-size:41px;
+        letter-spacing:-1.2px;
+    }
+
+    .sports-card{
+        min-height:270px;
+    }
+
+    .main-icon{
+        font-size:90px;
+    }
+
+    .quick-wrap{
+        margin-top:-30px;
+    }
+
+    .quick-form{
+        grid-template-columns:1fr;
+    }
+
+    .quick-form button{
+        grid-column:auto;
+    }
+
+    .quick-field{
+        border-right:0;
+        border-bottom:1px solid var(--border);
+        padding:9px 3px;
+    }
+
+    .features-grid,
+    .program-grid,
+    .why-grid,
+    .footer-grid{
+        grid-template-columns:1fr;
+    }
+
+    .feature{
+        justify-content:flex-start;
+        border-right:0;
+        border-bottom:1px solid var(--border);
+    }
+
+    .section{
+        padding:60px 0;
+    }
+
+    .section-heading h2{
+        font-size:31px;
+    }
+
+    .cta-box{
+        padding:29px 22px;
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+    .cta-box h2{
+        font-size:27px;
+    }
+
+    .trial-form{
+        grid-template-columns:1fr;
+    }
+
+    .trial-form textarea,
+    .trial-form button,
+    .form-note{
+        grid-column:auto;
+    }
+
+    .footer-bottom{
+        flex-direction:column;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- TOP BAR -->
+
+<div class="topbar">
+    <div class="container topbar-inner">
+
+        <span>
+            Cricket · Football · Basketball · Athletics · Fitness
+        </span>
+
+        <span>
+            Admission enquiries:
+            <strong>+91 98765 43210</strong>
+        </span>
+
+    </div>
+</div>
+
+<!-- HEADER -->
+
+<header>
+
+    <div class="container navbar">
+
+        <a href="#home" class="logo">
+            <div class="logo-icon">🏆</div>
+            Champion<span>Edge</span>
+        </a>
+
+        <ul class="menu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#programs">Sports Programs</a></li>
+            <li><a href="#academy">Why Us</a></li>
+            <li><a href="#trial">Trial Session</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <a href="#trial" class="btn btn-primary">
+            Join Academy
+        </a>
+
+    </div>
+
+</header>
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+    <div class="container hero-grid">
+
+        <div>
+
+            <div class="badge">
+                <span class="badge-dot"></span>
+                Structured coaching for young and aspiring athletes
+            </div>
+
+            <h1>
+                Train with purpose. <span>Play with confidence.</span>
+            </h1>
+
+            <p>
+                Professional sports coaching for kids, beginners
+                and competitive players with structured training,
+                skill development, fitness and regular performance guidance.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#trial" class="btn btn-orange">
+                    Book Trial Session
+                </a>
+
+                <a href="#programs" class="btn btn-light">
+                    Explore Programs
+                </a>
+
+            </div>
+
+            <div class="hero-points">
+                <div><strong>✓</strong> Experienced coaches</div>
+                <div><strong>✓</strong> Age-based batches</div>
+                <div><strong>✓</strong> Skill & fitness training</div>
+            </div>
+
+        </div>
+
+        <div class="sports-visual">
+
+            <div class="sports-card">
+
+                <div class="main-icon">🏅</div>
+
+                <div class="float-item item-one">🏏</div>
+                <div class="float-item item-two">⚽</div>
+                <div class="float-item item-three">🏀</div>
+                <div class="float-item item-four">🏃</div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- QUICK ENQUIRY -->
+
+<div class="quick-wrap">
+
+    <div class="container">
+
+        <form class="quick-form" action="#trial" method="get">
+
+            <div class="quick-field">
+
+                <label>Choose Sport</label>
+
+                <select name="sport" required>
+                    <option value="">Select sport</option>
+                    <option value="cricket">Cricket</option>
+                    <option value="football">Football</option>
+                    <option value="basketball">Basketball</option>
+                    <option value="athletics">Athletics</option>
+                    <option value="fitness">Fitness Training</option>
+                </select>
+
+            </div>
+
+            <div class="quick-field">
+
+                <label>Age Group</label>
+
+                <select name="age_group" required>
+                    <option value="">Select age</option>
+                    <option value="6-9">6 – 9 Years</option>
+                    <option value="10-13">10 – 13 Years</option>
+                    <option value="14-17">14 – 17 Years</option>
+                    <option value="18-plus">18+ Years</option>
+                </select>
+
+            </div>
+
+            <div class="quick-field">
+
+                <label>Preferred Batch</label>
+
+                <select name="batch">
+                    <option value="">Select batch</option>
+                    <option value="morning">Morning</option>
+                    <option value="evening">Evening</option>
+                    <option value="weekend">Weekend</option>
+                    <option value="flexible">Flexible</option>
+                </select>
+
+            </div>
+
+            <button type="submit" class="btn btn-primary">
+                Check Batch
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+<!-- FEATURES -->
+
+<section class="features">
+
+    <div class="container features-grid">
+
+        <div class="feature">
+
+            <div class="feature-icon">👨‍🏫</div>
+
+            <div>
+                <h3>Expert Coaching</h3>
+                <p>Structured guidance from trainers</p>
+            </div>
+
+        </div>
+
+        <div class="feature">
+
+            <div class="feature-icon">🎯</div>
+
+            <div>
+                <h3>Skill Development</h3>
+                <p>Technique and game understanding</p>
+            </div>
+
+        </div>
+
+        <div class="feature">
+
+            <div class="feature-icon">💪</div>
+
+            <div>
+                <h3>Fitness Training</h3>
+                <p>Strength, stamina and mobility</p>
+            </div>
+
+        </div>
+
+        <div class="feature">
+
+            <div class="feature-icon">📈</div>
+
+            <div>
+                <h3>Progress Review</h3>
+                <p>Track development over time</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- PROGRAMS -->
+
+<section class="section section-light" id="programs">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span>Sports programs</span>
+
+            <h2>
+                Coaching for different sports and skill levels.
+            </h2>
+
+            <p>
+                Programs can be adapted according to age,
+                experience and available training batches.
+            </p>
+
+        </div>
+
+        <div class="program-grid">
+
+            <article class="program-card">
+
+                <div class="program-icon">🏏</div>
+
+                <h3>Cricket Academy</h3>
+
+                <p>
+                    Batting, bowling, fielding,
+                    match awareness and fitness training.
+                </p>
+
+            </article>
+
+            <article class="program-card">
+
+                <div class="program-icon">⚽</div>
+
+                <h3>Football Coaching</h3>
+
+                <p>
+                    Ball control, passing, shooting,
+                    positioning and match fitness.
+                </p>
+
+            </article>
+
+            <article class="program-card">
+
+                <div class="program-icon">🏀</div>
+
+                <h3>Basketball Training</h3>
+
+                <p>
+                    Dribbling, shooting, passing,
+                    footwork and game fundamentals.
+                </p>
+
+            </article>
+
+            <article class="program-card">
+
+                <div class="program-icon">🏃</div>
+
+                <h3>Athletics & Fitness</h3>
+
+                <p>
+                    Speed, endurance, coordination,
+                    movement and conditioning sessions.
+                </p>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- WHY US -->
+
+<section class="section" id="academy">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span>Why choose our academy</span>
+
+            <h2>
+                Build skills, fitness and sporting discipline.
+            </h2>
+
+        </div>
+
+        <div class="why-grid">
+
+            <article class="why-card">
+
+                <div class="why-icon">🧑‍🏫</div>
+
+                <h3>Structured Coaching</h3>
+
+                <p>
+                    Training sessions follow a progressive plan
+                    covering technique, practice and fitness.
+                </p>
+
+            </article>
+
+            <article class="why-card">
+
+                <div class="why-icon">👥</div>
+
+                <h3>Age-Based Batches</h3>
+
+                <p>
+                    Players train in appropriate groups
+                    based on age and development level.
+                </p>
+
+            </article>
+
+            <article class="why-card">
+
+                <div class="why-icon">🏅</div>
+
+                <h3>Performance Focus</h3>
+
+                <p>
+                    Coaching focuses on consistent improvement,
+                    confidence, fitness and game understanding.
+                </p>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- CTA -->
+
+<section class="cta">
+
+    <div class="container">
+
+        <div class="cta-box">
+
+            <div>
+
+                <h2>
+                    Want to experience a training session first?
+                </h2>
+
+                <p>
+                    Request a trial session and check the available
+                    sport, age group and training batch.
+                </p>
+
+            </div>
+
+            <a href="#trial" class="btn btn-orange">
+                Book Trial Session
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- TRIAL FORM -->
+
+<section class="section section-light" id="trial">
+
+    <div class="container contact-grid">
+
+        <div class="contact-info" id="contact">
+
+            <h2>
+                Request a trial or admission consultation.
+            </h2>
+
+            <p>
+                Share the player's details and preferred sport.
+                Our academy team will contact you to confirm
+                batch availability, schedule and applicable fees.
+            </p>
+
+            <div class="info-row">
+                <strong>Call / WhatsApp</strong>
+                <span>+91 98765 43210</span>
+            </div>
+
+            <div class="info-row">
+                <strong>Email</strong>
+                <span>admissions@championedge.in</span>
+            </div>
+
+            <div class="info-row">
+                <strong>Academy Address</strong>
+                <span>25 Sports Complex Road, Your City, India</span>
+            </div>
+
+            <div class="info-row">
+                <strong>Training Hours</strong>
+                <span>Monday – Sunday: 6:00 AM – 9:00 PM</span>
+            </div>
+
+            <div class="info-row">
+                <strong>Batch Information</strong>
+                <span>
+                    Batch timings, fees and availability
+                    depend on sport, age group and coaching schedule.
+                </span>
+            </div>
+
+        </div>
+
+        <form class="trial-form" action="#trial" method="post">
+
+            <input
+                type="text"
+                name="student_name"
+                placeholder="Player Name"
+                required>
+
+            <input
+                type="tel"
+                name="phone"
+                placeholder="Parent / Player Phone"
+                required>
+
+            <input
+                type="email"
+                name="email"
+                placeholder="Email Address">
+
+            <input
+                type="number"
+                name="age"
+                min="5"
+                max="70"
+                placeholder="Player Age"
+                required>
+
+            <select name="sport" required>
+                <option value="">Select Sport</option>
+                <option value="cricket">Cricket</option>
+                <option value="football">Football</option>
+                <option value="basketball">Basketball</option>
+                <option value="athletics">Athletics</option>
+                <option value="fitness">Fitness Training</option>
+            </select>
+
+            <select name="experience">
+                <option value="">Playing Experience</option>
+                <option value="beginner">Beginner</option>
+                <option value="school-level">School Level</option>
+                <option value="club-level">Club Level</option>
+                <option value="competitive">Competitive Player</option>
+            </select>
+
+            <select name="batch">
+                <option value="">Preferred Batch</option>
+                <option value="morning">Morning</option>
+                <option value="evening">Evening</option>
+                <option value="weekend">Weekend</option>
+                <option value="flexible">Flexible</option>
+            </select>
+
+            <input
+                type="text"
+                name="city"
+                placeholder="City / Locality"
+                required>
+
+            <textarea
+                name="message"
+                placeholder="Mention training goals, preferred days or any other requirement"></textarea>
+
+            <div class="form-note">
+                Submission of this form is an enquiry only.
+                Trial availability, coaching fees and batch allocation
+                are confirmed separately by the academy.
+            </div>
+
+            <button type="submit" class="btn btn-primary">
+                Submit Trial Request
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+    <div class="container">
+
+        <div class="footer-grid">
+
+            <div>
+
+                <div class="footer-logo">
+                    Champion<span>Edge</span>
+                </div>
+
+                <p>
+                    Professional coaching for cricket, football,
+                    basketball, athletics and general sports fitness.
+                </p>
+
+            </div>
+
+            <div>
+
+                <h4>Sports Programs</h4>
+
+                <ul>
+                    <li><a href="#programs">Cricket</a></li>
+                    <li><a href="#programs">Football</a></li>
+                    <li><a href="#programs">Basketball</a></li>
+                    <li><a href="#programs">Athletics</a></li>
+                </ul>
+
+            </div>
+
+            <div>
+
+                <h4>Quick Links</h4>
+
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#academy">Why Us</a></li>
+                    <li><a href="#trial">Trial Session</a></li>
+                    <li><a href="#contact">Contact Details</a></li>
+                </ul>
+
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+
+            <span>
+                © 2026 ChampionEdge Sports Academy. All rights reserved.
+            </span>
+
+            <span>
+                Batch availability, fees and schedules are confirmed during admission.
+            </span>
+
+        </div>
+
+    </div>
+
+</footer>
+
+</body>
+</html>
