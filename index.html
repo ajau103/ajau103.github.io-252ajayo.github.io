@@ -1,0 +1,1343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>StillSpace Yoga | Yoga Classes for Beginners & All Levels</title>
+
+<meta
+    name="description"
+    content="Join welcoming yoga classes for beginners and experienced students. Explore gentle yoga, flow, mobility and private sessions at StillSpace Yoga."
+>
+
+<style>
+:root{
+    --terracotta:#b8664f;
+    --terracotta-dark:#914936;
+    --sage:#738b73;
+    --sage-dark:#566b57;
+    --cream:#faf5ed;
+    --cream2:#f4eee5;
+    --sand:#dfc7aa;
+    --white:#ffffff;
+    --dark:#34332e;
+    --text:#4c4c46;
+    --muted:#7c7b73;
+    --border:#e6dfd5;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#fff;
+    color:var(--text);
+    line-height:1.6;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+button,
+input,
+select,
+textarea{
+    font:inherit;
+}
+
+.container{
+    width:min(1120px,calc(100% - 32px));
+    margin:auto;
+}
+
+/* BUTTONS */
+
+.btn{
+    min-height:46px;
+    padding:0 22px;
+    border:0;
+    border-radius:30px;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    font-size:14px;
+    font-weight:700;
+    cursor:pointer;
+    transition:.25s;
+}
+
+.btn-primary{
+    background:var(--terracotta);
+    color:#fff;
+}
+
+.btn-primary:hover{
+    background:var(--terracotta-dark);
+    transform:translateY(-2px);
+}
+
+.btn-sage{
+    background:var(--sage);
+    color:#fff;
+}
+
+.btn-light{
+    background:#fff;
+    color:var(--dark);
+    border:1px solid var(--border);
+}
+
+/* TOPBAR */
+
+.topbar{
+    background:var(--sage-dark);
+    color:#e3e9e1;
+    padding:8px 0;
+    font-size:12px;
+}
+
+.topbar-inner{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+}
+
+.topbar strong{
+    color:#fff;
+}
+
+/* HEADER */
+
+header{
+    position:sticky;
+    top:0;
+    z-index:100;
+    background:rgba(255,255,255,.96);
+    border-bottom:1px solid var(--border);
+    backdrop-filter:blur(10px);
+}
+
+.navbar{
+    min-height:72px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:24px;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    color:var(--dark);
+    font-size:23px;
+    font-weight:800;
+}
+
+.logo-mark{
+    width:43px;
+    height:43px;
+    border-radius:50%;
+    display:grid;
+    place-items:center;
+    background:#eef2e9;
+    color:var(--sage-dark);
+    font-size:23px;
+}
+
+.logo span{
+    color:var(--terracotta);
+}
+
+.menu{
+    display:flex;
+    list-style:none;
+    gap:24px;
+}
+
+.menu a{
+    color:#62625d;
+    font-size:13px;
+    font-weight:600;
+}
+
+.menu a:hover{
+    color:var(--terracotta);
+}
+
+/* HERO */
+
+.hero{
+    overflow:hidden;
+    padding:78px 0 82px;
+    background:
+        radial-gradient(circle at 82% 18%,rgba(184,102,79,.12),transparent 24%),
+        linear-gradient(135deg,#fbf6ef,#f2f4ec);
+}
+
+.hero-grid{
+    display:grid;
+    grid-template-columns:1.02fr .98fr;
+    align-items:center;
+    gap:60px;
+}
+
+.eyebrow{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    font-size:11px;
+    text-transform:uppercase;
+    letter-spacing:1.5px;
+    color:var(--terracotta-dark);
+    font-weight:800;
+    margin-bottom:17px;
+}
+
+.eyebrow:before{
+    content:"";
+    width:30px;
+    height:2px;
+    background:var(--terracotta);
+}
+
+.hero h1{
+    color:var(--dark);
+    max-width:630px;
+    font-size:57px;
+    line-height:1.06;
+    letter-spacing:-2px;
+    margin-bottom:18px;
+}
+
+.hero h1 span{
+    color:var(--sage-dark);
+}
+
+.hero p{
+    max-width:590px;
+    color:var(--muted);
+    font-size:17px;
+    margin-bottom:27px;
+}
+
+.hero-buttons{
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+}
+
+.hero-points{
+    display:flex;
+    flex-wrap:wrap;
+    gap:20px;
+    margin-top:28px;
+    color:#696a64;
+    font-size:12px;
+}
+
+.hero-points strong{
+    color:var(--terracotta);
+}
+
+/* YOGA VISUAL */
+
+.yoga-visual{
+    position:relative;
+    min-height:390px;
+}
+
+.circle-back{
+    position:absolute;
+    width:320px;
+    height:320px;
+    border-radius:50%;
+    right:20px;
+    top:35px;
+    background:var(--sand);
+    opacity:.45;
+}
+
+.pose-card{
+    position:absolute;
+    width:285px;
+    height:320px;
+    right:55px;
+    top:25px;
+    border-radius:145px 145px 25px 25px;
+    overflow:hidden;
+    background:linear-gradient(155deg,#8fa18a,#617560);
+    box-shadow:0 26px 55px rgba(50,60,45,.17);
+}
+
+.pose{
+    position:absolute;
+    inset:0;
+    display:grid;
+    place-items:center;
+    font-size:125px;
+}
+
+.pose-label{
+    position:absolute;
+    left:24px;
+    bottom:22px;
+    color:#fff;
+}
+
+.pose-label small{
+    display:block;
+    color:#e4eddf;
+    font-size:9px;
+    font-weight:800;
+    letter-spacing:1px;
+}
+
+.pose-label strong{
+    font-size:14px;
+}
+
+.float-card{
+    position:absolute;
+    background:#fff;
+    border:1px solid var(--border);
+    border-radius:14px;
+    padding:12px 15px;
+    box-shadow:0 12px 28px rgba(65,65,55,.10);
+}
+
+.float-card strong{
+    display:block;
+    color:var(--dark);
+    font-size:12px;
+}
+
+.float-card span{
+    display:block;
+    color:#85857e;
+    font-size:9px;
+}
+
+.fc1{
+    left:0;
+    top:45px;
+}
+
+.fc2{
+    left:20px;
+    bottom:30px;
+}
+
+.fc3{
+    right:0;
+    bottom:0;
+}
+
+/* BENEFITS */
+
+.benefits{
+    background:#fff;
+    border-bottom:1px solid var(--border);
+}
+
+.benefit-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+}
+
+.benefit{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:11px;
+    padding:22px 15px;
+    border-right:1px solid var(--border);
+}
+
+.benefit:last-child{
+    border-right:0;
+}
+
+.benefit-icon{
+    font-size:25px;
+}
+
+.benefit h3{
+    color:var(--dark);
+    font-size:13px;
+}
+
+.benefit p{
+    color:var(--muted);
+    font-size:10px;
+}
+
+/* COMMON */
+
+.section{
+    padding:70px 0;
+}
+
+.section-light{
+    background:var(--cream);
+}
+
+.section-head{
+    max-width:650px;
+    margin:0 auto 37px;
+    text-align:center;
+}
+
+.section-head small{
+    color:var(--terracotta);
+    text-transform:uppercase;
+    letter-spacing:1.7px;
+    font-size:10px;
+    font-weight:800;
+}
+
+.section-head h2{
+    color:var(--dark);
+    font-size:37px;
+    line-height:1.2;
+    margin:7px 0 10px;
+}
+
+.section-head p{
+    color:var(--muted);
+    font-size:14px;
+}
+
+/* CLASSES */
+
+.classes-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+}
+
+.class-card{
+    background:#fff;
+    border:1px solid var(--border);
+    border-radius:18px;
+    padding:25px 21px;
+    transition:.25s;
+}
+
+.class-card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 15px 35px rgba(65,60,50,.07);
+}
+
+.class-icon{
+    width:58px;
+    height:58px;
+    border-radius:50%;
+    display:grid;
+    place-items:center;
+    background:#edf2e9;
+    font-size:29px;
+    margin-bottom:15px;
+}
+
+.class-card:nth-child(even) .class-icon{
+    background:#f7e9e3;
+}
+
+.class-card h3{
+    color:var(--dark);
+    font-size:17px;
+    margin-bottom:6px;
+}
+
+.class-card p{
+    color:var(--muted);
+    font-size:12px;
+}
+
+/* SCHEDULE */
+
+.schedule-wrap{
+    display:grid;
+    grid-template-columns:.9fr 1.1fr;
+    gap:35px;
+    align-items:center;
+}
+
+.schedule-intro{
+    background:var(--sage-dark);
+    color:#fff;
+    border-radius:22px;
+    padding:33px;
+}
+
+.schedule-intro small{
+    color:#dbe8d8;
+    font-size:10px;
+    letter-spacing:1.5px;
+    text-transform:uppercase;
+    font-weight:800;
+}
+
+.schedule-intro h2{
+    font-size:31px;
+    line-height:1.2;
+    margin:7px 0 10px;
+}
+
+.schedule-intro p{
+    color:#d7e0d5;
+    font-size:13px;
+}
+
+.schedule-list{
+    display:grid;
+    gap:12px;
+}
+
+.schedule-row{
+    background:#fff;
+    border:1px solid var(--border);
+    border-radius:13px;
+    padding:16px 18px;
+    display:grid;
+    grid-template-columns:90px 1fr auto;
+    align-items:center;
+    gap:14px;
+}
+
+.schedule-row strong{
+    color:var(--dark);
+    font-size:13px;
+}
+
+.schedule-row span{
+    color:var(--muted);
+    font-size:11px;
+}
+
+.schedule-row small{
+    color:var(--terracotta-dark);
+    font-size:10px;
+    font-weight:800;
+}
+
+/* CTA */
+
+.cta{
+    padding:0 0 70px;
+}
+
+.cta-box{
+    border-radius:20px;
+    padding:38px;
+    background:linear-gradient(135deg,#b8664f,#955441);
+    color:#fff;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:35px;
+}
+
+.cta-box h2{
+    font-size:29px;
+    line-height:1.2;
+    margin-bottom:6px;
+}
+
+.cta-box p{
+    color:#f4e6e1;
+    font-size:13px;
+}
+
+/* CONTACT */
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:.8fr 1.2fr;
+    gap:38px;
+}
+
+.contact-info{
+    background:var(--dark);
+    color:#fff;
+    border-radius:20px;
+    padding:32px;
+}
+
+.contact-info h2{
+    font-size:28px;
+    line-height:1.25;
+    margin-bottom:10px;
+}
+
+.contact-info > p{
+    color:#cbc9c3;
+    font-size:12px;
+    margin-bottom:20px;
+}
+
+.info-row{
+    padding:12px 0;
+    border-top:1px solid rgba(255,255,255,.12);
+}
+
+.info-row strong{
+    display:block;
+    font-size:10px;
+    margin-bottom:3px;
+}
+
+.info-row span,
+.info-row a{
+    color:#d1cec8;
+    font-size:12px;
+}
+
+.info-row a:hover{
+    color:#fff;
+}
+
+.yoga-form{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:12px;
+}
+
+.yoga-form input,
+.yoga-form select,
+.yoga-form textarea{
+    width:100%;
+    padding:13px 14px;
+    border:1px solid var(--border);
+    border-radius:10px;
+    outline:none;
+    background:#fff;
+}
+
+.yoga-form input:focus,
+.yoga-form select:focus,
+.yoga-form textarea:focus{
+    border-color:var(--terracotta);
+    box-shadow:0 0 0 3px rgba(184,102,79,.09);
+}
+
+.yoga-form textarea{
+    min-height:100px;
+    resize:vertical;
+    grid-column:span 2;
+}
+
+.yoga-form button,
+.form-note{
+    grid-column:span 2;
+}
+
+.form-note{
+    color:#81817a;
+    font-size:10px;
+    line-height:1.55;
+}
+
+/* FOOTER */
+
+footer{
+    background:#2b2d29;
+    color:#fff;
+    padding:40px 0 18px;
+}
+
+.footer-main{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    gap:40px;
+}
+
+.footer-brand{
+    max-width:420px;
+}
+
+.footer-logo{
+    font-size:21px;
+    font-weight:800;
+    margin-bottom:7px;
+}
+
+.footer-logo span{
+    color:#d88b73;
+}
+
+footer p,
+footer a{
+    color:#aaa9a3;
+    font-size:11px;
+}
+
+.footer-links{
+    display:flex;
+    flex-wrap:wrap;
+    gap:18px;
+}
+
+.footer-links a:hover{
+    color:#fff;
+}
+
+.footer-bottom{
+    border-top:1px solid #454741;
+    margin-top:27px;
+    padding-top:16px;
+    display:flex;
+    justify-content:space-between;
+    gap:20px;
+    color:#7e807a;
+    font-size:10px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+    .menu{
+        display:none;
+    }
+
+    .hero-grid,
+    .schedule-wrap,
+    .contact-grid{
+        grid-template-columns:1fr;
+    }
+
+    .classes-grid,
+    .benefit-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media(max-width:600px){
+
+    .container{
+        width:min(100% - 22px,1120px);
+    }
+
+    .topbar-inner{
+        justify-content:center;
+        text-align:center;
+    }
+
+    .topbar-inner span:last-child{
+        display:none;
+    }
+
+    .logo{
+        font-size:18px;
+    }
+
+    .navbar > .btn{
+        padding:0 13px;
+        font-size:11px;
+    }
+
+    .hero{
+        padding:55px 0;
+    }
+
+    .hero h1{
+        font-size:40px;
+        letter-spacing:-1px;
+    }
+
+    .yoga-visual{
+        min-height:420px;
+    }
+
+    .pose-card{
+        width:270px;
+        right:0;
+    }
+
+    .classes-grid,
+    .benefit-grid{
+        grid-template-columns:1fr;
+    }
+
+    .benefit{
+        justify-content:flex-start;
+        border-right:0;
+        border-bottom:1px solid var(--border);
+    }
+
+    .section{
+        padding:55px 0;
+    }
+
+    .section-head h2{
+        font-size:30px;
+    }
+
+    .schedule-row{
+        grid-template-columns:1fr;
+        gap:3px;
+    }
+
+    .cta-box{
+        padding:27px 22px;
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+    .yoga-form{
+        grid-template-columns:1fr;
+    }
+
+    .yoga-form textarea,
+    .yoga-form button,
+    .form-note{
+        grid-column:auto;
+    }
+
+    .footer-main,
+    .footer-bottom{
+        flex-direction:column;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- TOP BAR -->
+
+<div class="topbar">
+    <div class="container topbar-inner">
+        <span>Beginner Yoga · Gentle Flow · Mobility · Private Sessions</span>
+        <span>Class Information: <strong>(512) 555-0196</strong></span>
+    </div>
+</div>
+
+<!-- HEADER -->
+
+<header>
+
+    <div class="container navbar">
+
+        <a href="#home" class="logo">
+            <div class="logo-mark">◌</div>
+            Still<span>Space</span>
+        </a>
+
+        <ul class="menu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#classes">Classes</a></li>
+            <li><a href="#schedule">Schedule</a></li>
+            <li><a href="#trial">Trial Class</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <a href="#trial" class="btn btn-sage">
+            Join a Class
+        </a>
+
+    </div>
+
+</header>
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+    <div class="container hero-grid">
+
+        <div>
+
+            <div class="eyebrow">
+                Yoga for real life
+            </div>
+
+            <h1>
+                Move gently. Breathe deeply. <span>Feel more connected.</span>
+            </h1>
+
+            <p>
+                Welcoming yoga classes for beginners and experienced students
+                with options for gentle movement, flow, mobility and private
+                instruction in a calm studio environment.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#trial" class="btn btn-primary">
+                    Book a Trial Class
+                </a>
+
+                <a href="tel:+15125550196" class="btn btn-light">
+                    Call (512) 555-0196
+                </a>
+
+            </div>
+
+            <div class="hero-points">
+                <div><strong>✓</strong> Beginner-friendly</div>
+                <div><strong>✓</strong> Small group classes</div>
+                <div><strong>✓</strong> Private sessions available</div>
+            </div>
+
+        </div>
+
+        <!-- CSS VISUAL - NO EXTERNAL IMAGE -->
+
+        <div class="yoga-visual">
+
+            <div class="circle-back"></div>
+
+            <div class="float-card fc1">
+                <strong>🌿 Gentle Practice</strong>
+                <span>Move at a comfortable pace</span>
+            </div>
+
+            <div class="pose-card">
+
+                <div class="pose">🧘</div>
+
+                <div class="pose-label">
+                    <small>STILLSPACE YOGA</small>
+                    <strong>Move · Breathe · Reset</strong>
+                </div>
+
+            </div>
+
+            <div class="float-card fc2">
+                <strong>☀️ Morning Classes</strong>
+                <span>Start your day with movement</span>
+            </div>
+
+            <div class="float-card fc3">
+                <strong>✨ All Levels</strong>
+                <span>Choose a suitable class</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- BENEFITS -->
+
+<section class="benefits">
+
+    <div class="container benefit-grid">
+
+        <div class="benefit">
+
+            <div class="benefit-icon">🧘</div>
+
+            <div>
+                <h3>Beginner Friendly</h3>
+                <p>Start at a comfortable level</p>
+            </div>
+
+        </div>
+
+        <div class="benefit">
+
+            <div class="benefit-icon">🌿</div>
+
+            <div>
+                <h3>Mindful Movement</h3>
+                <p>Focus on movement and breathing</p>
+            </div>
+
+        </div>
+
+        <div class="benefit">
+
+            <div class="benefit-icon">🤸</div>
+
+            <div>
+                <h3>Mobility Practice</h3>
+                <p>Explore controlled ranges of motion</p>
+            </div>
+
+        </div>
+
+        <div class="benefit">
+
+            <div class="benefit-icon">👤</div>
+
+            <div>
+                <h3>Private Sessions</h3>
+                <p>Individual instruction available</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- CLASSES -->
+
+<section class="section section-light" id="classes">
+
+    <div class="container">
+
+        <div class="section-head">
+
+            <small>Yoga Classes</small>
+
+            <h2>
+                Find the practice that works for you.
+            </h2>
+
+            <p>
+                Explore classes with different pacing and movement styles.
+                Current availability depends on the studio schedule.
+            </p>
+
+        </div>
+
+        <div class="classes-grid">
+
+            <article class="class-card">
+
+                <div class="class-icon">🌱</div>
+
+                <h3>Beginner Yoga</h3>
+
+                <p>
+                    Learn foundational poses, breathing and basic
+                    movement at an approachable pace.
+                </p>
+
+            </article>
+
+            <article class="class-card">
+
+                <div class="class-icon">🌊</div>
+
+                <h3>Gentle Flow</h3>
+
+                <p>
+                    Connect simple movements together in a slower,
+                    comfortable class format.
+                </p>
+
+            </article>
+
+            <article class="class-card">
+
+                <div class="class-icon">☀️</div>
+
+                <h3>Morning Flow</h3>
+
+                <p>
+                    A balanced morning practice combining movement,
+                    mobility and mindful breathing.
+                </p>
+
+            </article>
+
+            <article class="class-card">
+
+                <div class="class-icon">👤</div>
+
+                <h3>Private Yoga</h3>
+
+                <p>
+                    One-on-one instruction based on your experience,
+                    movement preferences and schedule.
+                </p>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- SCHEDULE -->
+
+<section class="section" id="schedule">
+
+    <div class="container schedule-wrap">
+
+        <div class="schedule-intro">
+
+            <small>Weekly Schedule</small>
+
+            <h2>
+                Flexible classes throughout the week.
+            </h2>
+
+            <p>
+                Sample times are provided below. Replace them with
+                your actual class schedule before publishing the page.
+            </p>
+
+        </div>
+
+        <div class="schedule-list">
+
+            <div class="schedule-row">
+                <strong>Monday</strong>
+                <span>Beginner Yoga</span>
+                <small>7:00 AM</small>
+            </div>
+
+            <div class="schedule-row">
+                <strong>Tuesday</strong>
+                <span>Gentle Flow</span>
+                <small>6:00 PM</small>
+            </div>
+
+            <div class="schedule-row">
+                <strong>Thursday</strong>
+                <span>Morning Flow</span>
+                <small>7:30 AM</small>
+            </div>
+
+            <div class="schedule-row">
+                <strong>Saturday</strong>
+                <span>All Levels Yoga</span>
+                <small>9:00 AM</small>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- CTA -->
+
+<section class="cta">
+
+    <div class="container">
+
+        <div class="cta-box">
+
+            <div>
+
+                <h2>
+                    New to yoga? Start with a trial class.
+                </h2>
+
+                <p>
+                    Tell us your experience and preferred schedule
+                    and we'll help you choose a suitable class.
+                </p>
+
+            </div>
+
+            <a href="#trial" class="btn btn-light">
+                Request Trial Class
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- TRIAL -->
+
+<section class="section section-light" id="trial">
+
+    <div class="container contact-grid">
+
+        <div class="contact-info" id="contact">
+
+            <h2>
+                Find your next yoga class.
+            </h2>
+
+            <p>
+                Share your preferences and our studio team will
+                contact you regarding class availability,
+                trial options and current pricing.
+            </p>
+
+            <div class="info-row">
+                <strong>PHONE</strong>
+                <a href="tel:+15125550196">
+                    (512) 555-0196
+                </a>
+            </div>
+
+            <div class="info-row">
+                <strong>EMAIL</strong>
+                <a href="mailto:hello@stillspaceyoga.com">
+                    hello@stillspaceyoga.com
+                </a>
+            </div>
+
+            <div class="info-row">
+                <strong>STUDIO</strong>
+                <span>
+                    620 South Lamar Boulevard, Austin, TX 78704
+                </span>
+            </div>
+
+            <div class="info-row">
+                <strong>STUDIO HOURS</strong>
+                <span>
+                    Mon–Sat: 6:30 AM–8:00 PM
+                </span>
+            </div>
+
+            <div class="info-row">
+                <strong>HEALTH NOTE</strong>
+                <span>
+                    If you have an injury, medical condition,
+                    pregnancy-related concern or physical limitation,
+                    consult an appropriate healthcare professional before participating.
+                </span>
+            </div>
+
+        </div>
+
+        <form class="yoga-form" action="#trial" method="post">
+
+            <input
+                type="text"
+                name="name"
+                placeholder="Full Name"
+                required>
+
+            <input
+                type="tel"
+                name="phone"
+                placeholder="Phone Number"
+                required>
+
+            <input
+                type="email"
+                name="email"
+                placeholder="Email Address"
+                required>
+
+            <select name="class_type" required>
+                <option value="">Class Interest</option>
+                <option value="beginner">Beginner Yoga</option>
+                <option value="gentle">Gentle Flow</option>
+                <option value="morning">Morning Flow</option>
+                <option value="private">Private Yoga</option>
+                <option value="not-sure">Not Sure Yet</option>
+            </select>
+
+            <select name="experience">
+                <option value="">Yoga Experience</option>
+                <option value="none">Completely New</option>
+                <option value="beginner">Beginner</option>
+                <option value="some">Some Experience</option>
+                <option value="regular">Regular Practice</option>
+            </select>
+
+            <select name="preferred_time">
+                <option value="">Preferred Class Time</option>
+                <option value="early-morning">Early Morning</option>
+                <option value="morning">Morning</option>
+                <option value="afternoon">Afternoon</option>
+                <option value="evening">Evening</option>
+                <option value="weekend">Weekend</option>
+            </select>
+
+            <select name="goal">
+                <option value="">Main Interest</option>
+                <option value="general">General Yoga Practice</option>
+                <option value="mobility">Mobility & Movement</option>
+                <option value="relaxation">Relaxed / Gentle Practice</option>
+                <option value="strength">Strength & Balance</option>
+                <option value="learning">Learn Yoga Basics</option>
+            </select>
+
+            <input
+                type="text"
+                name="city"
+                placeholder="City / Neighborhood">
+
+            <textarea
+                name="message"
+                placeholder="Tell us about your preferred schedule, experience or anything you'd like the instructor to know"></textarea>
+
+            <div class="form-note">
+                This form is for class enquiries only. Yoga instruction is not a
+                substitute for medical care. Class schedules, instructor availability,
+                fees and trial options are confirmed before enrollment.
+            </div>
+
+            <button type="submit" class="btn btn-primary">
+                Request a Yoga Trial Class
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+    <div class="container">
+
+        <div class="footer-main">
+
+            <div class="footer-brand">
+
+                <div class="footer-logo">
+                    Still<span>Space</span>
+                </div>
+
+                <p>
+                    Beginner-friendly yoga, gentle flow,
+                    mobility-focused practice and private instruction
+                    in a welcoming studio setting.
+                </p>
+
+            </div>
+
+            <div class="footer-links">
+                <a href="#home">Home</a>
+                <a href="#classes">Classes</a>
+                <a href="#schedule">Schedule</a>
+                <a href="#trial">Trial Class</a>
+                <a href="#contact">Contact</a>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+
+            <span>
+                © 2026 StillSpace Yoga. All rights reserved.
+            </span>
+
+            <span>
+                Class availability, schedule and pricing are confirmed before enrollment.
+            </span>
+
+        </div>
+
+    </div>
+
+</footer>
+
+</body>
+</html>
