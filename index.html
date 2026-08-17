@@ -1,0 +1,1563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>HostPilot | Fast & Reliable Web Hosting</title>
+
+<meta
+    name="description"
+    content="Professional web hosting for websites, businesses and growing projects. Explore shared hosting, managed WordPress, VPS and business hosting plans."
+>
+
+<style>
+:root{
+    --primary:#5b5cf0;
+    --primary-dark:#4142c8;
+    --blue:#2494ff;
+    --cyan:#45d8e8;
+    --green:#29b879;
+    --orange:#ffad43;
+    --dark:#152033;
+    --text:#344154;
+    --muted:#748093;
+    --light:#f6f8fc;
+    --lavender:#f1f1ff;
+    --white:#ffffff;
+    --border:#e1e6ee;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#fff;
+    color:var(--text);
+    line-height:1.6;
+}
+
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+button,
+input,
+select,
+textarea{
+    font:inherit;
+}
+
+.container{
+    width:min(1120px,calc(100% - 32px));
+    margin:auto;
+}
+
+/* BUTTONS */
+
+.btn{
+    min-height:46px;
+    padding:0 22px;
+    border:0;
+    border-radius:10px;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    font-size:14px;
+    font-weight:700;
+    cursor:pointer;
+    transition:.25s;
+}
+
+.btn-primary{
+    background:linear-gradient(135deg,var(--primary),var(--blue));
+    color:#fff;
+}
+
+.btn-primary:hover{
+    transform:translateY(-2px);
+    box-shadow:0 9px 24px rgba(91,92,240,.22);
+}
+
+.btn-dark{
+    background:var(--dark);
+    color:#fff;
+}
+
+.btn-light{
+    background:#fff;
+    color:var(--dark);
+    border:1px solid var(--border);
+}
+
+/* TOPBAR */
+
+.topbar{
+    background:#111a2b;
+    color:#c8d0dc;
+    padding:8px 0;
+    font-size:12px;
+}
+
+.topbar-inner{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:20px;
+}
+
+.topbar strong{
+    color:#fff;
+}
+
+/* HEADER */
+
+header{
+    background:#fff;
+    border-bottom:1px solid var(--border);
+    position:sticky;
+    top:0;
+    z-index:100;
+}
+
+.navbar{
+    min-height:72px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:25px;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    color:var(--dark);
+    font-size:23px;
+    font-weight:800;
+}
+
+.logo-mark{
+    width:43px;
+    height:43px;
+    border-radius:12px;
+    display:grid;
+    place-items:center;
+    background:linear-gradient(135deg,var(--primary),var(--blue));
+    color:#fff;
+    font-size:21px;
+}
+
+.logo span{
+    color:var(--primary);
+}
+
+.menu{
+    display:flex;
+    list-style:none;
+    gap:24px;
+}
+
+.menu a{
+    color:#596578;
+    font-size:13px;
+    font-weight:600;
+}
+
+.menu a:hover{
+    color:var(--primary);
+}
+
+/* HERO */
+
+.hero{
+    padding:76px 0 86px;
+    overflow:hidden;
+    background:
+        radial-gradient(circle at 86% 12%,rgba(36,148,255,.15),transparent 25%),
+        radial-gradient(circle at 67% 85%,rgba(91,92,240,.10),transparent 28%),
+        linear-gradient(135deg,#f8f9ff,#eef7ff);
+}
+
+.hero-grid{
+    display:grid;
+    grid-template-columns:1.02fr .98fr;
+    gap:58px;
+    align-items:center;
+}
+
+.badge{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    padding:8px 13px;
+    border-radius:30px;
+    background:#ebebff;
+    color:var(--primary-dark);
+    font-size:12px;
+    font-weight:700;
+    margin-bottom:18px;
+}
+
+.badge-dot{
+    width:8px;
+    height:8px;
+    border-radius:50%;
+    background:var(--green);
+}
+
+.hero h1{
+    color:var(--dark);
+    font-size:56px;
+    line-height:1.06;
+    letter-spacing:-2px;
+    margin-bottom:18px;
+}
+
+.hero h1 span{
+    color:var(--primary);
+}
+
+.hero p{
+    max-width:590px;
+    color:var(--muted);
+    font-size:17px;
+    margin-bottom:27px;
+}
+
+.hero-buttons{
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+}
+
+.hero-points{
+    margin-top:28px;
+    display:flex;
+    flex-wrap:wrap;
+    gap:20px;
+    color:#657185;
+    font-size:12px;
+}
+
+.hero-points strong{
+    color:var(--green);
+}
+
+/* HOSTING DASHBOARD VISUAL */
+
+.hosting-visual{
+    position:relative;
+    min-height:400px;
+}
+
+.dashboard{
+    width:355px;
+    position:absolute;
+    right:15px;
+    top:34px;
+    background:#fff;
+    border:1px solid var(--border);
+    border-radius:20px;
+    padding:22px;
+    box-shadow:0 25px 60px rgba(41,62,90,.14);
+}
+
+.dashboard-top{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    margin-bottom:19px;
+}
+
+.dashboard-title small{
+    display:block;
+    color:#8a95a5;
+    font-size:9px;
+    text-transform:uppercase;
+    letter-spacing:1px;
+}
+
+.dashboard-title strong{
+    color:var(--dark);
+    font-size:17px;
+}
+
+.status{
+    display:flex;
+    align-items:center;
+    gap:5px;
+    color:var(--green);
+    font-size:10px;
+    font-weight:700;
+}
+
+.status:before{
+    content:"";
+    width:7px;
+    height:7px;
+    border-radius:50%;
+    background:var(--green);
+}
+
+.server-box{
+    border-radius:13px;
+    padding:15px;
+    background:var(--light);
+    margin-bottom:11px;
+}
+
+.server-head{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    font-size:11px;
+    color:#667385;
+    margin-bottom:10px;
+}
+
+.server-head strong{
+    color:var(--dark);
+}
+
+.progress{
+    height:8px;
+    border-radius:10px;
+    overflow:hidden;
+    background:#e5eaf1;
+}
+
+.progress span{
+    display:block;
+    height:100%;
+    border-radius:10px;
+    background:linear-gradient(90deg,var(--primary),var(--blue));
+}
+
+.p58{width:58%;}
+.p34{width:34%;}
+.p71{width:71%;}
+
+.dashboard-bottom{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:9px;
+    margin-top:15px;
+}
+
+.mini-stat{
+    border:1px solid var(--border);
+    border-radius:11px;
+    padding:11px;
+    text-align:center;
+}
+
+.mini-stat strong{
+    display:block;
+    color:var(--dark);
+    font-size:14px;
+}
+
+.mini-stat span{
+    color:#8894a4;
+    font-size:9px;
+}
+
+.float-box{
+    position:absolute;
+    background:#fff;
+    border:1px solid var(--border);
+    border-radius:13px;
+    padding:12px 15px;
+    box-shadow:0 13px 30px rgba(40,60,90,.11);
+}
+
+.float-box strong{
+    display:block;
+    color:var(--dark);
+    font-size:12px;
+}
+
+.float-box span{
+    color:#8792a1;
+    font-size:9px;
+}
+
+.box-one{
+    left:0;
+    top:15px;
+}
+
+.box-two{
+    left:10px;
+    bottom:25px;
+}
+
+.box-three{
+    right:0;
+    bottom:0;
+}
+
+/* TRUST */
+
+.trust{
+    border-bottom:1px solid var(--border);
+    background:#fff;
+}
+
+.trust-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+}
+
+.trust-item{
+    padding:22px 15px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:11px;
+    border-right:1px solid var(--border);
+}
+
+.trust-item:last-child{
+    border-right:0;
+}
+
+.trust-icon{
+    font-size:25px;
+}
+
+.trust-item h3{
+    color:var(--dark);
+    font-size:13px;
+}
+
+.trust-item p{
+    color:var(--muted);
+    font-size:10px;
+}
+
+/* COMMON */
+
+.section{
+    padding:70px 0;
+}
+
+.section-light{
+    background:var(--light);
+}
+
+.section-head{
+    max-width:650px;
+    margin:0 auto 37px;
+    text-align:center;
+}
+
+.section-head small{
+    color:var(--primary);
+    font-size:10px;
+    text-transform:uppercase;
+    letter-spacing:1.7px;
+    font-weight:800;
+}
+
+.section-head h2{
+    color:var(--dark);
+    font-size:37px;
+    line-height:1.2;
+    margin:7px 0 10px;
+}
+
+.section-head p{
+    color:var(--muted);
+    font-size:14px;
+}
+
+/* PLANS */
+
+.plans{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+}
+
+.plan{
+    position:relative;
+    background:#fff;
+    border:1px solid var(--border);
+    border-radius:17px;
+    padding:27px;
+    transition:.25s;
+}
+
+.plan:hover{
+    transform:translateY(-5px);
+    box-shadow:0 16px 38px rgba(38,55,80,.09);
+}
+
+.plan.featured{
+    border:2px solid var(--primary);
+}
+
+.plan-badge{
+    position:absolute;
+    top:-11px;
+    right:18px;
+    padding:5px 10px;
+    border-radius:20px;
+    background:var(--primary);
+    color:#fff;
+    font-size:9px;
+    font-weight:800;
+}
+
+.plan-icon{
+    width:53px;
+    height:53px;
+    display:grid;
+    place-items:center;
+    border-radius:13px;
+    background:var(--lavender);
+    font-size:26px;
+    margin-bottom:15px;
+}
+
+.plan h3{
+    color:var(--dark);
+    font-size:19px;
+}
+
+.plan > p{
+    color:var(--muted);
+    font-size:11px;
+    margin:5px 0 17px;
+    min-height:36px;
+}
+
+.price{
+    margin-bottom:17px;
+}
+
+.price strong{
+    color:var(--dark);
+    font-size:30px;
+}
+
+.price span{
+    color:#8c97a5;
+    font-size:10px;
+}
+
+.plan ul{
+    list-style:none;
+    margin:0 0 20px;
+}
+
+.plan li{
+    padding:7px 0;
+    border-bottom:1px solid #edf0f4;
+    color:#616e7e;
+    font-size:11px;
+}
+
+.plan li:before{
+    content:"✓";
+    color:var(--green);
+    font-weight:bold;
+    margin-right:7px;
+}
+
+/* SERVICES */
+
+.services-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+}
+
+.service{
+    border:1px solid var(--border);
+    border-radius:14px;
+    padding:22px;
+    background:#fff;
+}
+
+.service-icon{
+    width:52px;
+    height:52px;
+    display:grid;
+    place-items:center;
+    border-radius:12px;
+    background:#edf5ff;
+    font-size:26px;
+    margin-bottom:13px;
+}
+
+.service h3{
+    color:var(--dark);
+    font-size:15px;
+    margin-bottom:5px;
+}
+
+.service p{
+    color:var(--muted);
+    font-size:11px;
+}
+
+/* CTA */
+
+.cta{
+    padding:0 0 70px;
+}
+
+.cta-box{
+    padding:38px;
+    border-radius:18px;
+    color:#fff;
+    background:
+        radial-gradient(circle at 90% 20%,rgba(69,216,232,.25),transparent 25%),
+        linear-gradient(135deg,#5254e4,#2388db);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:35px;
+}
+
+.cta-box h2{
+    font-size:29px;
+    line-height:1.2;
+    margin-bottom:6px;
+}
+
+.cta-box p{
+    color:#e3ecff;
+    font-size:13px;
+}
+
+/* CONTACT */
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:.8fr 1.2fr;
+    gap:38px;
+}
+
+.contact-info{
+    background:var(--dark);
+    color:#fff;
+    border-radius:17px;
+    padding:32px;
+}
+
+.contact-info h2{
+    font-size:28px;
+    line-height:1.25;
+    margin-bottom:10px;
+}
+
+.contact-info > p{
+    color:#c1cad6;
+    font-size:12px;
+    margin-bottom:20px;
+}
+
+.info-row{
+    border-top:1px solid rgba(255,255,255,.12);
+    padding:12px 0;
+}
+
+.info-row strong{
+    display:block;
+    font-size:10px;
+    margin-bottom:3px;
+}
+
+.info-row span,
+.info-row a{
+    color:#c8d0da;
+    font-size:12px;
+}
+
+.info-row a:hover{
+    color:#fff;
+}
+
+.hosting-form{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:12px;
+}
+
+.hosting-form input,
+.hosting-form select,
+.hosting-form textarea{
+    width:100%;
+    padding:13px 14px;
+    border:1px solid var(--border);
+    border-radius:9px;
+    background:#fff;
+    outline:none;
+}
+
+.hosting-form input:focus,
+.hosting-form select:focus,
+.hosting-form textarea:focus{
+    border-color:var(--primary);
+    box-shadow:0 0 0 3px rgba(91,92,240,.08);
+}
+
+.hosting-form textarea{
+    min-height:100px;
+    resize:vertical;
+    grid-column:span 2;
+}
+
+.hosting-form button,
+.form-note{
+    grid-column:span 2;
+}
+
+.form-note{
+    color:#7e8997;
+    font-size:10px;
+    line-height:1.5;
+}
+
+/* FOOTER */
+
+footer{
+    background:#101827;
+    color:#fff;
+    padding:40px 0 18px;
+}
+
+.footer-main{
+    display:flex;
+    align-items:flex-start;
+    justify-content:space-between;
+    gap:40px;
+}
+
+.footer-brand{
+    max-width:430px;
+}
+
+.footer-logo{
+    font-size:21px;
+    font-weight:800;
+    margin-bottom:7px;
+}
+
+.footer-logo span{
+    color:#8b8dff;
+}
+
+footer p,
+footer a{
+    color:#98a4b4;
+    font-size:11px;
+}
+
+.footer-links{
+    display:flex;
+    flex-wrap:wrap;
+    gap:18px;
+}
+
+.footer-links a:hover{
+    color:#fff;
+}
+
+.footer-bottom{
+    border-top:1px solid #293447;
+    margin-top:27px;
+    padding-top:16px;
+    display:flex;
+    justify-content:space-between;
+    gap:20px;
+    color:#748093;
+    font-size:10px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+    .menu{
+        display:none;
+    }
+
+    .hero-grid,
+    .contact-grid{
+        grid-template-columns:1fr;
+    }
+
+    .plans{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .services-grid,
+    .trust-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media(max-width:600px){
+
+    .container{
+        width:min(100% - 22px,1120px);
+    }
+
+    .topbar-inner{
+        justify-content:center;
+        text-align:center;
+    }
+
+    .topbar-inner span:last-child{
+        display:none;
+    }
+
+    .logo{
+        font-size:18px;
+    }
+
+    .navbar > .btn{
+        padding:0 12px;
+        font-size:11px;
+    }
+
+    .hero{
+        padding:55px 0;
+    }
+
+    .hero h1{
+        font-size:40px;
+        letter-spacing:-1px;
+    }
+
+    .hosting-visual{
+        min-height:440px;
+    }
+
+    .dashboard{
+        width:285px;
+        right:0;
+    }
+
+    .box-one{
+        left:0;
+    }
+
+    .box-two{
+        left:0;
+        bottom:5px;
+    }
+
+    .box-three{
+        right:0;
+        bottom:-20px;
+    }
+
+    .plans,
+    .services-grid,
+    .trust-grid{
+        grid-template-columns:1fr;
+    }
+
+    .trust-item{
+        justify-content:flex-start;
+        border-right:0;
+        border-bottom:1px solid var(--border);
+    }
+
+    .section{
+        padding:55px 0;
+    }
+
+    .section-head h2{
+        font-size:30px;
+    }
+
+    .cta-box{
+        padding:27px 22px;
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+    .hosting-form{
+        grid-template-columns:1fr;
+    }
+
+    .hosting-form textarea,
+    .hosting-form button,
+    .form-note{
+        grid-column:auto;
+    }
+
+    .footer-main,
+    .footer-bottom{
+        flex-direction:column;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- TOP BAR -->
+
+<div class="topbar">
+    <div class="container topbar-inner">
+        <span>Web Hosting · WordPress · VPS · Website Migration · SSL</span>
+        <span>Hosting Support: <strong>(206) 555-0142</strong></span>
+    </div>
+</div>
+
+<!-- HEADER -->
+
+<header>
+
+    <div class="container navbar">
+
+        <a href="#home" class="logo">
+            <div class="logo-mark">H</div>
+            Host<span>Pilot</span>
+        </a>
+
+        <ul class="menu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#plans">Hosting Plans</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#quote">Get Started</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <a href="#plans" class="btn btn-primary">
+            View Hosting
+        </a>
+
+    </div>
+
+</header>
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+    <div class="container hero-grid">
+
+        <div>
+
+            <div class="badge">
+                <span class="badge-dot"></span>
+                Hosting built for websites that need room to grow
+            </div>
+
+            <h1>
+                Fast, dependable hosting for your <span>website and business.</span>
+            </h1>
+
+            <p>
+                Web hosting solutions for business websites, WordPress,
+                online stores and growing projects with SSL options,
+                backups, migration assistance and technical support.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#plans" class="btn btn-primary">
+                    Explore Hosting Plans
+                </a>
+
+                <a href="tel:+12065550142" class="btn btn-light">
+                    Call (206) 555-0142
+                </a>
+
+            </div>
+
+            <div class="hero-points">
+                <div><strong>✓</strong> Website hosting</div>
+                <div><strong>✓</strong> SSL options</div>
+                <div><strong>✓</strong> Migration assistance</div>
+            </div>
+
+        </div>
+
+        <!-- HOSTING DASHBOARD -->
+
+        <div class="hosting-visual">
+
+            <div class="float-box box-one">
+                <strong>🔒 SSL Ready</strong>
+                <span>Secure connection options</span>
+            </div>
+
+            <div class="dashboard">
+
+                <div class="dashboard-top">
+
+                    <div class="dashboard-title">
+                        <small>Hosting Control Center</small>
+                        <strong>Website Overview</strong>
+                    </div>
+
+                    <div class="status">
+                        Online
+                    </div>
+
+                </div>
+
+                <div class="server-box">
+
+                    <div class="server-head">
+                        <strong>Storage</strong>
+                        <span>58%</span>
+                    </div>
+
+                    <div class="progress">
+                        <span class="p58"></span>
+                    </div>
+
+                </div>
+
+                <div class="server-box">
+
+                    <div class="server-head">
+                        <strong>Bandwidth</strong>
+                        <span>34%</span>
+                    </div>
+
+                    <div class="progress">
+                        <span class="p34"></span>
+                    </div>
+
+                </div>
+
+                <div class="server-box">
+
+                    <div class="server-head">
+                        <strong>Monthly Visitors</strong>
+                        <span>71%</span>
+                    </div>
+
+                    <div class="progress">
+                        <span class="p71"></span>
+                    </div>
+
+                </div>
+
+                <div class="dashboard-bottom">
+
+                    <div class="mini-stat">
+                        <strong>1</strong>
+                        <span>Website</span>
+                    </div>
+
+                    <div class="mini-stat">
+                        <strong>SSL</strong>
+                        <span>Available</span>
+                    </div>
+
+                    <div class="mini-stat">
+                        <strong>24/7</strong>
+                        <span>Monitoring</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="float-box box-two">
+                <strong>🚀 Migration Help</strong>
+                <span>Move an existing website</span>
+            </div>
+
+            <div class="float-box box-three">
+                <strong>💾 Backups</strong>
+                <span>Backup options available</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- TRUST BAR -->
+
+<section class="trust">
+
+    <div class="container trust-grid">
+
+        <div class="trust-item">
+
+            <div class="trust-icon">⚡</div>
+
+            <div>
+                <h3>Performance</h3>
+                <p>Infrastructure built for web workloads</p>
+            </div>
+
+        </div>
+
+        <div class="trust-item">
+
+            <div class="trust-icon">🔒</div>
+
+            <div>
+                <h3>SSL Options</h3>
+                <p>HTTPS support for hosted sites</p>
+            </div>
+
+        </div>
+
+        <div class="trust-item">
+
+            <div class="trust-icon">💾</div>
+
+            <div>
+                <h3>Backup Options</h3>
+                <p>Protect important website files</p>
+            </div>
+
+        </div>
+
+        <div class="trust-item">
+
+            <div class="trust-icon">🧑‍💻</div>
+
+            <div>
+                <h3>Hosting Support</h3>
+                <p>Help when you need assistance</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- PLANS -->
+
+<section class="section section-light" id="plans">
+
+    <div class="container">
+
+        <div class="section-head">
+
+            <small>Hosting Plans</small>
+
+            <h2>
+                Choose hosting based on your website needs.
+            </h2>
+
+            <p>
+                Sample plans are shown below. Replace pricing,
+                storage and account limits with your actual hosting offer.
+            </p>
+
+        </div>
+
+        <div class="plans">
+
+            <!-- STARTER -->
+
+            <article class="plan">
+
+                <div class="plan-icon">🌐</div>
+
+                <h3>Starter Hosting</h3>
+
+                <p>
+                    Suitable for personal sites and smaller business websites.
+                </p>
+
+                <div class="price">
+                    <strong>$4.99</strong>
+                    <span>/ month*</span>
+                </div>
+
+                <ul>
+                    <li>1 Website</li>
+                    <li>20 GB Storage</li>
+                    <li>SSL Option</li>
+                    <li>Email Hosting Options</li>
+                    <li>Support Access</li>
+                </ul>
+
+                <a href="#quote" class="btn btn-dark">
+                    Choose Starter
+                </a>
+
+            </article>
+
+            <!-- BUSINESS -->
+
+            <article class="plan featured">
+
+                <div class="plan-badge">
+                    POPULAR
+                </div>
+
+                <div class="plan-icon">🚀</div>
+
+                <h3>Business Hosting</h3>
+
+                <p>
+                    More resources for active business and WordPress websites.
+                </p>
+
+                <div class="price">
+                    <strong>$9.99</strong>
+                    <span>/ month*</span>
+                </div>
+
+                <ul>
+                    <li>Multiple Websites</li>
+                    <li>50 GB Storage</li>
+                    <li>SSL Option</li>
+                    <li>Backup Options</li>
+                    <li>Migration Assistance</li>
+                </ul>
+
+                <a href="#quote" class="btn btn-primary">
+                    Choose Business
+                </a>
+
+            </article>
+
+            <!-- VPS -->
+
+            <article class="plan">
+
+                <div class="plan-icon">🖥️</div>
+
+                <h3>VPS Hosting</h3>
+
+                <p>
+                    Flexible server resources for applications and larger websites.
+                </p>
+
+                <div class="price">
+                    <strong>$29.99</strong>
+                    <span>/ month*</span>
+                </div>
+
+                <ul>
+                    <li>Dedicated VPS Resources</li>
+                    <li>Flexible Storage Options</li>
+                    <li>Administrative Access Options</li>
+                    <li>Scalable Resources</li>
+                    <li>Technical Support</li>
+                </ul>
+
+                <a href="#quote" class="btn btn-dark">
+                    Request VPS
+                </a>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- FEATURES -->
+
+<section class="section" id="features">
+
+    <div class="container">
+
+        <div class="section-head">
+
+            <small>Hosting Features</small>
+
+            <h2>
+                Essential tools for running your website.
+            </h2>
+
+        </div>
+
+        <div class="services-grid">
+
+            <article class="service">
+
+                <div class="service-icon">🔄</div>
+
+                <h3>Website Migration</h3>
+
+                <p>
+                    Assistance moving eligible websites from another hosting provider.
+                </p>
+
+            </article>
+
+            <article class="service">
+
+                <div class="service-icon">🔐</div>
+
+                <h3>SSL & Security</h3>
+
+                <p>
+                    HTTPS and security configuration options for hosted websites.
+                </p>
+
+            </article>
+
+            <article class="service">
+
+                <div class="service-icon">💾</div>
+
+                <h3>Backup Options</h3>
+
+                <p>
+                    Backup solutions for website files and supported databases.
+                </p>
+
+            </article>
+
+            <article class="service">
+
+                <div class="service-icon">📈</div>
+
+                <h3>Scalable Hosting</h3>
+
+                <p>
+                    Upgrade hosting resources as your website requirements grow.
+                </p>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- CTA -->
+
+<section class="cta">
+
+    <div class="container">
+
+        <div class="cta-box">
+
+            <div>
+
+                <h2>
+                    Moving an existing website to a new host?
+                </h2>
+
+                <p>
+                    Tell us what you're currently hosting and
+                    we'll help you identify a suitable hosting option.
+                </p>
+
+            </div>
+
+            <a href="#quote" class="btn btn-light">
+                Request Hosting Advice
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section class="section section-light" id="quote">
+
+    <div class="container contact-grid">
+
+        <div class="contact-info" id="contact">
+
+            <h2>
+                Find the right hosting setup.
+            </h2>
+
+            <p>
+                Share your website requirements and our team
+                can contact you regarding suitable hosting plans,
+                migration and available services.
+            </p>
+
+            <div class="info-row">
+                <strong>PHONE</strong>
+                <a href="tel:+12065550142">
+                    (206) 555-0142
+                </a>
+            </div>
+
+            <div class="info-row">
+                <strong>EMAIL</strong>
+                <a href="mailto:sales@hostpilotweb.com">
+                    sales@hostpilotweb.com
+                </a>
+            </div>
+
+            <div class="info-row">
+                <strong>OFFICE</strong>
+                <span>
+                    901 Digital Avenue, Seattle, WA 98101
+                </span>
+            </div>
+
+            <div class="info-row">
+                <strong>SALES HOURS</strong>
+                <span>
+                    Mon–Fri: 8:00 AM–6:00 PM PT
+                </span>
+            </div>
+
+            <div class="info-row">
+                <strong>ACCOUNT SECURITY</strong>
+                <span>
+                    Never submit hosting passwords, control-panel credentials
+                    or private keys through this form.
+                </span>
+            </div>
+
+        </div>
+
+        <form class="hosting-form" action="#quote" method="post">
+
+            <input
+                type="text"
+                name="name"
+                placeholder="Full Name"
+                required>
+
+            <input
+                type="text"
+                name="company"
+                placeholder="Company Name">
+
+            <input
+                type="email"
+                name="email"
+                placeholder="Email Address"
+                required>
+
+            <input
+                type="tel"
+                name="phone"
+                placeholder="Phone Number"
+                required>
+
+            <select name="hosting_type" required>
+                <option value="">Hosting Requirement</option>
+                <option value="shared">Shared Web Hosting</option>
+                <option value="wordpress">WordPress Hosting</option>
+                <option value="business">Business Hosting</option>
+                <option value="vps">VPS Hosting</option>
+                <option value="migration">Website Migration</option>
+                <option value="not-sure">Not Sure Yet</option>
+            </select>
+
+            <select name="websites">
+                <option value="">Number of Websites</option>
+                <option value="1">1 Website</option>
+                <option value="2-5">2–5 Websites</option>
+                <option value="6-10">6–10 Websites</option>
+                <option value="10-plus">10+ Websites</option>
+            </select>
+
+            <select name="current_host">
+                <option value="">Current Hosting Status</option>
+                <option value="new">New Website</option>
+                <option value="existing">Already Hosted Elsewhere</option>
+                <option value="cloud">Currently on Cloud / VPS</option>
+                <option value="unknown">Not Sure</option>
+            </select>
+
+            <select name="monthly_traffic">
+                <option value="">Estimated Monthly Traffic</option>
+                <option value="under-10k">Under 10,000 Visits</option>
+                <option value="10k-50k">10,000–50,000 Visits</option>
+                <option value="50k-200k">50,000–200,000 Visits</option>
+                <option value="200k-plus">200,000+ Visits</option>
+                <option value="unknown">Not Sure</option>
+            </select>
+
+            <textarea
+                name="message"
+                placeholder="Tell us about your website, CMS, storage needs, email requirements or migration plans"></textarea>
+
+            <div class="form-note">
+                *Displayed pricing is sample pricing and should be replaced
+                with your actual hosting rates. Final pricing, resource limits,
+                renewal terms and service availability should be confirmed before purchase.
+            </div>
+
+            <button type="submit" class="btn btn-primary">
+                Request Hosting Recommendation
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+    <div class="container">
+
+        <div class="footer-main">
+
+            <div class="footer-brand">
+
+                <div class="footer-logo">
+                    Host<span>Pilot</span>
+                </div>
+
+                <p>
+                    Web hosting, WordPress hosting,
+                    VPS solutions and website migration assistance
+                    for websites and businesses.
+                </p>
+
+            </div>
+
+            <div class="footer-links">
+                <a href="#home">Home</a>
+                <a href="#plans">Hosting Plans</a>
+                <a href="#features">Features</a>
+                <a href="#quote">Get Started</a>
+                <a href="#contact">Contact</a>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+
+            <span>
+                © 2026 HostPilot Web Hosting. All rights reserved.
+            </span>
+
+            <span>
+                Hosting specifications, pricing and availability may vary by plan.
+            </span>
+
+        </div>
+
+    </div>
+
+</footer>
+
+</body>
+</html>
