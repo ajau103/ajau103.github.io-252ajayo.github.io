@@ -1,0 +1,1401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ShineDock Car Wash | Exterior Wash & Auto Detailing</title>
+
+<meta
+    name="description"
+    content="Professional car washing and detailing services including exterior wash, interior cleaning, wax and full-detail packages. Request service availability today."
+>
+
+<style>
+:root{
+    --navy:#0d2234;
+    --navy-dark:#081722;
+    --aqua:#28c5d8;
+    --aqua-dark:#1598a8;
+    --sky:#eaf8fb;
+    --blue:#2f79c7;
+    --white:#ffffff;
+    --light:#f6f9fb;
+    --text:#34424d;
+    --muted:#73808a;
+    --border:#dfe7eb;
+    --silver:#eef2f4;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#fff;
+    color:var(--text);
+    line-height:1.6;
+}
+
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+button,
+input,
+select,
+textarea{
+    font:inherit;
+}
+
+.container{
+    width:min(1120px,calc(100% - 32px));
+    margin:auto;
+}
+
+.btn{
+    min-height:46px;
+    padding:0 22px;
+    border:0;
+    border-radius:9px;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    font-size:14px;
+    font-weight:700;
+    cursor:pointer;
+    transition:.25s;
+}
+
+.btn-primary{
+    background:var(--aqua);
+    color:#082029;
+}
+
+.btn-primary:hover{
+    background:var(--aqua-dark);
+    color:#fff;
+    transform:translateY(-2px);
+}
+
+.btn-dark{
+    background:var(--navy);
+    color:#fff;
+}
+
+.btn-light{
+    background:#fff;
+    color:var(--navy);
+    border:1px solid var(--border);
+}
+
+/* TOP BAR */
+
+.topbar{
+    background:var(--navy-dark);
+    color:#c6d7df;
+    padding:8px 0;
+    font-size:12px;
+}
+
+.topbar-inner{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+}
+
+.topbar strong{
+    color:#fff;
+}
+
+/* HEADER */
+
+header{
+    background:#fff;
+    border-bottom:1px solid var(--border);
+    position:sticky;
+    top:0;
+    z-index:100;
+}
+
+.navbar{
+    min-height:72px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:24px;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    color:var(--navy);
+    font-size:23px;
+    font-weight:800;
+}
+
+.logo-mark{
+    width:43px;
+    height:43px;
+    border-radius:12px;
+    display:grid;
+    place-items:center;
+    background:linear-gradient(135deg,#dff9fc,#eaf1ff);
+    color:var(--aqua-dark);
+    font-size:22px;
+}
+
+.logo span{
+    color:var(--aqua-dark);
+}
+
+.menu{
+    display:flex;
+    gap:24px;
+    list-style:none;
+}
+
+.menu a{
+    color:#596873;
+    font-size:13px;
+    font-weight:600;
+}
+
+.menu a:hover{
+    color:var(--aqua-dark);
+}
+
+/* HERO */
+
+.hero{
+    padding:74px 0 82px;
+    background:
+        radial-gradient(circle at 82% 15%,rgba(40,197,216,.16),transparent 25%),
+        linear-gradient(135deg,#f3fbfc,#f8fbfd);
+    overflow:hidden;
+}
+
+.hero-grid{
+    display:grid;
+    grid-template-columns:1.03fr .97fr;
+    gap:58px;
+    align-items:center;
+}
+
+.badge{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    padding:8px 13px;
+    border-radius:30px;
+    background:#def6f8;
+    color:#126d79;
+    font-size:12px;
+    font-weight:700;
+    margin-bottom:18px;
+}
+
+.badge-dot{
+    width:8px;
+    height:8px;
+    border-radius:50%;
+    background:var(--aqua);
+}
+
+.hero h1{
+    color:var(--navy);
+    font-size:56px;
+    line-height:1.06;
+    letter-spacing:-2px;
+    margin-bottom:18px;
+}
+
+.hero h1 span{
+    color:var(--aqua-dark);
+}
+
+.hero p{
+    max-width:590px;
+    color:var(--muted);
+    font-size:17px;
+    margin-bottom:27px;
+}
+
+.hero-buttons{
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+}
+
+.hero-points{
+    display:flex;
+    flex-wrap:wrap;
+    gap:20px;
+    margin-top:28px;
+    color:#64727d;
+    font-size:12px;
+}
+
+.hero-points strong{
+    color:var(--aqua-dark);
+}
+
+/* CAR WASH VISUAL */
+
+.wash-visual{
+    position:relative;
+    min-height:390px;
+}
+
+.car-panel{
+    position:absolute;
+    right:0;
+    top:35px;
+    width:360px;
+    height:300px;
+    border-radius:24px;
+    background:linear-gradient(145deg,#10283c,#173c58);
+    overflow:hidden;
+    box-shadow:0 25px 60px rgba(20,45,60,.18);
+}
+
+.car-icon{
+    position:absolute;
+    inset:0;
+    display:grid;
+    place-items:center;
+    font-size:125px;
+}
+
+.bubble{
+    position:absolute;
+    border-radius:50%;
+    background:rgba(255,255,255,.16);
+}
+
+.b1{width:52px;height:52px;top:25px;left:35px;}
+.b2{width:30px;height:30px;top:85px;right:35px;}
+.b3{width:18px;height:18px;bottom:55px;left:45px;}
+.b4{width:35px;height:35px;bottom:25px;right:65px;}
+
+.wave{
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:0;
+    height:75px;
+    background:rgba(40,197,216,.22);
+    border-radius:50% 50% 0 0 / 45% 45% 0 0;
+}
+
+.visual-label{
+    position:absolute;
+    left:24px;
+    bottom:22px;
+    color:#fff;
+    z-index:3;
+}
+
+.visual-label small{
+    display:block;
+    color:#84ebf5;
+    font-size:9px;
+    font-weight:800;
+    letter-spacing:1px;
+}
+
+.visual-label strong{
+    font-size:14px;
+}
+
+.float-card{
+    position:absolute;
+    background:#fff;
+    border:1px solid var(--border);
+    border-radius:13px;
+    padding:12px 15px;
+    box-shadow:0 12px 28px rgba(25,50,65,.10);
+}
+
+.float-card strong{
+    display:block;
+    color:var(--navy);
+    font-size:12px;
+}
+
+.float-card span{
+    color:#81909a;
+    font-size:9px;
+}
+
+.fc1{
+    left:0;
+    top:10px;
+}
+
+.fc2{
+    left:15px;
+    bottom:25px;
+}
+
+.fc3{
+    right:0;
+    bottom:5px;
+}
+
+/* BENEFITS */
+
+.benefits{
+    border-bottom:1px solid var(--border);
+    background:#fff;
+}
+
+.benefit-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+}
+
+.benefit{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:11px;
+    padding:22px 15px;
+    border-right:1px solid var(--border);
+}
+
+.benefit:last-child{
+    border-right:0;
+}
+
+.benefit-icon{
+    font-size:25px;
+}
+
+.benefit h3{
+    color:var(--navy);
+    font-size:13px;
+}
+
+.benefit p{
+    color:var(--muted);
+    font-size:10px;
+}
+
+/* COMMON */
+
+.section{
+    padding:70px 0;
+}
+
+.section-light{
+    background:var(--light);
+}
+
+.section-head{
+    max-width:650px;
+    margin:0 auto 37px;
+    text-align:center;
+}
+
+.section-head small{
+    color:var(--aqua-dark);
+    font-size:10px;
+    text-transform:uppercase;
+    letter-spacing:1.7px;
+    font-weight:800;
+}
+
+.section-head h2{
+    color:var(--navy);
+    font-size:37px;
+    line-height:1.2;
+    margin:7px 0 10px;
+}
+
+.section-head p{
+    color:var(--muted);
+    font-size:14px;
+}
+
+/* SERVICES */
+
+.services-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+}
+
+.service-card{
+    background:#fff;
+    border:1px solid var(--border);
+    border-radius:16px;
+    padding:24px 21px;
+    transition:.25s;
+}
+
+.service-card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 15px 35px rgba(30,55,70,.07);
+}
+
+.service-icon{
+    width:58px;
+    height:58px;
+    border-radius:14px;
+    background:var(--sky);
+    display:grid;
+    place-items:center;
+    font-size:29px;
+    margin-bottom:15px;
+}
+
+.service-card h3{
+    color:var(--navy);
+    font-size:17px;
+    margin-bottom:6px;
+}
+
+.service-card p{
+    color:var(--muted);
+    font-size:12px;
+}
+
+/* PACKAGES */
+
+.package-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+}
+
+.package{
+    background:#fff;
+    border:1px solid var(--border);
+    border-radius:16px;
+    padding:25px;
+}
+
+.package.featured{
+    border:2px solid var(--aqua);
+}
+
+.package-tag{
+    display:inline-block;
+    padding:4px 9px;
+    border-radius:20px;
+    background:var(--sky);
+    color:var(--aqua-dark);
+    font-size:9px;
+    font-weight:800;
+    margin-bottom:12px;
+}
+
+.package h3{
+    color:var(--navy);
+    font-size:19px;
+    margin-bottom:5px;
+}
+
+.package > p{
+    color:var(--muted);
+    font-size:11px;
+    margin-bottom:16px;
+}
+
+.price{
+    margin-bottom:16px;
+}
+
+.price strong{
+    color:var(--navy);
+    font-size:29px;
+}
+
+.price span{
+    color:#8a98a2;
+    font-size:10px;
+}
+
+.package ul{
+    list-style:none;
+    margin-bottom:18px;
+}
+
+.package li{
+    padding:7px 0;
+    border-bottom:1px solid #edf1f3;
+    color:#63717b;
+    font-size:11px;
+}
+
+.package li:before{
+    content:"✓";
+    color:var(--aqua-dark);
+    font-weight:bold;
+    margin-right:7px;
+}
+
+/* CTA */
+
+.cta{
+    padding:0 0 70px;
+}
+
+.cta-box{
+    border-radius:18px;
+    padding:38px;
+    color:#fff;
+    background:
+        radial-gradient(circle at 92% 20%,rgba(40,197,216,.25),transparent 26%),
+        linear-gradient(135deg,var(--navy),#174a67);
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:35px;
+}
+
+.cta-box h2{
+    font-size:29px;
+    line-height:1.2;
+    margin-bottom:6px;
+}
+
+.cta-box p{
+    color:#d2e3ea;
+    font-size:13px;
+}
+
+/* CONTACT */
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:.8fr 1.2fr;
+    gap:38px;
+}
+
+.contact-info{
+    background:var(--navy);
+    color:#fff;
+    border-radius:17px;
+    padding:32px;
+}
+
+.contact-info h2{
+    font-size:28px;
+    line-height:1.25;
+    margin-bottom:10px;
+}
+
+.contact-info > p{
+    color:#c3d1d8;
+    font-size:12px;
+    margin-bottom:20px;
+}
+
+.info-row{
+    border-top:1px solid rgba(255,255,255,.12);
+    padding:12px 0;
+}
+
+.info-row strong{
+    display:block;
+    font-size:10px;
+    margin-bottom:3px;
+}
+
+.info-row span,
+.info-row a{
+    color:#cad6dc;
+    font-size:12px;
+}
+
+.info-row a:hover{
+    color:#fff;
+}
+
+.booking-form{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:12px;
+}
+
+.booking-form input,
+.booking-form select,
+.booking-form textarea{
+    width:100%;
+    padding:13px 14px;
+    border:1px solid var(--border);
+    border-radius:9px;
+    outline:none;
+    background:#fff;
+}
+
+.booking-form input:focus,
+.booking-form select:focus,
+.booking-form textarea:focus{
+    border-color:var(--aqua);
+    box-shadow:0 0 0 3px rgba(40,197,216,.09);
+}
+
+.booking-form textarea{
+    min-height:100px;
+    resize:vertical;
+    grid-column:span 2;
+}
+
+.booking-form button,
+.form-note{
+    grid-column:span 2;
+}
+
+.form-note{
+    color:#7f8b93;
+    font-size:10px;
+    line-height:1.5;
+}
+
+/* FOOTER */
+
+footer{
+    background:#081722;
+    color:#fff;
+    padding:40px 0 18px;
+}
+
+.footer-main{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    gap:40px;
+}
+
+.footer-brand{
+    max-width:430px;
+}
+
+.footer-logo{
+    font-size:21px;
+    font-weight:800;
+    margin-bottom:7px;
+}
+
+.footer-logo span{
+    color:var(--aqua);
+}
+
+footer p,
+footer a{
+    color:#95a7b1;
+    font-size:11px;
+}
+
+.footer-links{
+    display:flex;
+    gap:18px;
+    flex-wrap:wrap;
+}
+
+.footer-links a:hover{
+    color:#fff;
+}
+
+.footer-bottom{
+    border-top:1px solid #20323d;
+    margin-top:27px;
+    padding-top:16px;
+    display:flex;
+    justify-content:space-between;
+    gap:20px;
+    color:#71838d;
+    font-size:10px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+    .menu{
+        display:none;
+    }
+
+    .hero-grid,
+    .contact-grid{
+        grid-template-columns:1fr;
+    }
+
+    .services-grid,
+    .benefit-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .package-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media(max-width:600px){
+
+    .container{
+        width:min(100% - 22px,1120px);
+    }
+
+    .topbar-inner{
+        justify-content:center;
+        text-align:center;
+    }
+
+    .topbar-inner span:last-child{
+        display:none;
+    }
+
+    .logo{
+        font-size:18px;
+    }
+
+    .navbar > .btn{
+        padding:0 12px;
+        font-size:11px;
+    }
+
+    .hero{
+        padding:55px 0;
+    }
+
+    .hero h1{
+        font-size:40px;
+        letter-spacing:-1px;
+    }
+
+    .wash-visual{
+        min-height:420px;
+    }
+
+    .car-panel{
+        width:295px;
+        right:0;
+    }
+
+    .services-grid,
+    .benefit-grid,
+    .package-grid{
+        grid-template-columns:1fr;
+    }
+
+    .benefit{
+        justify-content:flex-start;
+        border-right:0;
+        border-bottom:1px solid var(--border);
+    }
+
+    .section{
+        padding:55px 0;
+    }
+
+    .section-head h2{
+        font-size:30px;
+    }
+
+    .cta-box{
+        padding:27px 22px;
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+    .booking-form{
+        grid-template-columns:1fr;
+    }
+
+    .booking-form textarea,
+    .booking-form button,
+    .form-note{
+        grid-column:auto;
+    }
+
+    .footer-main,
+    .footer-bottom{
+        flex-direction:column;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- TOP BAR -->
+
+<div class="topbar">
+    <div class="container topbar-inner">
+        <span>Exterior Wash · Interior Cleaning · Wax · Full Detailing</span>
+        <span>Book Service: <strong>(602) 555-0176</strong></span>
+    </div>
+</div>
+
+<!-- HEADER -->
+
+<header>
+
+    <div class="container navbar">
+
+        <a href="#home" class="logo">
+            <div class="logo-mark">💧</div>
+            Shine<span>Dock</span>
+        </a>
+
+        <ul class="menu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#packages">Packages</a></li>
+            <li><a href="#booking">Book Wash</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <a href="#booking" class="btn btn-dark">
+            Book a Wash
+        </a>
+
+    </div>
+
+</header>
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+    <div class="container hero-grid">
+
+        <div>
+
+            <div class="badge">
+                <span class="badge-dot"></span>
+                Professional car care without the hassle
+            </div>
+
+            <h1>
+                A cleaner car. A sharper look. <span>A better drive.</span>
+            </h1>
+
+            <p>
+                Professional car washing and detailing for everyday vehicles,
+                SUVs and trucks with exterior wash, interior cleaning,
+                wax and full-detail options.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#booking" class="btn btn-primary">
+                    Book Car Wash
+                </a>
+
+                <a href="tel:+16025550176" class="btn btn-light">
+                    Call (602) 555-0176
+                </a>
+
+            </div>
+
+            <div class="hero-points">
+                <div><strong>✓</strong> Exterior cleaning</div>
+                <div><strong>✓</strong> Interior detailing</div>
+                <div><strong>✓</strong> Cars, SUVs & trucks</div>
+            </div>
+
+        </div>
+
+        <!-- CSS VISUAL -->
+
+        <div class="wash-visual">
+
+            <div class="float-card fc1">
+                <strong>✨ Clean Finish</strong>
+                <span>Exterior wash & dry</span>
+            </div>
+
+            <div class="car-panel">
+
+                <div class="bubble b1"></div>
+                <div class="bubble b2"></div>
+                <div class="bubble b3"></div>
+                <div class="bubble b4"></div>
+
+                <div class="car-icon">🚙</div>
+
+                <div class="wave"></div>
+
+                <div class="visual-label">
+                    <small>SHINEDOCK CAR CARE</small>
+                    <strong>Wash · Detail · Protect</strong>
+                </div>
+
+            </div>
+
+            <div class="float-card fc2">
+                <strong>🧽 Interior Care</strong>
+                <span>Vacuum & surface cleaning</span>
+            </div>
+
+            <div class="float-card fc3">
+                <strong>🚗 Multiple Vehicles</strong>
+                <span>Cars · SUVs · Trucks</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- BENEFITS -->
+
+<section class="benefits">
+
+    <div class="container benefit-grid">
+
+        <div class="benefit">
+            <div class="benefit-icon">💦</div>
+            <div>
+                <h3>Exterior Wash</h3>
+                <p>Clean body and exterior surfaces</p>
+            </div>
+        </div>
+
+        <div class="benefit">
+            <div class="benefit-icon">🧹</div>
+            <div>
+                <h3>Interior Cleaning</h3>
+                <p>Vacuum and surface cleaning</p>
+            </div>
+        </div>
+
+        <div class="benefit">
+            <div class="benefit-icon">✨</div>
+            <div>
+                <h3>Wax Options</h3>
+                <p>Add gloss and surface protection</p>
+            </div>
+        </div>
+
+        <div class="benefit">
+            <div class="benefit-icon">📅</div>
+            <div>
+                <h3>Easy Booking</h3>
+                <p>Request a convenient service time</p>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- SERVICES -->
+
+<section class="section section-light" id="services">
+
+    <div class="container">
+
+        <div class="section-head">
+
+            <small>Car Care Services</small>
+
+            <h2>
+                Simple options for a cleaner, better-looking vehicle.
+            </h2>
+
+            <p>
+                Choose a quick wash or a more complete detailing service
+                based on your vehicle and current condition.
+            </p>
+
+        </div>
+
+        <div class="services-grid">
+
+            <article class="service-card">
+
+                <div class="service-icon">🚿</div>
+
+                <h3>Exterior Car Wash</h3>
+
+                <p>
+                    Exterior washing and drying for routine vehicle cleaning.
+                </p>
+
+            </article>
+
+            <article class="service-card">
+
+                <div class="service-icon">🧹</div>
+
+                <h3>Interior Cleaning</h3>
+
+                <p>
+                    Vacuuming and basic cleaning of interior surfaces and floor areas.
+                </p>
+
+            </article>
+
+            <article class="service-card">
+
+                <div class="service-icon">✨</div>
+
+                <h3>Wash & Wax</h3>
+
+                <p>
+                    Exterior wash followed by an available wax or finishing option.
+                </p>
+
+            </article>
+
+            <article class="service-card">
+
+                <div class="service-icon">🧼</div>
+
+                <h3>Full Detailing</h3>
+
+                <p>
+                    More thorough interior and exterior cleaning based on vehicle condition.
+                </p>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- PACKAGES -->
+
+<section class="section" id="packages">
+
+    <div class="container">
+
+        <div class="section-head">
+
+            <small>Service Packages</small>
+
+            <h2>
+                Pick the level of clean your car needs.
+            </h2>
+
+            <p>
+                Sample pricing is shown below. Replace it with your
+                actual rates before publishing your Google Ads landing page.
+            </p>
+
+        </div>
+
+        <div class="package-grid">
+
+            <article class="package">
+
+                <span class="package-tag">QUICK CLEAN</span>
+
+                <h3>Express Wash</h3>
+
+                <p>
+                    A straightforward exterior wash for routine cleaning.
+                </p>
+
+                <div class="price">
+                    <strong>$24</strong>
+                    <span>starting price*</span>
+                </div>
+
+                <ul>
+                    <li>Exterior Wash</li>
+                    <li>Wheel Rinse</li>
+                    <li>Exterior Dry</li>
+                </ul>
+
+                <a href="#booking" class="btn btn-dark">
+                    Book Express
+                </a>
+
+            </article>
+
+            <article class="package featured">
+
+                <span class="package-tag">POPULAR</span>
+
+                <h3>Inside & Out</h3>
+
+                <p>
+                    Interior and exterior cleaning for everyday vehicle care.
+                </p>
+
+                <div class="price">
+                    <strong>$49</strong>
+                    <span>starting price*</span>
+                </div>
+
+                <ul>
+                    <li>Exterior Wash</li>
+                    <li>Interior Vacuum</li>
+                    <li>Dashboard Wipe</li>
+                    <li>Window Cleaning</li>
+                </ul>
+
+                <a href="#booking" class="btn btn-primary">
+                    Book Package
+                </a>
+
+            </article>
+
+            <article class="package">
+
+                <span class="package-tag">DEEP CLEAN</span>
+
+                <h3>Full Detail</h3>
+
+                <p>
+                    A more complete cleaning service for interior and exterior surfaces.
+                </p>
+
+                <div class="price">
+                    <strong>$129</strong>
+                    <span>starting price*</span>
+                </div>
+
+                <ul>
+                    <li>Exterior Wash</li>
+                    <li>Interior Cleaning</li>
+                    <li>Vacuum & Detail</li>
+                    <li>Wax Option</li>
+                    <li>Final Vehicle Review</li>
+                </ul>
+
+                <a href="#booking" class="btn btn-dark">
+                    Request Detail
+                </a>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- CTA -->
+
+<section class="cta">
+
+    <div class="container">
+
+        <div class="cta-box">
+
+            <div>
+
+                <h2>
+                    Does your car need more than a quick wash?
+                </h2>
+
+                <p>
+                    Tell us your vehicle type and condition
+                    and we'll help you choose a suitable service.
+                </p>
+
+            </div>
+
+            <a href="#booking" class="btn btn-primary">
+                Get Service Recommendation
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- BOOKING -->
+
+<section class="section section-light" id="booking">
+
+    <div class="container contact-grid">
+
+        <div class="contact-info" id="contact">
+
+            <h2>
+                Request your car wash appointment.
+            </h2>
+
+            <p>
+                Submit your vehicle and preferred service.
+                Our team will contact you regarding availability,
+                final pricing and appointment timing.
+            </p>
+
+            <div class="info-row">
+                <strong>PHONE</strong>
+                <a href="tel:+16025550176">
+                    (602) 555-0176
+                </a>
+            </div>
+
+            <div class="info-row">
+                <strong>EMAIL</strong>
+                <a href="mailto:service@shinedockwash.com">
+                    service@shinedockwash.com
+                </a>
+            </div>
+
+            <div class="info-row">
+                <strong>LOCATION</strong>
+                <span>
+                    1840 East Camelback Road, Phoenix, AZ 85016
+                </span>
+            </div>
+
+            <div class="info-row">
+                <strong>HOURS</strong>
+                <span>
+                    Mon–Sat: 8:00 AM–7:00 PM · Sun: 9:00 AM–5:00 PM
+                </span>
+            </div>
+
+            <div class="info-row">
+                <strong>SERVICE NOTE</strong>
+                <span>
+                    Final pricing may vary based on vehicle size,
+                    condition and selected services.
+                </span>
+            </div>
+
+        </div>
+
+        <form class="booking-form" action="#booking" method="post">
+
+            <input
+                type="text"
+                name="name"
+                placeholder="Full Name"
+                required>
+
+            <input
+                type="tel"
+                name="phone"
+                placeholder="Phone Number"
+                required>
+
+            <input
+                type="email"
+                name="email"
+                placeholder="Email Address"
+                required>
+
+            <select name="vehicle_type" required>
+                <option value="">Vehicle Type</option>
+                <option value="car">Car / Sedan</option>
+                <option value="suv">SUV / Crossover</option>
+                <option value="truck">Pickup Truck</option>
+                <option value="van">Van</option>
+                <option value="other">Other Vehicle</option>
+            </select>
+
+            <select name="service" required>
+                <option value="">Select Service</option>
+                <option value="exterior">Exterior Wash</option>
+                <option value="inside-out">Inside & Out</option>
+                <option value="wax">Wash & Wax</option>
+                <option value="detail">Full Detail</option>
+                <option value="unsure">Need Recommendation</option>
+            </select>
+
+            <input
+                type="date"
+                name="preferred_date"
+                required>
+
+            <select name="preferred_time">
+                <option value="">Preferred Time</option>
+                <option value="morning">Morning</option>
+                <option value="midday">Midday</option>
+                <option value="afternoon">Afternoon</option>
+                <option value="evening">Evening</option>
+            </select>
+
+            <input
+                type="text"
+                name="vehicle"
+                placeholder="Vehicle Make / Model">
+
+            <textarea
+                name="message"
+                placeholder="Tell us about stains, pet hair, heavy dirt, wax needs or any special cleaning request"></textarea>
+
+            <div class="form-note">
+                *Prices shown are sample starting prices only. Appointment submission
+                does not guarantee availability. Final services, timing and pricing
+                are confirmed after reviewing the vehicle and requested work.
+            </div>
+
+            <button type="submit" class="btn btn-primary">
+                Request Car Wash Appointment
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+    <div class="container">
+
+        <div class="footer-main">
+
+            <div class="footer-brand">
+
+                <div class="footer-logo">
+                    Shine<span>Dock</span>
+                </div>
+
+                <p>
+                    Professional exterior car washing,
+                    interior cleaning, wax and detailing
+                    for cars, SUVs and trucks.
+                </p>
+
+            </div>
+
+            <div class="footer-links">
+                <a href="#home">Home</a>
+                <a href="#services">Services</a>
+                <a href="#packages">Packages</a>
+                <a href="#booking">Book Wash</a>
+                <a href="#contact">Contact</a>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+
+            <span>
+                © 2026 ShineDock Car Wash. All rights reserved.
+            </span>
+
+            <span>
+                Service availability and final pricing are confirmed before work begins.
+            </span>
+
+        </div>
+
+    </div>
+
+</footer>
+
+</body>
+</html>
