@@ -1,0 +1,2321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Summit Roofing | Professional Roofing Services</title>
+
+  <meta
+    name="description"
+    content="Professional residential roofing services including roof replacement, repairs, inspections, and storm damage solutions. Request a roofing estimate today."
+  >
+
+  <style>
+    /* =========================================================
+       RESET
+    ========================================================= */
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: #17202a;
+      background: #ffffff;
+      line-height: 1.6;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button,
+    input,
+    select,
+    textarea {
+      font-family: inherit;
+    }
+
+    /* =========================================================
+       COLORS
+    ========================================================= */
+
+    :root {
+      --navy: #0c1b2a;
+      --navy-2: #12283b;
+      --blue: #1d5f91;
+      --gold: #d5a43a;
+      --gold-dark: #b98722;
+      --white: #ffffff;
+      --offwhite: #f7f8f9;
+      --gray: #687582;
+      --light-border: #e1e5e8;
+      --dark-text: #17202a;
+      --green: #277a58;
+    }
+
+    /* =========================================================
+       TOP BAR
+    ========================================================= */
+
+    .top-bar {
+      background: var(--navy);
+      color: #dce5ec;
+      font-size: 12px;
+    }
+
+    .top-bar-inner {
+      max-width: 1180px;
+      margin: auto;
+      padding: 9px 22px;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .top-bar-left {
+      display: flex;
+      gap: 22px;
+      flex-wrap: wrap;
+    }
+
+    .top-bar-right {
+      color: #f0c45d;
+      font-weight: 700;
+    }
+
+    /* =========================================================
+       NAVIGATION
+    ========================================================= */
+
+    .navbar {
+      background: #ffffff;
+      border-bottom: 1px solid var(--light-border);
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+
+    .nav-inner {
+      max-width: 1180px;
+      min-height: 76px;
+      margin: auto;
+      padding: 0 22px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+    }
+
+    .brand-mark {
+      width: 42px;
+      height: 42px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      background: var(--navy);
+      color: var(--gold);
+
+      font-size: 21px;
+      font-weight: 900;
+
+      border-radius: 5px;
+    }
+
+    .brand-text strong {
+      display: block;
+      color: var(--navy);
+      font-size: 18px;
+      line-height: 1.1;
+      letter-spacing: -0.3px;
+    }
+
+    .brand-text span {
+      color: #7b858d;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+
+      color: #46515b;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .nav-links a:hover {
+      color: var(--blue);
+    }
+
+    .nav-call {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      min-height: 43px;
+      padding: 0 17px;
+
+      background: var(--gold);
+      color: var(--navy);
+
+      border-radius: 4px;
+
+      font-size: 13px;
+      font-weight: 900;
+
+      white-space: nowrap;
+    }
+
+    .nav-call:hover {
+      background: var(--gold-dark);
+    }
+
+    /* =========================================================
+       HERO
+    ========================================================= */
+
+    .hero {
+      min-height: 690px;
+
+      background:
+        linear-gradient(
+          90deg,
+          rgba(8, 22, 35, 0.96) 0%,
+          rgba(8, 22, 35, 0.90) 42%,
+          rgba(8, 22, 35, 0.48) 75%,
+          rgba(8, 22, 35, 0.25) 100%
+        ),
+        url("https://images.unsplash.com/photo-1632759145351-1d592919f522?auto=format&fit=crop&w=2000&q=85")
+        center / cover no-repeat;
+
+      display: flex;
+      align-items: center;
+    }
+
+    .hero-inner {
+      width: 100%;
+      max-width: 1180px;
+      margin: auto;
+      padding: 80px 22px;
+
+      display: grid;
+      grid-template-columns: 1fr 430px;
+      gap: 65px;
+      align-items: center;
+    }
+
+    .hero-content {
+      color: var(--white);
+    }
+
+    .hero-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+
+      color: #f2c65e;
+
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+
+      margin-bottom: 18px;
+    }
+
+    .hero-label::before {
+      content: "";
+
+      width: 27px;
+      height: 2px;
+
+      background: var(--gold);
+    }
+
+    .hero h1 {
+      max-width: 680px;
+
+      font-size: clamp(43px, 5.5vw, 68px);
+      line-height: 1.01;
+
+      letter-spacing: -2.8px;
+
+      margin-bottom: 22px;
+    }
+
+    .hero h1 span {
+      color: #e7b84d;
+    }
+
+    .hero-description {
+      max-width: 625px;
+
+      color: #d0d9e0;
+
+      font-size: 17px;
+
+      margin-bottom: 28px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .btn {
+      min-height: 50px;
+      padding: 0 22px;
+
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      border-radius: 4px;
+
+      font-size: 13px;
+      font-weight: 900;
+
+      transition: 0.2s ease;
+    }
+
+    .btn-gold {
+      background: var(--gold);
+      color: var(--navy);
+    }
+
+    .btn-gold:hover {
+      background: #e4b84f;
+      transform: translateY(-1px);
+    }
+
+    .btn-outline {
+      border: 1px solid rgba(255,255,255,0.55);
+      color: var(--white);
+    }
+
+    .btn-outline:hover {
+      background: #ffffff;
+      color: var(--navy);
+    }
+
+    /* =========================================================
+       QUOTE CARD
+    ========================================================= */
+
+    .quote-card {
+      background: #ffffff;
+
+      border-radius: 7px;
+
+      padding: 29px;
+
+      box-shadow:
+        0 25px 70px rgba(0,0,0,0.30);
+    }
+
+    .quote-card h2 {
+      color: var(--navy);
+
+      font-size: 26px;
+      line-height: 1.2;
+
+      margin-bottom: 7px;
+    }
+
+    .quote-card-intro {
+      color: var(--gray);
+
+      font-size: 13px;
+
+      margin-bottom: 20px;
+    }
+
+    .form-group {
+      margin-bottom: 12px;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    label {
+      display: block;
+
+      color: #3e4a54;
+
+      font-size: 11px;
+      font-weight: 900;
+
+      margin-bottom: 5px;
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+
+      border: 1px solid #d7dde2;
+      border-radius: 4px;
+
+      background: #ffffff;
+      color: var(--dark-text);
+
+      outline: none;
+
+      font-size: 13px;
+    }
+
+    input,
+    select {
+      height: 44px;
+      padding: 0 11px;
+    }
+
+    textarea {
+      min-height: 75px;
+      resize: vertical;
+      padding: 10px 11px;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      border-color: var(--blue);
+
+      box-shadow:
+        0 0 0 3px rgba(29,95,145,0.10);
+    }
+
+    .quote-submit {
+      width: 100%;
+      height: 48px;
+
+      border: 0;
+      border-radius: 4px;
+
+      background: var(--navy);
+      color: #ffffff;
+
+      cursor: pointer;
+
+      font-size: 13px;
+      font-weight: 900;
+    }
+
+    .quote-submit:hover {
+      background: var(--blue);
+    }
+
+    .quote-disclaimer {
+      color: #8a949c;
+
+      font-size: 9px;
+      line-height: 1.45;
+
+      text-align: center;
+
+      margin-top: 9px;
+    }
+
+    /* =========================================================
+       TRUST STRIP
+    ========================================================= */
+
+    .trust-strip {
+      background: var(--navy);
+      color: white;
+    }
+
+    .trust-inner {
+      max-width: 1180px;
+      margin: auto;
+      padding: 22px;
+
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .trust-item {
+      padding: 3px 22px;
+
+      border-right: 1px solid rgba(255,255,255,0.12);
+
+      text-align: center;
+    }
+
+    .trust-item:last-child {
+      border-right: 0;
+    }
+
+    .trust-number {
+      color: #efc45a;
+
+      font-size: 22px;
+      font-weight: 900;
+
+      display: block;
+    }
+
+    .trust-label {
+      color: #b6c1ca;
+
+      font-size: 11px;
+    }
+
+    /* =========================================================
+       GENERAL SECTION
+    ========================================================= */
+
+    section {
+      padding: 88px 22px;
+    }
+
+    .container {
+      max-width: 1180px;
+      margin: auto;
+    }
+
+    .section-heading {
+      max-width: 720px;
+
+      margin: 0 auto 46px;
+
+      text-align: center;
+    }
+
+    .section-kicker {
+      color: var(--blue);
+
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: 1.8px;
+      text-transform: uppercase;
+
+      margin-bottom: 9px;
+    }
+
+    .section-heading h2 {
+      color: var(--navy);
+
+      font-size: 38px;
+      line-height: 1.15;
+
+      letter-spacing: -1.2px;
+
+      margin-bottom: 12px;
+    }
+
+    .section-heading p {
+      color: var(--gray);
+
+      font-size: 15px;
+    }
+
+    /* =========================================================
+       SERVICES
+    ========================================================= */
+
+    .services {
+      background: #ffffff;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .service-card {
+      overflow: hidden;
+
+      border: 1px solid var(--light-border);
+      border-radius: 6px;
+
+      background: #ffffff;
+
+      transition: 0.2s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-4px);
+
+      box-shadow:
+        0 18px 45px rgba(13,30,45,0.10);
+    }
+
+    .service-image {
+      height: 190px;
+      overflow: hidden;
+    }
+
+    .service-image img {
+      height: 100%;
+      object-fit: cover;
+
+      transition: transform 0.3s ease;
+    }
+
+    .service-card:hover .service-image img {
+      transform: scale(1.04);
+    }
+
+    .service-body {
+      padding: 23px;
+    }
+
+    .service-body h3 {
+      color: var(--navy);
+
+      font-size: 19px;
+
+      margin-bottom: 7px;
+    }
+
+    .service-body p {
+      color: var(--gray);
+
+      font-size: 13px;
+
+      margin-bottom: 14px;
+    }
+
+    .service-link {
+      color: var(--blue);
+
+      font-size: 12px;
+      font-weight: 900;
+    }
+
+    .service-link:hover {
+      color: var(--gold-dark);
+    }
+
+    /* =========================================================
+       ABOUT / FEATURE
+    ========================================================= */
+
+    .feature {
+      background: var(--offwhite);
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: 70px;
+      align-items: center;
+    }
+
+    .feature-image {
+      min-height: 480px;
+
+      border-radius: 7px;
+
+      overflow: hidden;
+
+      background:
+        url("https://images.unsplash.com/photo-1635424710928-8c5b2a0b8a4a?auto=format&fit=crop&w=1200&q=85")
+        center / cover no-repeat;
+    }
+
+    .feature-content .section-kicker {
+      text-align: left;
+    }
+
+    .feature-content h2 {
+      color: var(--navy);
+
+      font-size: 39px;
+      line-height: 1.12;
+
+      letter-spacing: -1.2px;
+
+      margin-bottom: 15px;
+    }
+
+    .feature-content > p {
+      color: var(--gray);
+
+      font-size: 15px;
+
+      margin-bottom: 24px;
+    }
+
+    .benefits {
+      display: grid;
+      gap: 14px;
+
+      margin-bottom: 25px;
+    }
+
+    .benefit {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+    }
+
+    .benefit-icon {
+      flex: 0 0 auto;
+
+      width: 27px;
+      height: 27px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      border-radius: 50%;
+
+      background: #e7f0f6;
+      color: var(--blue);
+
+      font-size: 12px;
+      font-weight: 900;
+    }
+
+    .benefit h3 {
+      color: var(--navy);
+
+      font-size: 14px;
+
+      margin-bottom: 2px;
+    }
+
+    .benefit p {
+      color: var(--gray);
+
+      font-size: 12px;
+    }
+
+    /* =========================================================
+       PROCESS
+    ========================================================= */
+
+    .process {
+      background: #ffffff;
+    }
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+
+    .process-card {
+      text-align: center;
+
+      padding: 15px;
+    }
+
+    .process-number {
+      width: 55px;
+      height: 55px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      margin: 0 auto 17px;
+
+      border: 2px solid var(--gold);
+
+      border-radius: 50%;
+
+      color: var(--navy);
+
+      font-size: 17px;
+      font-weight: 900;
+    }
+
+    .process-card h3 {
+      color: var(--navy);
+
+      font-size: 18px;
+
+      margin-bottom: 7px;
+    }
+
+    .process-card p {
+      color: var(--gray);
+
+      font-size: 13px;
+    }
+
+    /* =========================================================
+       STORM SECTION
+    ========================================================= */
+
+    .storm {
+      background:
+        linear-gradient(
+          120deg,
+          rgba(10,26,41,0.96),
+          rgba(18,40,59,0.91)
+        ),
+        url("https://images.unsplash.com/photo-1527482937786-6e4f8d9b4e4f?auto=format&fit=crop&w=1800&q=80")
+        center / cover no-repeat;
+
+      color: white;
+    }
+
+    .storm-inner {
+      max-width: 950px;
+      margin: auto;
+
+      text-align: center;
+    }
+
+    .storm .section-kicker {
+      color: #f0c55c;
+    }
+
+    .storm h2 {
+      font-size: 40px;
+      line-height: 1.15;
+
+      letter-spacing: -1px;
+
+      margin-bottom: 13px;
+    }
+
+    .storm p {
+      max-width: 700px;
+
+      margin: 0 auto 25px;
+
+      color: #c3cdd5;
+
+      font-size: 15px;
+    }
+
+    .storm-buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    /* =========================================================
+       FAQ
+    ========================================================= */
+
+    .faq {
+      background: var(--offwhite);
+    }
+
+    .faq-list {
+      max-width: 850px;
+      margin: auto;
+    }
+
+    details {
+      background: #ffffff;
+
+      border: 1px solid var(--light-border);
+      border-radius: 5px;
+
+      margin-bottom: 10px;
+
+      padding: 0 20px;
+    }
+
+    summary {
+      list-style: none;
+
+      cursor: pointer;
+
+      color: var(--navy);
+
+      font-size: 14px;
+      font-weight: 800;
+
+      padding: 18px 0;
+    }
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    details p {
+      color: var(--gray);
+
+      font-size: 13px;
+
+      padding: 0 0 18px;
+    }
+
+    /* =========================================================
+       FINAL CTA
+    ========================================================= */
+
+    .final-cta {
+      background: var(--gold);
+
+      color: var(--navy);
+
+      text-align: center;
+    }
+
+    .final-cta h2 {
+      font-size: 40px;
+      line-height: 1.12;
+
+      letter-spacing: -1px;
+
+      margin-bottom: 10px;
+    }
+
+    .final-cta p {
+      max-width: 650px;
+
+      margin: 0 auto 23px;
+
+      color: #4b3c1c;
+
+      font-size: 14px;
+    }
+
+    .final-call {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      min-height: 50px;
+
+      padding: 0 25px;
+
+      border-radius: 4px;
+
+      background: var(--navy);
+      color: white;
+
+      font-size: 14px;
+      font-weight: 900;
+    }
+
+    .final-call:hover {
+      background: var(--navy-2);
+    }
+
+    /* =========================================================
+       FOOTER
+    ========================================================= */
+
+    footer {
+      background: #07131f;
+      color: #9ba7b0;
+
+      padding: 45px 22px 20px;
+    }
+
+    .footer-grid {
+      max-width: 1180px;
+      margin: auto;
+
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr;
+      gap: 45px;
+
+      padding-bottom: 30px;
+    }
+
+    footer h3 {
+      color: #ffffff;
+
+      font-size: 17px;
+
+      margin-bottom: 12px;
+    }
+
+    footer p,
+    footer a {
+      font-size: 12px;
+    }
+
+    footer p {
+      margin-bottom: 5px;
+    }
+
+    footer a:hover {
+      color: #ffffff;
+    }
+
+    .footer-bottom {
+      max-width: 1180px;
+      margin: auto;
+
+      padding-top: 17px;
+
+      border-top: 1px solid rgba(255,255,255,0.09);
+
+      text-align: center;
+
+      color: #65727c;
+
+      font-size: 10px;
+    }
+
+    /* =========================================================
+       MOBILE
+    ========================================================= */
+
+    @media (max-width: 950px) {
+
+      .nav-links {
+        display: none;
+      }
+
+      .hero-inner {
+        grid-template-columns: 1fr;
+        gap: 45px;
+      }
+
+      .hero {
+        min-height: auto;
+      }
+
+      .trust-inner {
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 20px;
+      }
+
+      .trust-item:nth-child(2) {
+        border-right: 0;
+      }
+
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .feature-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .feature-image {
+        min-height: 390px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 620px) {
+
+      .top-bar-left {
+        display: none;
+      }
+
+      .top-bar-inner {
+        justify-content: center;
+      }
+
+      .nav-inner {
+        min-height: 66px;
+        padding: 0 15px;
+      }
+
+      .brand-mark {
+        width: 37px;
+        height: 37px;
+      }
+
+      .brand-text strong {
+        font-size: 16px;
+      }
+
+      .nav-call {
+        padding: 0 11px;
+        font-size: 11px;
+      }
+
+      .hero-inner {
+        padding: 55px 17px;
+      }
+
+      .hero h1 {
+        font-size: 42px;
+        letter-spacing: -1.8px;
+      }
+
+      .hero-description {
+        font-size: 15px;
+      }
+
+      .quote-card {
+        padding: 22px 17px;
+      }
+
+      .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+      }
+
+      .trust-inner {
+        grid-template-columns: 1fr;
+      }
+
+      .trust-item {
+        border-right: 0;
+      }
+
+      section {
+        padding: 65px 17px;
+      }
+
+      .section-heading h2,
+      .feature-content h2,
+      .storm h2,
+      .final-cta h2 {
+        font-size: 30px;
+      }
+
+      .services-grid,
+      .process-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .feature-image {
+        min-height: 300px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- =======================================================
+       TOP BAR
+  ======================================================== -->
+
+  <div class="top-bar">
+
+    <div class="top-bar-inner">
+
+      <div class="top-bar-left">
+
+        <span>
+          Residential Roofing Services
+        </span>
+
+        <span>
+          Roof Repairs & Replacement
+        </span>
+
+      </div>
+
+      <div class="top-bar-right">
+        Call Today for Information
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- =======================================================
+       NAVIGATION
+  ======================================================== -->
+
+  <header class="navbar">
+
+    <nav class="nav-inner">
+
+      <a href="#home" class="brand">
+
+        <div class="brand-mark">
+          ▲
+        </div>
+
+        <div class="brand-text">
+
+          <strong>
+            Summit Roofing
+          </strong>
+
+          <span>
+            Roofing & Exterior Services
+          </span>
+
+        </div>
+
+      </a>
+
+
+      <div class="nav-links">
+
+        <a href="#services">
+          Services
+        </a>
+
+        <a href="#about">
+          About
+        </a>
+
+        <a href="#process">
+          Process
+        </a>
+
+        <a href="#faq">
+          FAQ
+        </a>
+
+        <a href="#contact">
+          Contact
+        </a>
+
+      </div>
+
+
+      <!-- Replace the 555 number with the real business number -->
+
+      <a
+        href="tel:+18005550183"
+        class="nav-call"
+      >
+        (800) 555-0183
+      </a>
+
+    </nav>
+
+  </header>
+
+
+  <main id="home">
+
+
+    <!-- =====================================================
+         HERO
+    ====================================================== -->
+
+    <section class="hero">
+
+      <div class="hero-inner">
+
+
+        <div class="hero-content">
+
+          <div class="hero-label">
+            Professional Roofing Services
+          </div>
+
+          <h1>
+            A Strong Roof Starts With
+            <span>Quality Work.</span>
+          </h1>
+
+          <p class="hero-description">
+            Whether you need a roof repair, replacement, inspection,
+            or help after a storm, our team can help you understand
+            your options and plan the next step.
+          </p>
+
+          <div class="hero-buttons">
+
+            <a
+              href="#contact"
+              class="btn btn-gold"
+            >
+              Request a Roofing Estimate
+            </a>
+
+            <a
+              href="tel:+18005550183"
+              class="btn btn-outline"
+            >
+              Call (800) 555-0183
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <!-- =================================================
+             LEAD FORM
+        ================================================== -->
+
+        <div class="quote-card">
+
+          <h2>
+            Request a Roofing Estimate
+          </h2>
+
+          <p class="quote-card-intro">
+            Tell us a little about your project and our team
+            can contact you to discuss your roofing needs.
+          </p>
+
+          <form id="roofingForm">
+
+            <div class="form-row">
+
+              <div class="form-group">
+
+                <label for="firstName">
+                  First Name
+                </label>
+
+                <input
+                  type="text"
+                  id="firstName"
+                  name="firstName"
+                  placeholder="First name"
+                  required
+                >
+
+              </div>
+
+
+              <div class="form-group">
+
+                <label for="lastName">
+                  Last Name
+                </label>
+
+                <input
+                  type="text"
+                  id="lastName"
+                  name="lastName"
+                  placeholder="Last name"
+                  required
+                >
+
+              </div>
+
+            </div>
+
+
+            <div class="form-row">
+
+              <div class="form-group">
+
+                <label for="phone">
+                  Phone
+                </label>
+
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  placeholder="(555) 555-5555"
+                  required
+                >
+
+              </div>
+
+
+              <div class="form-group">
+
+                <label for="email">
+                  Email
+                </label>
+
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="you@example.com"
+                  required
+                >
+
+              </div>
+
+            </div>
+
+
+            <div class="form-group">
+
+              <label for="service">
+                Roofing Service
+              </label>
+
+              <select
+                id="service"
+                name="service"
+                required
+              >
+
+                <option value="">
+                  Select a service
+                </option>
+
+                <option>
+                  Roof Repair
+                </option>
+
+                <option>
+                  Roof Replacement
+                </option>
+
+                <option>
+                  Roof Inspection
+                </option>
+
+                <option>
+                  Storm Damage
+                </option>
+
+                <option>
+                  Other
+                </option>
+
+              </select>
+
+            </div>
+
+
+            <div class="form-group">
+
+              <label for="message">
+                Project Details
+              </label>
+
+              <textarea
+                id="message"
+                name="message"
+                placeholder="Briefly describe your roofing needs..."
+              ></textarea>
+
+            </div>
+
+
+            <button
+              type="submit"
+              class="quote-submit"
+            >
+              Request Information
+            </button>
+
+            <p class="quote-disclaimer">
+              By submitting this form, you agree that the business
+              may contact you regarding your request. Replace this
+              notice with your actual privacy/consent language before
+              advertising.
+            </p>
+
+          </form>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         TRUST STRIP
+    ====================================================== -->
+
+    <div class="trust-strip">
+
+      <div class="trust-inner">
+
+        <div class="trust-item">
+
+          <span class="trust-number">
+            Roofing
+          </span>
+
+          <span class="trust-label">
+            Residential Services
+          </span>
+
+        </div>
+
+
+        <div class="trust-item">
+
+          <span class="trust-number">
+            4
+          </span>
+
+          <span class="trust-label">
+            Core Service Areas
+          </span>
+
+        </div>
+
+
+        <div class="trust-item">
+
+          <span class="trust-number">
+            Free
+          </span>
+
+          <span class="trust-label">
+            Project Consultation*
+          </span>
+
+        </div>
+
+
+        <div class="trust-item">
+
+          <span class="trust-number">
+            Local
+          </span>
+
+          <span class="trust-label">
+            Customer-Focused Service
+          </span>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         SERVICES
+    ====================================================== -->
+
+    <section
+      class="services"
+      id="services"
+    >
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <div class="section-kicker">
+            Our Roofing Services
+          </div>
+
+          <h2>
+            Roofing Solutions for Your Home
+          </h2>
+
+          <p>
+            From routine repairs to complete roof replacement,
+            choose the service that fits your project.
+          </p>
+
+        </div>
+
+
+        <div class="services-grid">
+
+
+          <article class="service-card">
+
+            <div class="service-image">
+
+              <img
+                src="https://images.unsplash.com/photo-1632759145351-1d592919f522?auto=format&fit=crop&w=1000&q=80"
+                alt="Residential roof replacement"
+                loading="lazy"
+              >
+
+            </div>
+
+            <div class="service-body">
+
+              <h3>
+                Roof Replacement
+              </h3>
+
+              <p>
+                Planning a new roof? Discuss roofing materials,
+                project requirements, and replacement options
+                with our team.
+              </p>
+
+              <a
+                href="#contact"
+                class="service-link"
+              >
+                Discuss Your Project →
+              </a>
+
+            </div>
+
+          </article>
+
+
+          <article class="service-card">
+
+            <div class="service-image">
+
+              <img
+                src="https://images.unsplash.com/photo-1635424710928-8c5b2a0b8a4a?auto=format&fit=crop&w=1000&q=80"
+                alt="Roof repair service"
+                loading="lazy"
+              >
+
+            </div>
+
+            <div class="service-body">
+
+              <h3>
+                Roof Repairs
+              </h3>
+
+              <p>
+                Address leaks, damaged shingles, flashing concerns,
+                and other roofing issues with professional assistance.
+              </p>
+
+              <a
+                href="#contact"
+                class="service-link"
+              >
+                Ask About Repairs →
+              </a>
+
+            </div>
+
+          </article>
+
+
+          <article class="service-card">
+
+            <div class="service-image">
+
+              <img
+                src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1000&q=80"
+                alt="Roof inspection"
+                loading="lazy"
+              >
+
+            </div>
+
+            <div class="service-body">
+
+              <h3>
+                Roof Inspections
+              </h3>
+
+              <p>
+                Get help evaluating the condition of your roof
+                and understanding what work may be needed.
+              </p>
+
+              <a
+                href="#contact"
+                class="service-link"
+              >
+                Request an Inspection →
+              </a>
+
+            </div>
+
+          </article>
+
+
+          <article class="service-card">
+
+            <div class="service-image">
+
+              <img
+                src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1000&q=80"
+                alt="Roofing contractor working"
+                loading="lazy"
+              >
+
+            </div>
+
+            <div class="service-body">
+
+              <h3>
+                Storm Damage
+              </h3>
+
+              <p>
+                If your roof has been affected by severe weather,
+                contact our team to discuss your situation.
+              </p>
+
+              <a
+                href="#contact"
+                class="service-link"
+              >
+                Discuss Storm Damage →
+              </a>
+
+            </div>
+
+          </article>
+
+
+          <article class="service-card">
+
+            <div class="service-image">
+
+              <img
+                src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1000&q=80"
+                alt="Roofing construction project"
+                loading="lazy"
+              >
+
+            </div>
+
+            <div class="service-body">
+
+              <h3>
+                New Construction Roofing
+              </h3>
+
+              <p>
+                Roofing solutions for qualifying new construction
+                and residential building projects.
+              </p>
+
+              <a
+                href="#contact"
+                class="service-link"
+              >
+                Talk to Our Team →
+              </a>
+
+            </div>
+
+          </article>
+
+
+          <article class="service-card">
+
+            <div class="service-image">
+
+              <img
+                src="https://images.unsplash.com/photo-1562259949-e8e7689d7828?auto=format&fit=crop&w=1000&q=80"
+                alt="Roof maintenance"
+                loading="lazy"
+              >
+
+            </div>
+
+            <div class="service-body">
+
+              <h3>
+                Roofing Maintenance
+              </h3>
+
+              <p>
+                Stay proactive with roofing maintenance and
+                identify potential concerns before they become
+                larger projects.
+              </p>
+
+              <a
+                href="#contact"
+                class="service-link"
+              >
+                Learn More →
+              </a>
+
+            </div>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         ABOUT / BENEFITS
+    ====================================================== -->
+
+    <section
+      class="feature"
+      id="about"
+    >
+
+      <div class="container">
+
+        <div class="feature-grid">
+
+          <div class="feature-image"></div>
+
+
+          <div class="feature-content">
+
+            <div class="section-kicker">
+              Built Around Your Project
+            </div>
+
+            <h2>
+              Clear Communication From Start to Finish
+            </h2>
+
+            <p>
+              Roofing projects can feel complicated. Our approach
+              is to help homeowners understand their options,
+              project requirements, and next steps before moving
+              forward.
+            </p>
+
+
+            <div class="benefits">
+
+              <div class="benefit">
+
+                <div class="benefit-icon">
+                  ✓
+                </div>
+
+                <div>
+
+                  <h3>
+                    Project-Focused Guidance
+                  </h3>
+
+                  <p>
+                    Discuss the condition of your roof and
+                    determine the appropriate next step.
+                  </p>
+
+                </div>
+
+              </div>
+
+
+              <div class="benefit">
+
+                <div class="benefit-icon">
+                  ✓
+                </div>
+
+                <div>
+
+                  <h3>
+                    Quality Materials
+                  </h3>
+
+                  <p>
+                    Discuss available roofing materials and
+                    options based on your project.
+                  </p>
+
+                </div>
+
+              </div>
+
+
+              <div class="benefit">
+
+                <div class="benefit-icon">
+                  ✓
+                </div>
+
+                <div>
+
+                  <h3>
+                    Straightforward Communication
+                  </h3>
+
+                  <p>
+                    Get clear information about your roofing
+                    project before making a decision.
+                  </p>
+
+                </div>
+
+              </div>
+
+
+              <div class="benefit">
+
+                <div class="benefit-icon">
+                  ✓
+                </div>
+
+                <div>
+
+                  <h3>
+                    Customer-Focused Service
+                  </h3>
+
+                  <p>
+                    We aim to make the roofing process easier
+                    to understand from beginning to end.
+                  </p>
+
+                </div>
+
+              </div>
+
+            </div>
+
+
+            <a
+              href="#contact"
+              class="btn btn-gold"
+            >
+              Discuss Your Roofing Project
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         PROCESS
+    ====================================================== -->
+
+    <section
+      class="process"
+      id="process"
+    >
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <div class="section-kicker">
+            Simple Process
+          </div>
+
+          <h2>
+            Getting Started Is Easy
+          </h2>
+
+          <p>
+            A straightforward process designed around your
+            roofing needs.
+          </p>
+
+        </div>
+
+
+        <div class="process-grid">
+
+
+          <div class="process-card">
+
+            <div class="process-number">
+              01
+            </div>
+
+            <h3>
+              Tell Us About Your Roof
+            </h3>
+
+            <p>
+              Contact our team and explain what you're seeing,
+              what you need, or what you're planning.
+            </p>
+
+          </div>
+
+
+          <div class="process-card">
+
+            <div class="process-number">
+              02
+            </div>
+
+            <h3>
+              Discuss Your Options
+            </h3>
+
+            <p>
+              We'll discuss your project and help you understand
+              potential solutions and next steps.
+            </p>
+
+          </div>
+
+
+          <div class="process-card">
+
+            <div class="process-number">
+              03
+            </div>
+
+            <h3>
+              Plan the Project
+            </h3>
+
+            <p>
+              Move forward with the roofing solution that makes
+              sense for your property and requirements.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         STORM CTA
+    ====================================================== -->
+
+    <section class="storm">
+
+      <div class="storm-inner">
+
+        <div class="section-kicker">
+          Roofing Assistance
+        </div>
+
+        <h2>
+          Concerned About Your Roof?
+        </h2>
+
+        <p>
+          Don't ignore visible damage, leaks, missing shingles,
+          or other roofing concerns. Contact our team to discuss
+          what you're experiencing and determine the next step.
+        </p>
+
+        <div class="storm-buttons">
+
+          <a
+            href="#contact"
+            class="btn btn-gold"
+          >
+            Request Information
+          </a>
+
+          <a
+            href="tel:+18005550183"
+            class="btn btn-outline"
+          >
+            Call (800) 555-0183
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         FAQ
+    ====================================================== -->
+
+    <section
+      class="faq"
+      id="faq"
+    >
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <div class="section-kicker">
+            Roofing FAQ
+          </div>
+
+          <h2>
+            Common Roofing Questions
+          </h2>
+
+          <p>
+            Helpful information before you contact a roofing
+            professional.
+          </p>
+
+        </div>
+
+
+        <div class="faq-list">
+
+
+          <details>
+
+            <summary>
+              How do I know if my roof needs repair or replacement?
+            </summary>
+
+            <p>
+              The right solution depends on factors such as the
+              age and condition of the roof, the extent of damage,
+              and other property considerations. A professional
+              evaluation can help determine the appropriate option.
+            </p>
+
+          </details>
+
+
+          <details>
+
+            <summary>
+              What roofing services do you provide?
+            </summary>
+
+            <p>
+              Services may include roof repairs, replacement,
+              inspections, storm damage assistance, maintenance,
+              and qualifying new construction roofing projects.
+            </p>
+
+          </details>
+
+
+          <details>
+
+            <summary>
+              Can I request an estimate?
+            </summary>
+
+            <p>
+              Yes. Use the request form on this page or call the
+              business directly to discuss your roofing project.
+            </p>
+
+          </details>
+
+
+          <details>
+
+            <summary>
+              What should I do if my roof has storm damage?
+            </summary>
+
+            <p>
+              If it is safe to do so, document visible damage and
+              contact a qualified roofing professional to discuss
+              the condition of the roof and appropriate next steps.
+            </p>
+
+          </details>
+
+
+          <details>
+
+            <summary>
+              How long does a roof replacement take?
+            </summary>
+
+            <p>
+              Project timelines vary depending on the size and
+              complexity of the roof, materials, weather, and
+              other project conditions.
+            </p>
+
+          </details>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         FINAL CTA
+    ====================================================== -->
+
+    <section
+      class="final-cta"
+      id="contact"
+    >
+
+      <div class="container">
+
+        <h2>
+          Ready to Talk About Your Roof?
+        </h2>
+
+        <p>
+          Request information online or speak with our team
+          about your roofing needs.
+        </p>
+
+        <a
+          href="tel:+18005550183"
+          class="final-call"
+        >
+          Call (800) 555-0183
+        </a>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =======================================================
+       FOOTER
+  ======================================================== -->
+
+  <footer>
+
+    <div class="footer-grid">
+
+
+      <div>
+
+        <h3>
+          Summit Roofing
+        </h3>
+
+        <p>
+          Professional roofing and exterior services focused
+          on helping homeowners understand their project options.
+        </p>
+
+        <p>
+          Replace this text with your actual company information
+          before publishing.
+        </p>
+
+      </div>
+
+
+      <div>
+
+        <h3>
+          Services
+        </h3>
+
+        <p>
+          <a href="#services">
+            Roof Replacement
+          </a>
+        </p>
+
+        <p>
+          <a href="#services">
+            Roof Repairs
+          </a>
+        </p>
+
+        <p>
+          <a href="#services">
+            Roof Inspections
+          </a>
+        </p>
+
+        <p>
+          <a href="#services">
+            Storm Damage
+          </a>
+        </p>
+
+      </div>
+
+
+      <div>
+
+        <h3>
+          Contact
+        </h3>
+
+        <p>
+          <a href="tel:+18005550183">
+            (800) 555-0183
+          </a>
+        </p>
+
+        <p>
+          United States
+        </p>
+
+        <p>
+          <a href="#contact">
+            Request Information
+          </a>
+        </p>
+
+      </div>
+
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+      © 2026 Summit Roofing. All rights reserved.
+      Replace business details, service area, and legal information
+      with your actual company information before launch.
+
+    </div>
+
+  </footer>
+
+
+  <!-- =======================================================
+       FORM SCRIPT
+  ======================================================== -->
+
+  <script>
+
+    const roofingForm =
+      document.getElementById("roofingForm");
+
+    roofingForm.addEventListener("submit", function(event) {
+
+      event.preventDefault();
+
+      const submitButton =
+        roofingForm.querySelector(".quote-submit");
+
+      submitButton.textContent = "Request Received";
+      submitButton.disabled = true;
+
+      setTimeout(function() {
+
+        alert(
+          "Thank you. Your roofing request has been received. Connect this form to your actual lead-management system before launching your advertising campaign."
+        );
+
+        roofingForm.reset();
+
+        submitButton.textContent =
+          "Request Information";
+
+        submitButton.disabled = false;
+
+      }, 600);
+
+    });
+
+  </script>
+
+</body>
+</html>
