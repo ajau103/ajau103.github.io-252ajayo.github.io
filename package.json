@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "name": "static-site",
   "version": "1.0.0",
   "scripts": {
@@ -6,5 +7,18 @@
   },
   "dependencies": {
     "serve": "^14.2.1"
+=======
+  "name": "worknest",
+  "version": "1.0.0",
+  "description": "WorkNest Premium Coworking Space",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": "22.x"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+>>>>>>> 0a7aa67ac596138fcc236e84e4f4d22770fee969
   }
 }

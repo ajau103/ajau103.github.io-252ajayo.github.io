@@ -1,0 +1,2095 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>DriveLine Motors | Quality Used Cars</title>
+
+  <meta
+    name="description"
+    content="Explore quality used cars, SUVs, and trucks at DriveLine Motors. Browse available vehicles, request pricing, and contact our team today."
+  >
+
+  <style>
+    :root {
+      --black: #0b0d10;
+      --dark: #11151a;
+      --dark-2: #171c22;
+      --blue: #2f8cff;
+      --blue-dark: #176ed5;
+      --white: #ffffff;
+      --muted: #a8b0ba;
+      --light: #f4f6f8;
+      --text: #26313c;
+      --border: #dfe4e9;
+      --green: #2fa36b;
+      --red: #e05252;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--white);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+    }
+
+    /* =========================
+       HEADER
+    ========================== */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+
+      background: rgba(11, 13, 16, 0.98);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .nav {
+      max-width: 1200px;
+      min-height: 74px;
+      margin: auto;
+      padding: 0 24px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
+    }
+
+    .logo {
+      color: var(--white);
+      font-size: 23px;
+      font-weight: 900;
+      letter-spacing: -0.7px;
+      white-space: nowrap;
+    }
+
+    .logo span {
+      color: var(--blue);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+
+      color: #c6ccd3;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .nav-links a:hover {
+      color: var(--blue);
+    }
+
+    .nav-phone {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      padding: 11px 18px;
+
+      background: var(--blue);
+      color: var(--white);
+
+      border-radius: 4px;
+
+      font-size: 14px;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .nav-phone:hover {
+      background: var(--blue-dark);
+    }
+
+    /* =========================
+       HERO
+    ========================== */
+
+    .hero {
+      min-height: 680px;
+
+      display: flex;
+      align-items: center;
+
+      background:
+        linear-gradient(
+          90deg,
+          rgba(7,9,12,0.97) 0%,
+          rgba(7,9,12,0.91) 43%,
+          rgba(7,9,12,0.42) 100%
+        ),
+        url("https://images.unsplash.com/photo-1494976388531-d1058494cdd8?auto=format&fit=crop&w=2000&q=85")
+        center / cover no-repeat;
+    }
+
+    .hero-container {
+      width: 100%;
+      max-width: 1200px;
+      margin: auto;
+      padding: 80px 24px;
+
+      display: grid;
+      grid-template-columns: 1.08fr 0.92fr;
+      gap: 65px;
+      align-items: center;
+    }
+
+    .hero-content {
+      color: var(--white);
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+
+      margin-bottom: 18px;
+
+      color: #75b5ff;
+
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: 1.8px;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 27px;
+      height: 2px;
+
+      background: var(--blue);
+    }
+
+    .hero h1 {
+      max-width: 680px;
+
+      font-size: clamp(44px, 5.5vw, 70px);
+      line-height: 0.99;
+      letter-spacing: -3px;
+
+      margin-bottom: 24px;
+    }
+
+    .hero h1 span {
+      color: var(--blue);
+    }
+
+    .hero-text {
+      max-width: 610px;
+
+      color: #c5cbd1;
+      font-size: 18px;
+
+      margin-bottom: 31px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .button {
+      min-height: 51px;
+      padding: 0 23px;
+
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      border-radius: 4px;
+
+      font-size: 14px;
+      font-weight: 900;
+
+      transition: 0.2s ease;
+    }
+
+    .button-primary {
+      background: var(--blue);
+      color: var(--white);
+    }
+
+    .button-primary:hover {
+      background: var(--blue-dark);
+      transform: translateY(-1px);
+    }
+
+    .button-light {
+      border: 1px solid rgba(255,255,255,0.4);
+      color: var(--white);
+    }
+
+    .button-light:hover {
+      background: var(--white);
+      color: var(--black);
+    }
+
+    /* =========================
+       SEARCH CARD
+    ========================== */
+
+    .search-card {
+      background: rgba(255,255,255,0.98);
+
+      padding: 30px;
+
+      border-radius: 7px;
+
+      box-shadow: 0 25px 70px rgba(0,0,0,0.35);
+    }
+
+    .search-card h2 {
+      color: var(--black);
+
+      font-size: 27px;
+      line-height: 1.2;
+
+      margin-bottom: 7px;
+    }
+
+    .search-card > p {
+      color: #68737e;
+
+      font-size: 14px;
+
+      margin-bottom: 22px;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .form-group {
+      margin-bottom: 13px;
+    }
+
+    .form-group.full {
+      grid-column: 1 / -1;
+    }
+
+    label {
+      display: block;
+
+      color: #37424d;
+
+      font-size: 12px;
+      font-weight: 800;
+
+      margin-bottom: 6px;
+    }
+
+    input,
+    select {
+      width: 100%;
+      height: 46px;
+
+      border: 1px solid #d5dce2;
+      border-radius: 4px;
+
+      padding: 0 12px;
+
+      background: #fff;
+
+      color: #27323c;
+
+      font-family: inherit;
+      font-size: 14px;
+
+      outline: none;
+    }
+
+    input:focus,
+    select:focus {
+      border-color: var(--blue);
+
+      box-shadow:
+        0 0 0 3px rgba(47,140,255,0.1);
+    }
+
+    .search-button {
+      width: 100%;
+      height: 49px;
+
+      border: 0;
+      border-radius: 4px;
+
+      background: var(--blue);
+      color: var(--white);
+
+      font-size: 14px;
+      font-weight: 900;
+
+      cursor: pointer;
+    }
+
+    .search-button:hover {
+      background: var(--blue-dark);
+    }
+
+    .search-note {
+      color: #87919a;
+
+      font-size: 10px;
+      text-align: center;
+
+      margin-top: 10px;
+    }
+
+    /* =========================
+       QUICK INFO
+    ========================== */
+
+    .quick-info {
+      background: var(--black);
+      border-bottom: 1px solid #20252b;
+    }
+
+    .quick-container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 23px 24px;
+
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .quick-item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .quick-icon {
+      width: 38px;
+      height: 38px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      border-radius: 4px;
+
+      background: #17283a;
+      color: #70b0ff;
+
+      font-size: 15px;
+      font-weight: 900;
+    }
+
+    .quick-item strong {
+      display: block;
+
+      color: var(--white);
+      font-size: 13px;
+    }
+
+    .quick-item span {
+      color: #8d969f;
+      font-size: 11px;
+    }
+
+    /* =========================
+       GENERAL
+    ========================== */
+
+    section {
+      padding: 88px 24px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .section-heading {
+      max-width: 720px;
+
+      margin: 0 auto 48px;
+
+      text-align: center;
+    }
+
+    .section-heading .eyebrow {
+      color: var(--blue);
+
+      justify-content: center;
+    }
+
+    .section-heading h2 {
+      color: var(--black);
+
+      font-size: 39px;
+      line-height: 1.15;
+
+      letter-spacing: -1.3px;
+
+      margin-bottom: 13px;
+    }
+
+    .section-heading p {
+      color: #68737d;
+    }
+
+    /* =========================
+       INVENTORY
+    ========================== */
+
+    .inventory {
+      background: var(--light);
+    }
+
+    .inventory-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .car-card {
+      overflow: hidden;
+
+      background: var(--white);
+
+      border: 1px solid var(--border);
+      border-radius: 6px;
+
+      transition: 0.2s ease;
+    }
+
+    .car-card:hover {
+      transform: translateY(-4px);
+
+      box-shadow:
+        0 16px 40px rgba(15,25,35,0.1);
+    }
+
+    .car-image {
+      height: 225px;
+      overflow: hidden;
+
+      position: relative;
+    }
+
+    .car-image img {
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+
+      transition: transform 0.35s ease;
+    }
+
+    .car-card:hover .car-image img {
+      transform: scale(1.04);
+    }
+
+    .car-badge {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+
+      padding: 6px 9px;
+
+      background: var(--blue);
+      color: var(--white);
+
+      border-radius: 3px;
+
+      font-size: 10px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+    }
+
+    .car-content {
+      padding: 22px;
+    }
+
+    .car-year {
+      color: var(--blue);
+
+      font-size: 12px;
+      font-weight: 900;
+
+      margin-bottom: 4px;
+    }
+
+    .car-content h3 {
+      color: var(--black);
+
+      font-size: 20px;
+      margin-bottom: 5px;
+    }
+
+    .car-details {
+      color: #737d86;
+
+      font-size: 13px;
+
+      margin-bottom: 16px;
+    }
+
+    .car-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      padding-top: 15px;
+
+      border-top: 1px solid var(--border);
+    }
+
+    .car-price {
+      color: var(--black);
+
+      font-size: 21px;
+      font-weight: 900;
+    }
+
+    .car-link {
+      color: var(--blue);
+
+      font-size: 13px;
+      font-weight: 900;
+    }
+
+    .car-link:hover {
+      color: var(--blue-dark);
+    }
+
+    /* =========================
+       WHY SECTION
+    ========================== */
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .why-card {
+      padding: 28px;
+
+      border: 1px solid var(--border);
+      border-radius: 6px;
+
+      background: var(--white);
+    }
+
+    .why-icon {
+      width: 45px;
+      height: 45px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      margin-bottom: 18px;
+
+      background: #edf5ff;
+      color: var(--blue);
+
+      border-radius: 4px;
+
+      font-size: 17px;
+      font-weight: 900;
+    }
+
+    .why-card h3 {
+      color: var(--black);
+
+      font-size: 17px;
+
+      margin-bottom: 8px;
+    }
+
+    .why-card p {
+      color: #707b84;
+
+      font-size: 13px;
+    }
+
+    /* =========================
+       FINANCE
+    ========================== */
+
+    .finance {
+      background: var(--dark);
+      color: var(--white);
+    }
+
+    .finance-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 75px;
+    }
+
+    .finance-content .eyebrow {
+      color: #75b5ff;
+    }
+
+    .finance-content h2 {
+      font-size: 42px;
+      line-height: 1.12;
+
+      letter-spacing: -1.5px;
+
+      margin-bottom: 17px;
+    }
+
+    .finance-content p {
+      color: var(--muted);
+
+      font-size: 16px;
+
+      margin-bottom: 25px;
+    }
+
+    .finance-list {
+      display: grid;
+      gap: 12px;
+
+      margin-bottom: 27px;
+    }
+
+    .finance-list div {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      color: #d9dee3;
+
+      font-size: 14px;
+    }
+
+    .check {
+      width: 21px;
+      height: 21px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      border-radius: 50%;
+
+      background: #163b61;
+      color: #7cbbff;
+
+      font-size: 11px;
+      font-weight: 900;
+    }
+
+    .finance-box {
+      padding: 35px;
+
+      background: #1b2229;
+
+      border: 1px solid rgba(255,255,255,0.08);
+
+      border-radius: 7px;
+    }
+
+    .finance-box h3 {
+      font-size: 25px;
+      margin-bottom: 9px;
+    }
+
+    .finance-box p {
+      color: var(--muted);
+      font-size: 14px;
+
+      margin-bottom: 22px;
+    }
+
+    .finance-box a {
+      width: 100%;
+    }
+
+    /* =========================
+       PROCESS
+    ========================== */
+
+    .process {
+      background: var(--light);
+    }
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 35px;
+    }
+
+    .process-card {
+      text-align: center;
+    }
+
+    .process-number {
+      width: 54px;
+      height: 54px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      margin: 0 auto 18px;
+
+      background: var(--black);
+      color: var(--white);
+
+      border-radius: 50%;
+
+      font-size: 17px;
+      font-weight: 900;
+    }
+
+    .process-card h3 {
+      color: var(--black);
+
+      font-size: 18px;
+
+      margin-bottom: 8px;
+    }
+
+    .process-card p {
+      color: #6d7882;
+
+      font-size: 14px;
+    }
+
+    /* =========================
+       FAQ
+    ========================== */
+
+    .faq-container {
+      max-width: 850px;
+      margin: auto;
+    }
+
+    details {
+      border: 1px solid var(--border);
+      border-radius: 6px;
+
+      padding: 0 20px;
+
+      margin-bottom: 12px;
+    }
+
+    summary {
+      padding: 18px 0;
+
+      cursor: pointer;
+
+      color: var(--black);
+
+      font-size: 15px;
+      font-weight: 800;
+
+      list-style: none;
+    }
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    details p {
+      color: #68737c;
+
+      font-size: 14px;
+
+      padding: 0 0 20px;
+    }
+
+    /* =========================
+       CTA
+    ========================== */
+
+    .cta {
+      background:
+        linear-gradient(
+          135deg,
+          #0b0d10,
+          #18212b
+        );
+
+      color: var(--white);
+
+      text-align: center;
+    }
+
+    .cta h2 {
+      font-size: 42px;
+      line-height: 1.15;
+
+      letter-spacing: -1px;
+
+      margin-bottom: 12px;
+    }
+
+    .cta p {
+      max-width: 650px;
+
+      margin: 0 auto 26px;
+
+      color: #aeb7c0;
+    }
+
+    /* =========================
+       FOOTER
+    ========================== */
+
+    footer {
+      background: #07090b;
+      color: #89929a;
+
+      padding: 45px 24px 22px;
+    }
+
+    .footer-grid {
+      max-width: 1200px;
+      margin: auto;
+
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr;
+
+      gap: 40px;
+
+      padding-bottom: 30px;
+    }
+
+    footer h3 {
+      color: var(--white);
+
+      font-size: 18px;
+
+      margin-bottom: 12px;
+    }
+
+    footer p,
+    footer a {
+      font-size: 13px;
+    }
+
+    footer p {
+      margin-bottom: 5px;
+    }
+
+    footer a:hover {
+      color: var(--white);
+    }
+
+    .footer-bottom {
+      max-width: 1200px;
+      margin: auto;
+
+      border-top: 1px solid rgba(255,255,255,0.08);
+
+      padding-top: 18px;
+
+      text-align: center;
+
+      font-size: 11px;
+    }
+
+    /* =========================
+       MOBILE
+    ========================== */
+
+    @media (max-width: 900px) {
+
+      .nav-links {
+        display: none;
+      }
+
+      .hero {
+        min-height: auto;
+      }
+
+      .hero-container {
+        grid-template-columns: 1fr;
+
+        padding-top: 60px;
+        padding-bottom: 60px;
+
+        gap: 40px;
+      }
+
+      .hero h1 {
+        font-size: 48px;
+      }
+
+      .inventory-grid,
+      .why-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .finance-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .quick-container {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 600px) {
+
+      .nav {
+        min-height: 65px;
+        padding: 0 15px;
+      }
+
+      .logo {
+        font-size: 19px;
+      }
+
+      .nav-phone {
+        padding: 9px 11px;
+        font-size: 11px;
+      }
+
+      .hero-container {
+        padding: 50px 18px;
+      }
+
+      .hero h1 {
+        font-size: 39px;
+        letter-spacing: -1.8px;
+      }
+
+      .hero-text {
+        font-size: 16px;
+      }
+
+      .search-card {
+        padding: 22px 18px;
+      }
+
+      .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+      }
+
+      .form-group.full {
+        grid-column: auto;
+      }
+
+      .inventory-grid,
+      .why-grid,
+      .process-grid {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 65px 18px;
+      }
+
+      .section-heading h2,
+      .finance-content h2,
+      .cta h2 {
+        font-size: 30px;
+      }
+
+      .finance-box {
+        padding: 25px 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- =========================
+       HEADER
+  ========================== -->
+
+  <header>
+
+    <nav class="nav">
+
+      <a href="#top" class="logo">
+        Drive<span>Line</span> Motors
+      </a>
+
+      <div class="nav-links">
+
+        <a href="#inventory">
+          Inventory
+        </a>
+
+        <a href="#why-us">
+          Why Us
+        </a>
+
+        <a href="#finance">
+          Financing
+        </a>
+
+        <a href="#faq">
+          FAQ
+        </a>
+
+        <a href="#contact">
+          Contact
+        </a>
+
+      </div>
+
+      <!-- Replace this fictional number with your real dealership number -->
+      <a
+        href="tel:+18005550152"
+        class="nav-phone"
+      >
+        (800) 555-0152
+      </a>
+
+    </nav>
+
+  </header>
+
+
+  <main id="top">
+
+    <!-- =========================
+         HERO
+    ========================== -->
+
+    <section class="hero">
+
+      <div class="hero-container">
+
+        <div class="hero-content">
+
+          <span class="eyebrow">
+            Quality Pre-Owned Vehicles
+          </span>
+
+          <h1>
+            Find Your Next
+            <span>Drive.</span>
+          </h1>
+
+          <p class="hero-text">
+            Explore a selection of quality used cars, SUVs,
+            and trucks. Find a vehicle that fits your lifestyle,
+            budget, and everyday needs.
+          </p>
+
+          <div class="hero-buttons">
+
+            <a
+              href="#inventory"
+              class="button button-primary"
+            >
+              Browse Vehicles
+            </a>
+
+            <a
+              href="tel:+18005550152"
+              class="button button-light"
+            >
+              Call (800) 555-0152
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <!-- =========================
+             VEHICLE SEARCH
+        ========================== -->
+
+        <div class="search-card">
+
+          <h2>
+            Find Your Vehicle
+          </h2>
+
+          <p>
+            Tell us what you're looking for and explore
+            available vehicle options.
+          </p>
+
+          <form id="vehicleSearchForm">
+
+            <div class="form-row">
+
+              <div class="form-group">
+
+                <label for="make">
+                  Make
+                </label>
+
+                <select id="make" name="make">
+
+                  <option value="">
+                    Any Make
+                  </option>
+
+                  <option>
+                    Toyota
+                  </option>
+
+                  <option>
+                    Honda
+                  </option>
+
+                  <option>
+                    Ford
+                  </option>
+
+                  <option>
+                    Chevrolet
+                  </option>
+
+                  <option>
+                    Nissan
+                  </option>
+
+                  <option>
+                    Hyundai
+                  </option>
+
+                </select>
+
+              </div>
+
+
+              <div class="form-group">
+
+                <label for="type">
+                  Vehicle Type
+                </label>
+
+                <select id="type" name="type">
+
+                  <option value="">
+                    Any Type
+                  </option>
+
+                  <option>
+                    Sedan
+                  </option>
+
+                  <option>
+                    SUV
+                  </option>
+
+                  <option>
+                    Truck
+                  </option>
+
+                  <option>
+                    Coupe
+                  </option>
+
+                </select>
+
+              </div>
+
+
+              <div class="form-group">
+
+                <label for="budget">
+                  Budget
+                </label>
+
+                <select id="budget" name="budget">
+
+                  <option value="">
+                    Any Budget
+                  </option>
+
+                  <option>
+                    Under $15,000
+                  </option>
+
+                  <option>
+                    $15,000 - $25,000
+                  </option>
+
+                  <option>
+                    $25,000 - $35,000
+                  </option>
+
+                  <option>
+                    $35,000+
+                  </option>
+
+                </select>
+
+              </div>
+
+
+              <div class="form-group">
+
+                <label for="condition">
+                  Condition
+                </label>
+
+                <select id="condition" name="condition">
+
+                  <option value="">
+                    Any Condition
+                  </option>
+
+                  <option>
+                    Used
+                  </option>
+
+                  <option>
+                    Certified Pre-Owned
+                  </option>
+
+                </select>
+
+              </div>
+
+            </div>
+
+
+            <button
+              type="submit"
+              class="search-button"
+            >
+              Search Inventory
+            </button>
+
+          </form>
+
+          <p class="search-note">
+            Vehicle availability, pricing, and specifications
+            are subject to change.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         QUICK INFO
+    ========================== -->
+
+    <div class="quick-info">
+
+      <div class="quick-container">
+
+        <div class="quick-item">
+
+          <div class="quick-icon">
+            ✓
+          </div>
+
+          <div>
+            <strong>
+              Quality Used Vehicles
+            </strong>
+
+            <span>
+              Cars, SUVs & trucks
+            </span>
+          </div>
+
+        </div>
+
+
+        <div class="quick-item">
+
+          <div class="quick-icon">
+            $
+          </div>
+
+          <div>
+            <strong>
+              Financing Options
+            </strong>
+
+            <span>
+              Ask about available options
+            </span>
+          </div>
+
+        </div>
+
+
+        <div class="quick-item">
+
+          <div class="quick-icon">
+            ☎
+          </div>
+
+          <div>
+            <strong>
+              Speak With Our Team
+            </strong>
+
+            <span>
+              Call or request information
+            </span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- =========================
+         INVENTORY
+    ========================== -->
+
+    <section
+      class="inventory"
+      id="inventory"
+    >
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <span class="eyebrow">
+            Featured Inventory
+          </span>
+
+          <h2>
+            Explore Popular Vehicle Options
+          </h2>
+
+          <p>
+            Browse example inventory categories below.
+            Replace these vehicles with your actual available stock.
+          </p>
+
+        </div>
+
+
+        <div class="inventory-grid">
+
+          <!-- VEHICLE 1 -->
+
+          <article class="car-card">
+
+            <div class="car-image">
+
+              <img
+                src="https://images.unsplash.com/photo-1553440569-bcc63803a83d?auto=format&fit=crop&w=1000&q=80"
+                alt="Used sedan"
+                loading="lazy"
+              >
+
+              <span class="car-badge">
+                Featured
+              </span>
+
+            </div>
+
+            <div class="car-content">
+
+              <div class="car-year">
+                USED SEDAN
+              </div>
+
+              <h3>
+                Premium Midsize Sedan
+              </h3>
+
+              <p class="car-details">
+                Automatic · Gas · Comfortable Interior
+              </p>
+
+              <div class="car-bottom">
+
+                <span class="car-price">
+                  From $18,995
+                </span>
+
+                <a
+                  href="#contact"
+                  class="car-link"
+                >
+                  Get Details →
+                </a>
+
+              </div>
+
+            </div>
+
+          </article>
+
+
+          <!-- VEHICLE 2 -->
+
+          <article class="car-card">
+
+            <div class="car-image">
+
+              <img
+                src="https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?auto=format&fit=crop&w=1000&q=80"
+                alt="Used SUV"
+                loading="lazy"
+              >
+
+              <span class="car-badge">
+                Popular
+              </span>
+
+            </div>
+
+            <div class="car-content">
+
+              <div class="car-year">
+                USED SUV
+              </div>
+
+              <h3>
+                Family SUV
+              </h3>
+
+              <p class="car-details">
+                Automatic · Spacious Cabin · AWD Available
+              </p>
+
+              <div class="car-bottom">
+
+                <span class="car-price">
+                  From $24,995
+                </span>
+
+                <a
+                  href="#contact"
+                  class="car-link"
+                >
+                  Get Details →
+                </a>
+
+              </div>
+
+            </div>
+
+          </article>
+
+
+          <!-- VEHICLE 3 -->
+
+          <article class="car-card">
+
+            <div class="car-image">
+
+              <img
+                src="https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=1000&q=80"
+                alt="Used truck"
+                loading="lazy"
+              >
+
+              <span class="car-badge">
+                Available
+              </span>
+
+            </div>
+
+            <div class="car-content">
+
+              <div class="car-year">
+                USED TRUCK
+              </div>
+
+              <h3>
+                Full-Size Pickup
+              </h3>
+
+              <p class="car-details">
+                Automatic · Utility Focused · Multiple Configurations
+              </p>
+
+              <div class="car-bottom">
+
+                <span class="car-price">
+                  From $27,995
+                </span>
+
+                <a
+                  href="#contact"
+                  class="car-link"
+                >
+                  Get Details →
+                </a>
+
+              </div>
+
+            </div>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         WHY CHOOSE US
+    ========================== -->
+
+    <section id="why-us">
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <span class="eyebrow">
+            Why DriveLine
+          </span>
+
+          <h2>
+            A Simpler Way to Shop for a Used Vehicle
+          </h2>
+
+          <p>
+            We're focused on helping shoppers compare options
+            and find a vehicle that matches their needs.
+          </p>
+
+        </div>
+
+
+        <div class="why-grid">
+
+          <div class="why-card">
+
+            <div class="why-icon">
+              ✓
+            </div>
+
+            <h3>
+              Vehicle Selection
+            </h3>
+
+            <p>
+              Explore cars, SUVs, and trucks across different
+              makes, models, price ranges, and body styles.
+            </p>
+
+          </div>
+
+
+          <div class="why-card">
+
+            <div class="why-icon">
+              $
+            </div>
+
+            <h3>
+              Financing Options
+            </h3>
+
+            <p>
+              Ask our team about financing options that may
+              be available for your vehicle purchase.
+            </p>
+
+          </div>
+
+
+          <div class="why-card">
+
+            <div class="why-icon">
+              ↔
+            </div>
+
+            <h3>
+              Easy Comparison
+            </h3>
+
+            <p>
+              Compare vehicle types, features, and budgets
+              to narrow down your choices.
+            </p>
+
+          </div>
+
+
+          <div class="why-card">
+
+            <div class="why-icon">
+              ☎
+            </div>
+
+            <h3>
+              Helpful Team
+            </h3>
+
+            <p>
+              Have questions? Contact our team to discuss
+              available vehicles and next steps.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         FINANCING
+    ========================== -->
+
+    <section
+      class="finance"
+      id="finance"
+    >
+
+      <div class="container">
+
+        <div class="finance-grid">
+
+          <div class="finance-content">
+
+            <span class="eyebrow">
+              Financing
+            </span>
+
+            <h2>
+              Make Your Next Vehicle More Accessible
+            </h2>
+
+            <p>
+              Purchasing a used vehicle can come with different
+              financing considerations. Contact our team to learn
+              more about the financing options available to you.
+            </p>
+
+            <div class="finance-list">
+
+              <div>
+                <span class="check">✓</span>
+                Discuss available financing options
+              </div>
+
+              <div>
+                <span class="check">✓</span>
+                Review vehicle and budget preferences
+              </div>
+
+              <div>
+                <span class="check">✓</span>
+                Ask questions before making a decision
+              </div>
+
+            </div>
+
+            <a
+              href="#contact"
+              class="button button-primary"
+            >
+              Ask About Financing
+            </a>
+
+          </div>
+
+
+          <div
+            class="finance-box"
+            id="contact"
+          >
+
+            <h3>
+              Looking for a Specific Vehicle?
+            </h3>
+
+            <p>
+              Tell us what you're searching for and our team
+              can help you check available options.
+            </p>
+
+            <a
+              href="tel:+18005550152"
+              class="button button-primary"
+            >
+              Call (800) 555-0152
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         HOW IT WORKS
+    ========================== -->
+
+    <section class="process">
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <span class="eyebrow">
+            Simple Process
+          </span>
+
+          <h2>
+            From Search to Your Next Vehicle
+          </h2>
+
+          <p>
+            A simple process to help you explore your options.
+          </p>
+
+        </div>
+
+
+        <div class="process-grid">
+
+          <div class="process-card">
+
+            <div class="process-number">
+              1
+            </div>
+
+            <h3>
+              Choose Your Preferences
+            </h3>
+
+            <p>
+              Start with your preferred vehicle type, make,
+              budget, or other requirements.
+            </p>
+
+          </div>
+
+
+          <div class="process-card">
+
+            <div class="process-number">
+              2
+            </div>
+
+            <h3>
+              Explore Available Options
+            </h3>
+
+            <p>
+              Review available vehicles and contact our team
+              with any questions.
+            </p>
+
+          </div>
+
+
+          <div class="process-card">
+
+            <div class="process-number">
+              3
+            </div>
+
+            <h3>
+              Take the Next Step
+            </h3>
+
+            <p>
+              Discuss pricing, financing, availability,
+              and purchase options with our team.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         FAQ
+    ========================== -->
+
+    <section id="faq">
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <span class="eyebrow">
+            FAQ
+          </span>
+
+          <h2>
+            Frequently Asked Questions
+          </h2>
+
+          <p>
+            Helpful information for used-car shoppers.
+          </p>
+
+        </div>
+
+
+        <div class="faq-container">
+
+          <details>
+
+            <summary>
+              What types of used vehicles are available?
+            </summary>
+
+            <p>
+              Inventory can include sedans, SUVs, trucks,
+              coupes, and other vehicle types. Availability
+              changes, so contact us about specific models.
+            </p>
+
+          </details>
+
+
+          <details>
+
+            <summary>
+              Can I ask about financing?
+            </summary>
+
+            <p>
+              Yes. Contact our team to discuss the financing
+              options that may be available based on your
+              situation and selected vehicle.
+            </p>
+
+          </details>
+
+
+          <details>
+
+            <summary>
+              Can I ask about a specific vehicle?
+            </summary>
+
+            <p>
+              Yes. Call the dealership and provide the make,
+              model, year, or other details you're looking for.
+            </p>
+
+          </details>
+
+
+          <details>
+
+            <summary>
+              Do vehicle prices change?
+            </summary>
+
+            <p>
+              Vehicle pricing and availability can change.
+              Confirm the current price, availability, mileage,
+              features, and other details with the dealership.
+            </p>
+
+          </details>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         FINAL CTA
+    ========================== -->
+
+    <section class="cta">
+
+      <div class="container">
+
+        <h2>
+          Ready to Find Your Next Car?
+        </h2>
+
+        <p>
+          Browse available options or contact our team to
+          discuss the vehicle you're looking for.
+        </p>
+
+        <a
+          href="tel:+18005550152"
+          class="button button-primary"
+        >
+          Call (800) 555-0152
+        </a>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+
+  <footer>
+
+    <div class="footer-grid">
+
+      <div>
+
+        <h3>
+          DriveLine Motors
+        </h3>
+
+        <p>
+          Quality pre-owned vehicles for drivers looking
+          for practical, dependable transportation.
+        </p>
+
+      </div>
+
+
+      <div>
+
+        <h3>
+          Quick Links
+        </h3>
+
+        <p>
+          <a href="#inventory">
+            Inventory
+          </a>
+        </p>
+
+        <p>
+          <a href="#why-us">
+            Why Us
+          </a>
+        </p>
+
+        <p>
+          <a href="#finance">
+            Financing
+          </a>
+        </p>
+
+        <p>
+          <a href="#faq">
+            FAQ
+          </a>
+        </p>
+
+      </div>
+
+
+      <div>
+
+        <h3>
+          Contact
+        </h3>
+
+        <p>
+          <a href="tel:+18005550152">
+            (800) 555-0152
+          </a>
+        </p>
+
+        <p>
+          United States
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+      © 2026 DriveLine Motors. All rights reserved.
+
+    </div>
+
+  </footer>
+
+
+  <!-- =========================
+       JAVASCRIPT
+  ========================== -->
+
+  <script>
+
+    const vehicleForm =
+      document.getElementById("vehicleSearchForm");
+
+    vehicleForm.addEventListener("submit", function(event) {
+
+      event.preventDefault();
+
+      const button =
+        vehicleForm.querySelector(".search-button");
+
+      button.textContent = "Search Submitted";
+      button.disabled = true;
+
+      setTimeout(function() {
+
+        alert(
+          "Thanks for your vehicle inquiry. Connect this form to your actual inventory or lead system before launching your advertising campaign."
+        );
+
+        vehicleForm.reset();
+
+        button.textContent = "Search Inventory";
+        button.disabled = false;
+
+      }, 500);
+
+    });
+
+  </script>
+
+</body>
+</html>
