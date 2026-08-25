@@ -1,0 +1,1568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Hearth & Form Furniture | Sofas, Beds, Dining & Home Furniture</title>
+
+<meta
+    name="description"
+    content="Shop modern furniture for living rooms, bedrooms, dining spaces and home offices. Explore sofas, beds, tables, chairs and storage furniture."
+>
+
+<style>
+:root{
+    --walnut:#6f4f3a;
+    --walnut-dark:#4c3527;
+    --olive:#79836a;
+    --olive-dark:#5f6852;
+    --ivory:#faf8f3;
+    --sand:#eee5da;
+    --white:#ffffff;
+    --dark:#2c2a27;
+    --text:#4b4844;
+    --muted:#7b7772;
+    --border:#e5dfd7;
+    --gold:#c5a56a;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    color:var(--text);
+    background:#fff;
+    line-height:1.6;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+button,
+input,
+select,
+textarea{
+    font:inherit;
+}
+
+.container{
+    width:min(1120px,calc(100% - 32px));
+    margin:auto;
+}
+
+/* BUTTONS */
+
+.btn{
+    min-height:46px;
+    padding:0 22px;
+    border:0;
+    border-radius:8px;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    font-size:14px;
+    font-weight:700;
+    cursor:pointer;
+    transition:.25s;
+}
+
+.btn-primary{
+    background:var(--walnut);
+    color:#fff;
+}
+
+.btn-primary:hover{
+    background:var(--walnut-dark);
+    transform:translateY(-2px);
+}
+
+.btn-olive{
+    background:var(--olive);
+    color:#fff;
+}
+
+.btn-light{
+    background:#fff;
+    color:var(--dark);
+    border:1px solid var(--border);
+}
+
+/* TOP BAR */
+
+.topbar{
+    background:var(--dark);
+    color:#d8d2cb;
+    padding:8px 0;
+    font-size:12px;
+}
+
+.topbar-inner{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+}
+
+.topbar strong{
+    color:#fff;
+}
+
+/* HEADER */
+
+header{
+    background:#fff;
+    border-bottom:1px solid var(--border);
+    position:sticky;
+    top:0;
+    z-index:100;
+}
+
+.navbar{
+    min-height:72px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:24px;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    color:var(--dark);
+    font-size:23px;
+    font-weight:800;
+}
+
+.logo-mark{
+    width:43px;
+    height:43px;
+    border-radius:10px;
+    display:grid;
+    place-items:center;
+    background:#f0ebe3;
+    color:var(--walnut);
+    font-size:22px;
+}
+
+.logo span{
+    color:var(--olive);
+}
+
+.menu{
+    display:flex;
+    list-style:none;
+    gap:24px;
+}
+
+.menu a{
+    color:#605d59;
+    font-size:13px;
+    font-weight:600;
+}
+
+.menu a:hover{
+    color:var(--walnut);
+}
+
+/* HERO */
+
+.hero{
+    padding:76px 0 84px;
+    background:
+        radial-gradient(circle at 82% 20%,rgba(121,131,106,.13),transparent 25%),
+        linear-gradient(135deg,#faf7f2,#f2eee7);
+    overflow:hidden;
+}
+
+.hero-grid{
+    display:grid;
+    grid-template-columns:1.02fr .98fr;
+    gap:58px;
+    align-items:center;
+}
+
+.eyebrow{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    color:var(--olive-dark);
+    font-size:10px;
+    text-transform:uppercase;
+    letter-spacing:1.8px;
+    font-weight:800;
+    margin-bottom:18px;
+}
+
+.eyebrow:before{
+    content:"";
+    width:34px;
+    height:2px;
+    background:var(--olive);
+}
+
+.hero h1{
+    color:var(--dark);
+    font-size:56px;
+    line-height:1.06;
+    letter-spacing:-2px;
+    margin-bottom:18px;
+}
+
+.hero h1 span{
+    color:var(--walnut);
+}
+
+.hero p{
+    max-width:590px;
+    color:var(--muted);
+    font-size:17px;
+    margin-bottom:27px;
+}
+
+.hero-buttons{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+}
+
+.hero-points{
+    display:flex;
+    flex-wrap:wrap;
+    gap:20px;
+    margin-top:28px;
+    color:#69655f;
+    font-size:12px;
+}
+
+.hero-points strong{
+    color:var(--olive-dark);
+}
+
+/* FURNITURE VISUAL */
+
+.furniture-visual{
+    position:relative;
+    min-height:390px;
+}
+
+.room-card{
+    position:absolute;
+    right:0;
+    top:35px;
+    width:355px;
+    height:305px;
+    border-radius:22px;
+    overflow:hidden;
+    background:
+        linear-gradient(to bottom,#eee8dd 0 72%,#c8b39a 72% 100%);
+    box-shadow:0 25px 60px rgba(70,55,40,.15);
+}
+
+.wall-frame{
+    position:absolute;
+    top:38px;
+    right:42px;
+    width:92px;
+    height:66px;
+    border:7px solid #8f7964;
+    background:#e6dfd4;
+}
+
+.sofa{
+    position:absolute;
+    left:45px;
+    bottom:55px;
+    width:210px;
+    height:78px;
+    border-radius:18px 18px 8px 8px;
+    background:#75806d;
+}
+
+.sofa:before,
+.sofa:after{
+    content:"";
+    position:absolute;
+    width:38px;
+    height:55px;
+    bottom:0;
+    background:#687260;
+}
+
+.sofa:before{
+    left:-20px;
+    border-radius:12px 0 0 8px;
+}
+
+.sofa:after{
+    right:-20px;
+    border-radius:0 12px 8px 0;
+}
+
+.cushion{
+    position:absolute;
+    width:52px;
+    height:44px;
+    top:17px;
+    border-radius:8px;
+}
+
+.c1{
+    left:28px;
+    background:#d6c4aa;
+}
+
+.c2{
+    right:28px;
+    background:#9a7257;
+}
+
+.table{
+    position:absolute;
+    left:110px;
+    bottom:23px;
+    width:100px;
+    height:12px;
+    background:#7b583f;
+}
+
+.table:before,
+.table:after{
+    content:"";
+    position:absolute;
+    width:7px;
+    height:32px;
+    top:10px;
+    background:#624431;
+}
+
+.table:before{left:14px;}
+.table:after{right:14px;}
+
+.lamp{
+    position:absolute;
+    right:35px;
+    bottom:55px;
+    font-size:55px;
+}
+
+.room-label{
+    position:absolute;
+    left:20px;
+    top:20px;
+    background:rgba(255,255,255,.86);
+    border-radius:10px;
+    padding:10px 13px;
+}
+
+.room-label small{
+    display:block;
+    color:var(--olive-dark);
+    font-size:9px;
+    font-weight:800;
+    letter-spacing:1px;
+}
+
+.room-label strong{
+    color:var(--dark);
+    font-size:13px;
+}
+
+.float-card{
+    position:absolute;
+    background:#fff;
+    border:1px solid var(--border);
+    border-radius:13px;
+    padding:12px 15px;
+    box-shadow:0 12px 28px rgba(60,50,40,.10);
+}
+
+.float-card strong{
+    display:block;
+    color:var(--dark);
+    font-size:12px;
+}
+
+.float-card span{
+    color:#858078;
+    font-size:9px;
+}
+
+.fc1{left:0;top:15px;}
+.fc2{left:10px;bottom:28px;}
+.fc3{right:0;bottom:0;}
+
+/* BENEFITS */
+
+.benefits{
+    background:#fff;
+    border-bottom:1px solid var(--border);
+}
+
+.benefit-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+}
+
+.benefit{
+    padding:22px 15px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:11px;
+    border-right:1px solid var(--border);
+}
+
+.benefit:last-child{
+    border-right:0;
+}
+
+.benefit-icon{
+    font-size:25px;
+}
+
+.benefit h3{
+    color:var(--dark);
+    font-size:13px;
+}
+
+.benefit p{
+    color:var(--muted);
+    font-size:10px;
+}
+
+/* COMMON */
+
+.section{
+    padding:70px 0;
+}
+
+.section-light{
+    background:var(--ivory);
+}
+
+.section-head{
+    max-width:650px;
+    margin:0 auto 37px;
+    text-align:center;
+}
+
+.section-head small{
+    color:var(--olive-dark);
+    font-size:10px;
+    text-transform:uppercase;
+    letter-spacing:1.7px;
+    font-weight:800;
+}
+
+.section-head h2{
+    color:var(--dark);
+    font-size:37px;
+    line-height:1.2;
+    margin:7px 0 10px;
+}
+
+.section-head p{
+    color:var(--muted);
+    font-size:14px;
+}
+
+/* CATEGORIES */
+
+.category-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+}
+
+.category{
+    background:#fff;
+    border:1px solid var(--border);
+    border-radius:15px;
+    padding:24px 21px;
+    transition:.25s;
+}
+
+.category:hover{
+    transform:translateY(-5px);
+    box-shadow:0 15px 35px rgba(60,50,40,.07);
+}
+
+.category-icon{
+    width:58px;
+    height:58px;
+    border-radius:14px;
+    display:grid;
+    place-items:center;
+    background:#edf0e9;
+    font-size:29px;
+    margin-bottom:15px;
+}
+
+.category:nth-child(even) .category-icon{
+    background:#f3ebe4;
+}
+
+.category h3{
+    color:var(--dark);
+    font-size:17px;
+    margin-bottom:6px;
+}
+
+.category p{
+    color:var(--muted);
+    font-size:12px;
+}
+
+/* PRODUCTS */
+
+.product-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+}
+
+.product{
+    background:#fff;
+    border:1px solid var(--border);
+    border-radius:15px;
+    overflow:hidden;
+}
+
+.product-top{
+    height:150px;
+    position:relative;
+    display:grid;
+    place-items:center;
+    font-size:65px;
+    background:linear-gradient(145deg,#eee9e2,#f5f1eb);
+}
+
+.product-tag{
+    position:absolute;
+    top:11px;
+    left:11px;
+    border-radius:20px;
+    padding:5px 9px;
+    background:var(--olive);
+    color:#fff;
+    font-size:9px;
+    font-weight:800;
+}
+
+.product-body{
+    padding:17px;
+}
+
+.product-body small{
+    color:var(--olive-dark);
+    font-weight:700;
+}
+
+.product-body h3{
+    color:var(--dark);
+    font-size:16px;
+    margin:4px 0;
+}
+
+.product-body p{
+    color:var(--muted);
+    font-size:11px;
+}
+
+.product-bottom{
+    margin-top:14px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:10px;
+}
+
+.price strong{
+    color:var(--dark);
+    font-size:18px;
+}
+
+.small-btn{
+    min-height:34px;
+    padding:0 11px;
+    display:inline-flex;
+    align-items:center;
+    border-radius:7px;
+    background:var(--walnut);
+    color:#fff;
+    font-size:10px;
+    font-weight:700;
+}
+
+/* CTA */
+
+.cta{
+    padding:0 0 70px;
+}
+
+.cta-box{
+    border-radius:18px;
+    padding:38px;
+    background:
+        radial-gradient(circle at 90% 20%,rgba(197,165,106,.20),transparent 25%),
+        linear-gradient(135deg,var(--walnut),var(--walnut-dark));
+    color:#fff;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:35px;
+}
+
+.cta-box h2{
+    font-size:29px;
+    line-height:1.2;
+    margin-bottom:6px;
+}
+
+.cta-box p{
+    color:#e8ddd3;
+    font-size:13px;
+}
+
+/* CONTACT */
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:.8fr 1.2fr;
+    gap:38px;
+}
+
+.contact-info{
+    background:var(--dark);
+    color:#fff;
+    border-radius:18px;
+    padding:32px;
+}
+
+.contact-info h2{
+    font-size:28px;
+    line-height:1.25;
+    margin-bottom:10px;
+}
+
+.contact-info > p{
+    color:#ccc7c0;
+    font-size:12px;
+    margin-bottom:20px;
+}
+
+.info-row{
+    padding:12px 0;
+    border-top:1px solid rgba(255,255,255,.12);
+}
+
+.info-row strong{
+    display:block;
+    font-size:10px;
+    margin-bottom:3px;
+}
+
+.info-row span,
+.info-row a{
+    color:#d2cdc7;
+    font-size:12px;
+}
+
+.info-row a:hover{
+    color:#fff;
+}
+
+.furniture-form{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:12px;
+}
+
+.furniture-form input,
+.furniture-form select,
+.furniture-form textarea{
+    width:100%;
+    padding:13px 14px;
+    border:1px solid var(--border);
+    border-radius:9px;
+    outline:none;
+    background:#fff;
+}
+
+.furniture-form input:focus,
+.furniture-form select:focus,
+.furniture-form textarea:focus{
+    border-color:var(--olive);
+    box-shadow:0 0 0 3px rgba(121,131,106,.09);
+}
+
+.furniture-form textarea{
+    min-height:100px;
+    resize:vertical;
+    grid-column:span 2;
+}
+
+.furniture-form button,
+.form-note{
+    grid-column:span 2;
+}
+
+.form-note{
+    color:#817d78;
+    font-size:10px;
+    line-height:1.5;
+}
+
+/* FOOTER */
+
+footer{
+    background:#252421;
+    color:#fff;
+    padding:40px 0 18px;
+}
+
+.footer-main{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    gap:40px;
+}
+
+.footer-brand{
+    max-width:430px;
+}
+
+.footer-logo{
+    font-size:21px;
+    font-weight:800;
+    margin-bottom:7px;
+}
+
+.footer-logo span{
+    color:#a7b194;
+}
+
+footer p,
+footer a{
+    color:#aaa6a0;
+    font-size:11px;
+}
+
+.footer-links{
+    display:flex;
+    flex-wrap:wrap;
+    gap:18px;
+}
+
+.footer-links a:hover{
+    color:#fff;
+}
+
+.footer-bottom{
+    border-top:1px solid #3d3b37;
+    margin-top:27px;
+    padding-top:16px;
+    display:flex;
+    justify-content:space-between;
+    gap:20px;
+    color:#7d7974;
+    font-size:10px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+    .menu{
+        display:none;
+    }
+
+    .hero-grid,
+    .contact-grid{
+        grid-template-columns:1fr;
+    }
+
+    .category-grid,
+    .product-grid,
+    .benefit-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media(max-width:600px){
+
+    .container{
+        width:min(100% - 22px,1120px);
+    }
+
+    .topbar-inner{
+        justify-content:center;
+        text-align:center;
+    }
+
+    .topbar-inner span:last-child{
+        display:none;
+    }
+
+    .logo{
+        font-size:18px;
+    }
+
+    .navbar > .btn{
+        padding:0 12px;
+        font-size:11px;
+    }
+
+    .hero{
+        padding:55px 0;
+    }
+
+    .hero h1{
+        font-size:40px;
+        letter-spacing:-1px;
+    }
+
+    .furniture-visual{
+        min-height:420px;
+    }
+
+    .room-card{
+        width:295px;
+        right:0;
+    }
+
+    .category-grid,
+    .product-grid,
+    .benefit-grid{
+        grid-template-columns:1fr;
+    }
+
+    .benefit{
+        justify-content:flex-start;
+        border-right:0;
+        border-bottom:1px solid var(--border);
+    }
+
+    .section{
+        padding:55px 0;
+    }
+
+    .section-head h2{
+        font-size:30px;
+    }
+
+    .cta-box{
+        padding:27px 22px;
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+    .furniture-form{
+        grid-template-columns:1fr;
+    }
+
+    .furniture-form textarea,
+    .furniture-form button,
+    .form-note{
+        grid-column:auto;
+    }
+
+    .footer-main,
+    .footer-bottom{
+        flex-direction:column;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- TOP BAR -->
+
+<div class="topbar">
+    <div class="container topbar-inner">
+
+        <span>
+            Living Room · Bedroom · Dining · Home Office · Storage
+        </span>
+
+        <span>
+            Furniture Sales:
+            <strong>(704) 555-0182</strong>
+        </span>
+
+    </div>
+</div>
+
+<!-- HEADER -->
+
+<header>
+
+    <div class="container navbar">
+
+        <a href="#home" class="logo">
+
+            <div class="logo-mark">⌂</div>
+
+            Hearth <span>& Form</span>
+
+        </a>
+
+        <ul class="menu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#categories">Furniture</a></li>
+            <li><a href="#popular">Popular Pieces</a></li>
+            <li><a href="#enquiry">Get a Quote</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <a href="#enquiry" class="btn btn-primary">
+            Visit Our Collection
+        </a>
+
+    </div>
+
+</header>
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+    <div class="container hero-grid">
+
+        <div>
+
+            <div class="eyebrow">
+                Furniture for modern living
+            </div>
+
+            <h1>
+                Create a home that feels <span>comfortable, considered and yours.</span>
+            </h1>
+
+            <p>
+                Explore furniture for living rooms, bedrooms, dining areas
+                and home offices with modern designs, practical storage
+                and options for different spaces and budgets.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#popular" class="btn btn-primary">
+                    Explore Furniture
+                </a>
+
+                <a href="tel:+17045550182" class="btn btn-light">
+                    Call (704) 555-0182
+                </a>
+
+            </div>
+
+            <div class="hero-points">
+                <div><strong>✓</strong> Living & bedroom furniture</div>
+                <div><strong>✓</strong> Dining & office options</div>
+                <div><strong>✓</strong> Delivery enquiries available</div>
+            </div>
+
+        </div>
+
+        <!-- CSS ROOM VISUAL -->
+
+        <div class="furniture-visual">
+
+            <div class="float-card fc1">
+                <strong>🛋️ Living Room</strong>
+                <span>Sofas, tables & storage</span>
+            </div>
+
+            <div class="room-card">
+
+                <div class="room-label">
+                    <small>HEARTH & FORM</small>
+                    <strong>Designed for everyday living.</strong>
+                </div>
+
+                <div class="wall-frame"></div>
+
+                <div class="sofa">
+                    <div class="cushion c1"></div>
+                    <div class="cushion c2"></div>
+                </div>
+
+                <div class="table"></div>
+
+                <div class="lamp">🪴</div>
+
+            </div>
+
+            <div class="float-card fc2">
+                <strong>🛏️ Bedroom</strong>
+                <span>Beds, dressers & nightstands</span>
+            </div>
+
+            <div class="float-card fc3">
+                <strong>🚚 Delivery Options</strong>
+                <span>Ask about your ZIP code</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- BENEFITS -->
+
+<section class="benefits">
+
+    <div class="container benefit-grid">
+
+        <div class="benefit">
+
+            <div class="benefit-icon">🛋️</div>
+
+            <div>
+                <h3>Multiple Styles</h3>
+                <p>Furniture for different interiors</p>
+            </div>
+
+        </div>
+
+        <div class="benefit">
+
+            <div class="benefit-icon">📏</div>
+
+            <div>
+                <h3>Size Options</h3>
+                <p>Choices for different room sizes</p>
+            </div>
+
+        </div>
+
+        <div class="benefit">
+
+            <div class="benefit-icon">🏠</div>
+
+            <div>
+                <h3>Whole-Home Furniture</h3>
+                <p>Living, dining, bedroom & office</p>
+            </div>
+
+        </div>
+
+        <div class="benefit">
+
+            <div class="benefit-icon">🚚</div>
+
+            <div>
+                <h3>Delivery Enquiries</h3>
+                <p>Check service in your location</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- CATEGORIES -->
+
+<section class="section section-light" id="categories">
+
+    <div class="container">
+
+        <div class="section-head">
+
+            <small>Shop by Room</small>
+
+            <h2>
+                Furniture for the spaces you use every day.
+            </h2>
+
+            <p>
+                Browse core categories for living,
+                sleeping, dining and working at home.
+            </p>
+
+        </div>
+
+        <div class="category-grid">
+
+            <article class="category">
+
+                <div class="category-icon">🛋️</div>
+
+                <h3>Living Room</h3>
+
+                <p>
+                    Sofas, accent chairs, coffee tables,
+                    consoles and storage furniture.
+                </p>
+
+            </article>
+
+            <article class="category">
+
+                <div class="category-icon">🛏️</div>
+
+                <h3>Bedroom</h3>
+
+                <p>
+                    Beds, nightstands, dressers and
+                    selected bedroom storage options.
+                </p>
+
+            </article>
+
+            <article class="category">
+
+                <div class="category-icon">🍽️</div>
+
+                <h3>Dining</h3>
+
+                <p>
+                    Dining tables, chairs, benches
+                    and storage for dining areas.
+                </p>
+
+            </article>
+
+            <article class="category">
+
+                <div class="category-icon">💻</div>
+
+                <h3>Home Office</h3>
+
+                <p>
+                    Desks, office chairs, shelves
+                    and practical workspace furniture.
+                </p>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- POPULAR -->
+
+<section class="section" id="popular">
+
+    <div class="container">
+
+        <div class="section-head">
+
+            <small>Popular Pieces</small>
+
+            <h2>
+                Versatile furniture for modern homes.
+            </h2>
+
+            <p>
+                Sample products and prices are shown below.
+                Replace them with your current inventory before publishing.
+            </p>
+
+        </div>
+
+        <div class="product-grid">
+
+            <article class="product">
+
+                <div class="product-top">
+                    <span class="product-tag">POPULAR</span>
+                    🛋️
+                </div>
+
+                <div class="product-body">
+
+                    <small>Living Room</small>
+
+                    <h3>Modern 3-Seat Sofa</h3>
+
+                    <p>
+                        Clean-lined sofa suitable for
+                        living rooms and lounge spaces.
+                    </p>
+
+                    <div class="product-bottom">
+
+                        <div class="price">
+                            <strong>$899</strong>
+                        </div>
+
+                        <a href="#enquiry" class="small-btn">
+                            Inquire
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+            <article class="product">
+
+                <div class="product-top">
+                    <span class="product-tag">NEW</span>
+                    🛏️
+                </div>
+
+                <div class="product-body">
+
+                    <small>Bedroom</small>
+
+                    <h3>Platform Bed Frame</h3>
+
+                    <p>
+                        Simple contemporary bed frame
+                        available in selected sizes and finishes.
+                    </p>
+
+                    <div class="product-bottom">
+
+                        <div class="price">
+                            <strong>$649</strong>
+                        </div>
+
+                        <a href="#enquiry" class="small-btn">
+                            Inquire
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+            <article class="product">
+
+                <div class="product-top">
+                    🍽️
+                </div>
+
+                <div class="product-body">
+
+                    <small>Dining</small>
+
+                    <h3>Dining Table Set</h3>
+
+                    <p>
+                        Practical dining solution for
+                        everyday meals and entertaining.
+                    </p>
+
+                    <div class="product-bottom">
+
+                        <div class="price">
+                            <strong>$749</strong>
+                        </div>
+
+                        <a href="#enquiry" class="small-btn">
+                            Inquire
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+            <article class="product">
+
+                <div class="product-top">
+                    <span class="product-tag">HOME OFFICE</span>
+                    🪑
+                </div>
+
+                <div class="product-body">
+
+                    <small>Workspace</small>
+
+                    <h3>Office Desk & Chair</h3>
+
+                    <p>
+                        Compact desk and seating option
+                        for home office setups.
+                    </p>
+
+                    <div class="product-bottom">
+
+                        <div class="price">
+                            <strong>$499</strong>
+                        </div>
+
+                        <a href="#enquiry" class="small-btn">
+                            Inquire
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- CTA -->
+
+<section class="cta">
+
+    <div class="container">
+
+        <div class="cta-box">
+
+            <div>
+
+                <h2>
+                    Furnishing a complete room or new home?
+                </h2>
+
+                <p>
+                    Tell us what you're shopping for,
+                    your room size and approximate budget.
+                </p>
+
+            </div>
+
+            <a href="#enquiry" class="btn btn-light">
+                Request Furniture Options
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ENQUIRY -->
+
+<section class="section section-light" id="enquiry">
+
+    <div class="container contact-grid">
+
+        <div class="contact-info" id="contact">
+
+            <h2>
+                Find furniture that fits your space.
+            </h2>
+
+            <p>
+                Share your room and furniture requirements.
+                Our store team will contact you regarding
+                current availability, dimensions and pricing.
+            </p>
+
+            <div class="info-row">
+
+                <strong>PHONE</strong>
+
+                <a href="tel:+17045550182">
+                    (704) 555-0182
+                </a>
+
+            </div>
+
+            <div class="info-row">
+
+                <strong>EMAIL</strong>
+
+                <a href="mailto:sales@hearthandform.com">
+                    sales@hearthandform.com
+                </a>
+
+            </div>
+
+            <div class="info-row">
+
+                <strong>SHOWROOM</strong>
+
+                <span>
+                    1840 South Boulevard, Charlotte, NC 28203
+                </span>
+
+            </div>
+
+            <div class="info-row">
+
+                <strong>STORE HOURS</strong>
+
+                <span>
+                    Mon–Sat: 10:00 AM–7:00 PM · Sun: 11:00 AM–5:00 PM
+                </span>
+
+            </div>
+
+            <div class="info-row">
+
+                <strong>DELIVERY NOTE</strong>
+
+                <span>
+                    Delivery availability, assembly services,
+                    product dimensions and final pricing vary by item and ZIP code.
+                </span>
+
+            </div>
+
+        </div>
+
+        <form class="furniture-form" action="#enquiry" method="post">
+
+            <input
+                type="text"
+                name="name"
+                placeholder="Full Name"
+                required>
+
+            <input
+                type="tel"
+                name="phone"
+                placeholder="Phone Number"
+                required>
+
+            <input
+                type="email"
+                name="email"
+                placeholder="Email Address"
+                required>
+
+            <select name="room" required>
+                <option value="">Room / Category</option>
+                <option value="living">Living Room</option>
+                <option value="bedroom">Bedroom</option>
+                <option value="dining">Dining Room</option>
+                <option value="office">Home Office</option>
+                <option value="storage">Storage Furniture</option>
+                <option value="multiple">Multiple Rooms</option>
+            </select>
+
+            <select name="product">
+                <option value="">Furniture Needed</option>
+                <option value="sofa">Sofa / Sectional</option>
+                <option value="bed">Bed / Bedroom Set</option>
+                <option value="dining">Dining Table / Chairs</option>
+                <option value="desk">Desk / Office Furniture</option>
+                <option value="storage">Cabinet / Storage</option>
+                <option value="multiple">Multiple Items</option>
+            </select>
+
+            <select name="style">
+                <option value="">Preferred Style</option>
+                <option value="modern">Modern</option>
+                <option value="contemporary">Contemporary</option>
+                <option value="mid-century">Mid-Century</option>
+                <option value="traditional">Traditional</option>
+                <option value="rustic">Rustic</option>
+                <option value="unsure">Need Recommendation</option>
+            </select>
+
+            <select name="budget">
+                <option value="">Approximate Budget</option>
+                <option value="under-500">Under $500</option>
+                <option value="500-1000">$500–$1,000</option>
+                <option value="1000-2500">$1,000–$2,500</option>
+                <option value="2500-5000">$2,500–$5,000</option>
+                <option value="5000-plus">$5,000+</option>
+            </select>
+
+            <input
+                type="text"
+                name="zip"
+                placeholder="Delivery ZIP Code">
+
+            <select name="timeline">
+                <option value="">When Do You Need It?</option>
+                <option value="now">As Soon As Possible</option>
+                <option value="2weeks">Within 2 Weeks</option>
+                <option value="month">Within 1 Month</option>
+                <option value="planning">Just Exploring</option>
+            </select>
+
+            <textarea
+                name="message"
+                placeholder="Tell us about your room size, preferred color, material, dimensions or furniture requirements"></textarea>
+
+            <div class="form-note">
+                Sample prices on this page are for layout purposes only.
+                Product availability, dimensions, materials, delivery,
+                assembly and final pricing are confirmed before purchase.
+            </div>
+
+            <button type="submit" class="btn btn-primary">
+                Request Furniture Recommendations
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+    <div class="container">
+
+        <div class="footer-main">
+
+            <div class="footer-brand">
+
+                <div class="footer-logo">
+                    Hearth <span>& Form</span>
+                </div>
+
+                <p>
+                    Furniture for living rooms, bedrooms,
+                    dining spaces and home offices with
+                    modern styles and practical options.
+                </p>
+
+            </div>
+
+            <div class="footer-links">
+                <a href="#home">Home</a>
+                <a href="#categories">Furniture</a>
+                <a href="#popular">Popular Pieces</a>
+                <a href="#enquiry">Get a Quote</a>
+                <a href="#contact">Contact</a>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+
+            <span>
+                © 2026 Hearth & Form Furniture. All rights reserved.
+            </span>
+
+            <span>
+                Product availability, delivery and pricing are confirmed before purchase.
+            </span>
+
+        </div>
+
+    </div>
+
+</footer>
+
+</body>
+</html>
